@@ -1,18 +1,25 @@
 import './Header.scss'
+import {BiSearchAlt} from "react-icons/bi";
+import SwitchControl from "./SwitchControl";
+import React from "react";
 
-const Header = () => {
+
+export const Header = () => {
     return (
         <div className='header'>
 
-            <section className='section1'>
+            {/*logo_search*/}
+            <section className='logo_search'>
                 <div className='logo'>MOV</div>
                 <div className='search'>
-                    <input type='text'/>
+                    <BiSearchAlt className='magnifier'/>
+                    <input placeholder='Search something here...' type='text'/>
                 </div>
             </section>
 
-            <section className='section2'>
-                <div> Hello users</div>
+            {/*dark-control*/}
+            <section className='dark-control'>
+                <SwitchControl/>
             </section>
 
         </div>

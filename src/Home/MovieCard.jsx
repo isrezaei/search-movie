@@ -10,11 +10,11 @@ const MovieCard = ({ids}) => {
 
 
     return (
-        <Link to={`details/${imdbID}`}>
+        <Link to={`details/${imdbID}`} style={{textDecoration : 'none'}}>
             <div className='cards'>
                 <img className='image' src={Poster} alt={Title}/>
-                <div className='title'>{Title}</div>
                 <div className='year'>{Year}</div>
+                <div className='title'>{Title}</div>
             </div>
         </Link>
 

@@ -12,13 +12,19 @@ const MovieShow = () => {
 
 
     return (
-        <>
-            <h1>Movie</h1>
 
-            <div className='home'>
-                {MovieShow}
+
+            <div>
+
+                <div className='select_type'>
+                    <section>Movie</section>
+                    <section>Series</section>
+                </div>
+
+                <div className='show_movie'>{MovieShow}</div>
+
             </div>
-        </>
+
     );
 };
 

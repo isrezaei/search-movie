@@ -1,25 +1,41 @@
 @import "../MainSass/MainSass";
 
-.home
+.show_movie
 {
   width: 100%;
-  background-color : cadetblue;
+  background-color : #2d2d3b;
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(5 , 16vw);
   grid-template-rows: repeat(2 , 26vw) ;
   grid-column-gap: 1vw;
+  grid-row-gap: 1vw;
   padding: 1.5vw 0;
-
 }
 
 
+.select_type
+{
+  @include flex();
+  margin: auto;
+  width: 50%;
+  section
+  {
+    @include flex();
+    width: 4vw;
+    height: 1.5vw;
+    background-color: #8f8f8f;
+    margin: 0 3vw;
+    font : {size: 1vw ; weight: bolder}
+  }
+}
+
 .cards
 {
-  @include flex(column , space-between , center);
+  @include flex(column , space-between , flex-start);
   width: 100%;
-  background-color: aquamarine;
+
   transition: .1s ease-in;
   cursor: pointer;
 
@@ -32,6 +48,7 @@
   {
     width: 16vw;
     height: 23vw;
+    margin: .5vw 0;
   }
   .title
   {
@@ -39,12 +56,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: center;
-
+    font: {size: 1vw ; weight: bold};
+    color: whitesmoke;
   }
   .year
   {
-
+    width: 60%;
+    font-size: .85vw;
+    color: #bdbcbc;
   }
 
 }

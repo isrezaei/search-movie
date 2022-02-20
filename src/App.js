@@ -10,11 +10,13 @@ function App() {
     return (
         <div>
             <Header/>
+
             <Routes>
                 <Route path='/' exact element={<Home/>}/>
                 <Route path='details/:imdbId' element={<Details/>}/>
                 <Route path='*' element={<NotFound404/>}/>
             </Routes>
+
             <Footer/>
         </div>
     )

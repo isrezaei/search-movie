@@ -1,0 +1,58 @@
+@import "../MainSass/MainSass";
+
+.home
+{
+  width: 100%;
+  background-color : cadetblue;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5 , 16vw);
+  grid-template-rows: repeat(2 , 26vw) ;
+  grid-column-gap: 1vw;
+  padding: 1.5vw 0;
+
+}
+
+
+.cards
+{
+  @include flex(column , space-between , center);
+  width: 100%;
+  background-color: aquamarine;
+  transition: .1s ease-in;
+  cursor: pointer;
+
+  &:hover
+  {
+    transform: scale(1.05);
+  }
+
+  .image
+  {
+    width: 16vw;
+    height: 23vw;
+  }
+  .title
+  {
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+
+  }
+  .year
+  {
+
+  }
+
+}
+
+.movie
+{
+
+  @include flex(column , center , center);
+
+
+}

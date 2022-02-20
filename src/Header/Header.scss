@@ -1,0 +1,24 @@
+@import "../MainSass/MainSass";
+
+.header {
+  @include flex(row, space-around, center) ;
+  width: 70%;
+  height: 3vw;
+  background-color: #7676ff;
+  margin: auto;
+
+  .section1 {
+    flex: 2;
+    background-color: aliceblue;
+    @include flex(row , flex-start , center)
+
+  }
+
+  .section2
+  {
+    flex: 2;
+    background-color: aquamarine;
+    @include flex(row , flex-end , center)
+  }
+
+}

@@ -8,7 +8,7 @@ import Choice from "../../Chose/Choice";
 const SeriesReadyToRender = () => {
 
     const status = useSelector(state => state.SeriesSlice.status)
-
+    const AsyncResultSearch = useSelector(state => state.SearchSlice.AsyncResultSearch)
     const dispatch = useDispatch()
     // console.log(status)
     // console.log(MovieIds)
@@ -25,7 +25,7 @@ const SeriesReadyToRender = () => {
 
     useEffect(()=>{
 
-        status === 'idle' && dispatch(GetImdbSeriesData())
+        status === 'idle' && dispatch(GetImdbSeriesData(AsyncResultSearch))
 
     } , [dispatch , status])
 

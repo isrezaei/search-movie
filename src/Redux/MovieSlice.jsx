@@ -6,7 +6,7 @@ import {KeyApi} from "../Api/Key";
 
 
 
-export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params)=> {
+export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params ='friends')=> {
 
     return await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)
         .then(Response => Response.data)

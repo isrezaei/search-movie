@@ -1,10 +1,11 @@
 import {createSlice , createAsyncThunk , createEntityAdapter} from "@reduxjs/toolkit";
+import {AsyncResultSearch} from "./SearchSlice";
 import ImdbApi from "../Api/ImdbApi";
 import {KeyApi} from "../Api/Key";
 
-export const GetImdbSeriesData = createAsyncThunk('movie/SeriesData' ,  async ()=> {
+export const GetImdbSeriesData = createAsyncThunk('movie/SeriesData' ,  async (params = 'friends')=> {
 
-    return await ImdbApi.get(`?s=friends&apikey=${KeyApi}&type=series`)
+    return await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)
         .then(Response => Response.data)
         .catch(Response => console.log(Response))
 })
@@ -67,6 +68,11 @@ export const SeriesSlice = createSlice({
         [GetImdbSeriesDetails.rejected] : (state)=>
         {
 
+        },
+        [AsyncResultSearch] : (state) =>
+        {
+            state.status = 'idle'
+            SeriesAdapter.removeAll(state)
         }
     }
 

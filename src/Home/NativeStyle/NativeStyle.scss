@@ -1,4 +1,4 @@
-@import "../MainSass/MainSass";
+@import "../../MainSass/MainSass";
 
 .show_movie
 {
@@ -11,25 +11,9 @@
   grid-template-rows: repeat(2 , 26vw) ;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
-  padding: 1.5vw 0;
 }
 
 
-.select_type
-{
-  @include flex();
-  margin: auto;
-  width: 50%;
-  section
-  {
-    @include flex();
-    width: 4vw;
-    height: 1.5vw;
-    background-color: #8f8f8f;
-    margin: 0 3vw;
-    font : {size: 1vw ; weight: bolder}
-  }
-}
 
 .cards
 {

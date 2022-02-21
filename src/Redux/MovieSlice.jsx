@@ -1,18 +1,19 @@
 import {createSlice, createAsyncThunk, createEntityAdapter, nanoid} from "@reduxjs/toolkit";
+import {AsyncResultSearch} from "./SearchSlice";
 
 import ImdbApi from "../Api/ImdbApi";
 import {KeyApi} from "../Api/Key";
 
-const love = 'friends'
 
-export const GetImdbData = createAsyncThunk('imdb/movie' , async ()=> {
 
-    return await ImdbApi.get(`?s=${love}&apikey=${KeyApi}&type=movie`)
+export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params)=> {
+
+    return await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)
         .then(Response => Response.data)
         .catch(Response => console.log(Response))
 })
 
-export const GetImdbDetails = createAsyncThunk('imdb/details' , async (params)=>{
+export const GetImdbMovieDetails = createAsyncThunk('movie/MovieDetails' , async (params)=>{
 
     return await ImdbApi.get(`?i=${params}&apikey=${KeyApi}&type=movie`)
         .then(Response => Response.data)
@@ -29,55 +30,60 @@ const MovieAdapter = createEntityAdapter({
 
 const initialState = MovieAdapter.getInitialState({
     status : 'idle',
-    details : {}
+    details : {} ,
+    search :  ''
 })
 
-export const {selectIds : selectMovieIds , selectById : selectMovieByIds , selectAll , selectEntities : selectMovieEntities} = MovieAdapter.getSelectors(state => state.ImdbSlice)
+export const {selectIds : selectMovieIds , selectById : selectMovieByIds , selectAll , selectEntities : selectMovieEntities} = MovieAdapter.getSelectors(state => state.MovieSlice)
 
-const ImdbSlice = createSlice({
-    name : 'imdb',
+const MovieSlice = createSlice({
+    name : 'movie',
     initialState ,
     reducers : {
-        RemoveDetails : (stata) =>
+        CleanMovieDetails : (stata) =>
         {
             stata.details = {}
-        }
+        },
     } ,
     extraReducers : {
-        [GetImdbData.pending] : (state)=>
+        [GetImdbMovieData.pending] : (state)=>
         {
             state.status = 'pending'
         },
-        [GetImdbData.fulfilled] : (state , {payload})=>
+        [GetImdbMovieData.fulfilled] : (state , {payload})=>
         {
             state.status = 'success'
             MovieAdapter.upsertMany(state , payload.Search)
             // console.log(payload)
         },
-        [GetImdbData.rejected] : (state)=>
+        [GetImdbMovieData.rejected] : (state)=>
         {
             state.status = 'rejected'
         },
 
-        [GetImdbDetails.pending] : (state)=>
+        [GetImdbMovieDetails.pending] : (state)=>
         {
 
         },
-        [GetImdbDetails.fulfilled] : (state , {payload})=>
+        [GetImdbMovieDetails.fulfilled] : (state , {payload})=>
         {
             // console.log(payload)
             state.details = payload
 
         },
-        [GetImdbDetails.rejected] : (state)=>
+        [GetImdbMovieDetails.rejected] : (state)=>
         {
             state.status = 'rejected'
         },
-
+        [AsyncResultSearch] : (state) =>
+        {
+            state.status = 'idle'
+            MovieAdapter.removeAll(state)
+        }
     },
 
 })
 
-export const {RemoveDetails} = ImdbSlice.actions
+export const {CleanMovieDetails} = MovieSlice.actions
 
-export default ImdbSlice.reducer
+export default MovieSlice.reducer

@@ -2,12 +2,16 @@ import {useSelector} from "react-redux";
 import MovieShow from "./MovieShow";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {GetImdbData} from "../Redux/ImdbSlice";
+import {GetImdbMovieData} from "../../Redux/MovieSlice";
+import Choice from "../../Chose/Choice";
 
-const Home = () => {
+
+const MovieReadyToRender = () => {
 
 
-    const status = useSelector(state => state.ImdbSlice.status)
+    const status = useSelector(state => state.MovieSlice.status)
+    const AsyncResultSearch = useSelector(state => state.SearchSlice.AsyncResultSearch)
+
     const dispatch = useDispatch()
     // console.log(status)
     // console.log(MovieIds)
@@ -23,15 +27,18 @@ const Home = () => {
     }
 
     useEffect(()=>{
-        status === 'idle' && dispatch(GetImdbData())
-    } , [dispatch , status])
+
+        status === 'idle' && dispatch(GetImdbMovieData(AsyncResultSearch))
+
+    } , [dispatch , status , AsyncResultSearch])
 
 
     return (
         <>
+            <Choice/>
             {Rendering}
         </>
     );
 };
 
-export default Home;
+export default MovieReadyToRender;

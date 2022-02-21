@@ -1,16 +1,17 @@
 import {useSelector} from "react-redux";
-import {selectMovieByIds} from "../Redux/ImdbSlice";
+import {selectSeriesByIds} from "../../Redux/SeriesSlice";
 import {Link} from "react-router-dom";
 
-const MovieCard = ({ids}) => {
+const SeriesCard = ({ids}) => {
 
-    const MovieData = useSelector(state => selectMovieByIds(state , ids))
+    const SeriesData = useSelector(state => selectSeriesByIds(state , ids))
 
-    const {Poster , Title , Type , Year , imdbID} = MovieData
+
+    const {Poster , Title , Type , Year , imdbID} = SeriesData
 
 
     return (
-        <Link to={`details/${imdbID}`} style={{textDecoration : 'none'}}>
+        <Link to={`/series/SeriesDetails/${imdbID}`} style={{textDecoration : 'none'}}>
             <div className='cards'>
                 <img className='image' src={Poster} alt={Title}/>
                 <div className='year'>{Year}</div>
@@ -21,4 +22,4 @@ const MovieCard = ({ids}) => {
     );
 };
 
-export default MovieCard;
+export default SeriesCard;

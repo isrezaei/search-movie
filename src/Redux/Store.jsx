@@ -1,6 +1,12 @@
 import {configureStore} from "@reduxjs/toolkit";
-import ImdbSlice from "./ImdbSlice";
+import MovieSlice from "./MovieSlice";
+import SeriesSlice from "./SeriesSlice";
+import SearchSlice from "./SearchSlice";
 
 export const store = configureStore({
-    reducer : {ImdbSlice}
+    reducer : {
+        MovieSlice ,
+        SeriesSlice ,
+        SearchSlice
+    }
 })

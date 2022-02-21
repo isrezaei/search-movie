@@ -1,13 +1,13 @@
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {GetImdbDetails , GetImdbData} from "../Redux/ImdbSlice";
-import {RemoveDetails} from "../Redux/ImdbSlice";
-import {useEffect, useLayoutEffect} from "react";
+import {GetImdbMovieDetails} from "../Redux/MovieSlice";
+import {CleanMovieDetails} from "../Redux/MovieSlice";
+import {useLayoutEffect} from "react";
 
-const Details = () => {
+const MovieDetails = () => {
 
-    const {imdbId} = useParams()
-    const MovieDetails = useSelector(state => state.ImdbSlice.details)
+    const {imdbID} = useParams()
+    const MovieDetails = useSelector(state => state.MovieSlice.details)
     const dispatch = useDispatch()
 
     const ShowDetails = Object.keys(MovieDetails).length !== 0
@@ -21,10 +21,10 @@ const Details = () => {
 
     useLayoutEffect(()=>{
 
-        dispatch(GetImdbDetails(imdbId))
+        dispatch(GetImdbMovieDetails(imdbID))
 
-        //Clean Up Details Object
-        return ()=> dispatch(RemoveDetails())
+        //Clean Up MovieDetails Object
+        return ()=> dispatch(CleanMovieDetails())
 
     } , [dispatch])
 
@@ -40,4 +40,4 @@ const Details = () => {
     );
 };
 
-export default Details;
+export default MovieDetails;

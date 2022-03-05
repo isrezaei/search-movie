@@ -1,60 +1,50 @@
 import styled from "styled-components";
 import NoImageAvailable from '../NoImageAvailable.svg'
+import {Link} from "react-router-dom";
 
-const HeaderSyncSearch = ({value}) => {
-
+const HeaderSyncSearch = ({value , InputValue}) => {
 
     const SearchItems = styled.div`
       width: 100%;
-      height: 5vw;
+      height: auto;
       background: #252525;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      border-top: 1px solid #494949;
-      border-bottom: 1px solid #494949;
-      :last-child
+      padding : .1vw 0 ;
+      transition : .1s;
+      :hover
       {
-        border-bottom: none;
-      }
-      :first-child 
-      {
-        border-top: none;
-      }
-
-      img {
-        width: 3vw;
+        background: #6c6c6c;
       }
     `
+    const Image = styled.img`
+      width: 3vw;
+      padding: .5vw 0 ;
+    `
     const Info = styled.div`
-      width: 10vw;
-      height: 4vw;
+      width: 11vw;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      white-space: break-spaces;
       color: #e3e2e2;
+      padding: .5vw 0 ;
     `
 
-
-
     return (
-        <>
+        <Link onClick={()=> InputValue.unsubscribe()} style={{textDecoration : 'none'}} to={`MovieDetails/${value.imdbID}`}>
             <SearchItems>
-
-                <img src={value.Poster === 'N/A'  ? NoImageAvailable : value.Poster}/>
-
-
+                <Image src={value.Poster === 'N/A'  ? NoImageAvailable : value.Poster}/>
                 <Info>
-
                     <h4>{value.Title}</h4>
                     <div>{value.Year}</div>
-
                     <div>Type : {value.Type}</div>
-
                 </Info>
             </SearchItems>
-        </>
+        </Link>
     );
 };
 

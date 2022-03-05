@@ -8,7 +8,6 @@ import NotFound404 from "./NotFound/NotFound404";
 import Footer from "./Footer/Footer";
 
 
-
 function App() {
     return (
         <div>

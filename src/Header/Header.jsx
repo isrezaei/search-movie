@@ -5,23 +5,27 @@ import {useForm} from "react-hook-form";
 import {useEffect} from "react";
 import { AsyncResultSearch} from "../Redux/SearchSlice";
 import  {GetImdbMovieDataSync} from "../Redux/MovieSlice";
-import {HeaderStyled , Logo , Input , Search_Logo , Search , SyncSearch , SearchInput} from "./HeaderStyled";
+import {HeaderStyled , Logo , Input , SearchAndLogo , Search , SyncSearch , SearchInput} from "./HeaderStyled";
 import HeaderSyncSearch from "./HeaderSyncSearch";
+import {Link} from "react-router-dom";
 
 
 export const Header = () => {
 
     const dispatch = useDispatch()
-
-    const DataSyncSearch = useSelector(state => state.MovieSlice.syncSearch).map(value => <HeaderSyncSearch key={value.imdbID} value={value}/>)
-
-
+    const {register,watch , reset} = useForm();
+    const InputValue = watch('InputValue')
 
 
-    const { register, watch, formState: { errors }, handleSubmit } = useForm();
+    const DataSyncSearch = useSelector(state => state.MovieSlice.syncSearch).map(value => <HeaderSyncSearch InputValue={InputValue} key={value.imdbID} value={value}/>)
 
 
 
+    const onSubmit = () => {
+
+        dispatch(AsyncResultSearch(InputValue))
+        reset({InputValue : ''})
+    }
 
     useEffect(()=>{
 
@@ -31,21 +35,20 @@ export const Header = () => {
     } , [watch])
 
 
-    const InputValue = watch('InputValue')
-    const onSubmit = () => dispatch(AsyncResultSearch(InputValue))
+
+
 
     return (
         <HeaderStyled>
 
-            {/*logo_search*/}
-            <Search_Logo>
+            <SearchAndLogo>
 
-                <Logo>MOV</Logo>
+                <Link style={{textDecoration : 'none'}} to='/'><Logo>MOV</Logo></Link>
 
                 <Search>
 
                     <SearchInput>
-                        <BiSearchAlt onClick={onSubmit} style={{fontSize : '1vw' , color : 'lightseagreen' , cursor : 'pointer'}}/>
+                        <BiSearchAlt onClick={()=> onSubmit()} style={{fontSize : '1vw' , color : 'lightseagreen' , cursor : 'pointer'}}/>
                         <Input {...register('InputValue')} placeholder='Search something here...' type='text'/>
                     </SearchInput>
 
@@ -55,9 +58,9 @@ export const Header = () => {
 
                 </Search>
 
-            </Search_Logo>
+            </SearchAndLogo>
 
-                <SwitchControl/>
+            <SwitchControl/>
 
 
         </HeaderStyled>

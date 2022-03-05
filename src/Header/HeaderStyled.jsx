@@ -11,7 +11,7 @@ export const HeaderStyled = styled.div `
   margin: auto;
 
 `
-export const Search_Logo = styled.div`
+export const SearchAndLogo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,7 +34,7 @@ export const Search = styled.div`
 export const Input = styled.input`
   border: none;
   outline: none;
-  background-color: transparent;
+  background: transparent;
   color: #8f8f8f;
 `
 
@@ -49,7 +49,6 @@ export const SyncSearch =  styled.div`
   width: 15vw;
   height: 20vw;
   overflow-x: hidden;
-  background: #000000;
   position: absolute;
   top: 3vw;
   z-index: 1;

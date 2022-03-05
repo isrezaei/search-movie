@@ -6,18 +6,21 @@ import {KeyApi} from "../Api/Key";
 
 
 
-export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params ='friends')=> {
+export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params )=> {
 
-    return await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)
-        .then(Response => Response.data)
-        .catch(Response => console.log(Response))
+    return (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data
+
 })
 
 export const GetImdbMovieDetails = createAsyncThunk('movie/MovieDetails' , async (params)=>{
 
-    return await ImdbApi.get(`?i=${params}&apikey=${KeyApi}&type=movie`)
-        .then(Response => Response.data)
-        .catch(Response => console.log(Response))
+    return (await ImdbApi.get(`?i=${params}&apikey=${KeyApi}&type=movie`)).data
+})
+
+
+export const GetImdbMovieDataSync = createAsyncThunk('movie/MovieDataSync' ,  async (params)=> {
+
+    return (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data.Search
 
 })
 
@@ -31,7 +34,7 @@ const MovieAdapter = createEntityAdapter({
 const initialState = MovieAdapter.getInitialState({
     status : 'idle',
     details : {} ,
-    search :  ''
+    syncSearch : []
 })
 
 export const {selectIds : selectMovieIds , selectById : selectMovieByIds , selectAll , selectEntities : selectMovieEntities} = MovieAdapter.getSelectors(state => state.MovieSlice)
@@ -75,6 +78,23 @@ const MovieSlice = createSlice({
         {
             state.status = 'rejected'
         },
+
+        [GetImdbMovieDataSync.pending] : (state)=>
+        {
+
+        },
+        [GetImdbMovieDataSync.fulfilled] : (state , {payload})=> {
+
+            // console.log(payload)
+            state.syncSearch = payload ? payload : []
+
+        }
+        ,
+        [GetImdbMovieDataSync.rejected] : (state)=>
+        {
+            state.syncSearch = {}
+        }
+        ,
         [AsyncResultSearch] : (state) =>
         {
             state.status = 'idle'

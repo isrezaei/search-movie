@@ -3,7 +3,7 @@ import {AsyncResultSearch} from "./SearchSlice";
 import ImdbApi from "../Api/ImdbApi";
 import {KeyApi} from "../Api/Key";
 
-export const GetImdbSeriesData = createAsyncThunk('movie/SeriesData' ,  async (params = 'friends')=> {
+export const GetImdbSeriesData = createAsyncThunk('movie/SeriesData' ,  async (params)=> {
 
     return await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)
         .then(Response => Response.data)

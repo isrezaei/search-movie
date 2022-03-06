@@ -4,6 +4,8 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/MovieSlice";
 import Choice from "../../Chose/Choice";
+import {MoviePreloaded} from "./MoviePreloaded";
+
 
 
 const MovieReadyToRender = () => {
@@ -19,11 +21,15 @@ const MovieReadyToRender = () => {
 
     if (status === 'pending')
     {
-        Rendering =  <h1>Loading ...</h1>
+        Rendering = <MoviePreloaded/>
     }
     else if (status === 'success')
     {
         Rendering = <MovieShow/>
+    }
+    else if (status === 'reject')
+    {
+        Rendering = <h1>Not Found !!</h1>
     }
 
     useEffect(()=>{

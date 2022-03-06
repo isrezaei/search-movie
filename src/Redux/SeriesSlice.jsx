@@ -5,9 +5,8 @@ import {KeyApi} from "../Api/Key";
 
 export const GetImdbSeriesData = createAsyncThunk('movie/SeriesData' ,  async (params)=> {
 
-    return await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)
-        .then(Response => Response.data)
-        .catch(Response => console.log(Response))
+    return (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)).data
+
 })
 
 export const GetImdbSeriesDetails = createAsyncThunk('movie/SeriesDetails' ,  async (params)=> {
@@ -46,8 +45,16 @@ export const SeriesSlice = createSlice({
         },
         [GetImdbSeriesData.fulfilled] : (state , {payload}) =>
         {
-            state.status = 'success'
-            SeriesAdapter.upsertMany(state , payload.Search)
+            if (payload.Search)
+            {
+                state.status = 'success'
+                SeriesAdapter.upsertMany(state , payload.Search)
+            }
+            else
+            {
+                state.status = 'reject'
+            }
+
         },
         [GetImdbSeriesData.rejected] : (state) =>
         {

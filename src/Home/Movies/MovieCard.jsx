@@ -3,7 +3,6 @@ import {selectMovieByIds} from "../../Redux/MovieSlice";
 import {Link} from "react-router-dom";
 import NoImageAvailable from '../../NoImageAvailable.svg'
 
-
 const MovieCard = ({ids}) => {
 
     const MovieData = useSelector(state => selectMovieByIds(state , ids))

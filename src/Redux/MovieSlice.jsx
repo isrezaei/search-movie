@@ -55,9 +55,18 @@ const MovieSlice = createSlice({
         },
         [GetImdbMovieData.fulfilled] : (state , {payload})=>
         {
-            state.status = 'success'
-            MovieAdapter.upsertMany(state , payload.Search)
-            // console.log(payload)
+
+            if (payload.Search)
+            {
+                state.status = 'success'
+                MovieAdapter.upsertMany(state , payload.Search)
+            }
+            else
+            {
+                state.status = 'reject'
+            }
+
+
         },
         [GetImdbMovieData.rejected] : (state)=>
         {
@@ -92,7 +101,7 @@ const MovieSlice = createSlice({
         ,
         [GetImdbMovieDataSync.rejected] : (state)=>
         {
-            state.syncSearch = {}
+
         }
         ,
         [AsyncResultSearch] : (state) =>

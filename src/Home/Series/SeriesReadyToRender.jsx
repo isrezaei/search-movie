@@ -22,6 +22,10 @@ const SeriesReadyToRender = () => {
     {
         Rendering = <SeriesShow/>
     }
+    else if (status === 'reject')
+    {
+        Rendering = <h1>Not Found !!</h1>
+    }
 
     useEffect(()=>{
 

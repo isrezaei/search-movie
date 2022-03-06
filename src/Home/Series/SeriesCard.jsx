@@ -11,7 +11,7 @@ const SeriesCard = ({ids}) => {
 
 
     return (
-        <Link to={`/series/SeriesDetails/${imdbID}`} style={{textDecoration : 'none'}}>
+        <Link to={`/Details/${imdbID}`} style={{textDecoration : 'none'}}>
             <div className='cards'>
                 <img className='image' src={Poster} alt={Title}/>
                 <div className='year'>{Year}</div>

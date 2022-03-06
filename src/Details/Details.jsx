@@ -4,7 +4,7 @@ import {GetImdbMovieDetails} from "../Redux/MovieSlice";
 import {CleanMovieDetails} from "../Redux/MovieSlice";
 import {useLayoutEffect} from "react";
 
-const MovieDetails = () => {
+const Details = () => {
 
     const {imdbID} = useParams()
     const MovieDetails = useSelector(state => state.MovieSlice.details)
@@ -40,4 +40,4 @@ const MovieDetails = () => {
     );
 };
 
-export default MovieDetails;
+export default Details;

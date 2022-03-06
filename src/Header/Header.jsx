@@ -4,11 +4,10 @@ import {useDispatch , useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
 import {useEffect} from "react";
 import { AsyncResultSearch} from "../Redux/SearchSlice";
-import  {GetImdbMovieDataSync} from "../Redux/MovieSlice";
+import  {GetImdbMovieDataSync , CleanSyncSearch} from "../Redux/MovieSlice";
 import {HeaderStyled , Logo , Input , SearchAndLogo , Search , SyncSearch , SearchInput} from "./HeaderStyled";
 import HeaderSyncSearch from "./HeaderSyncSearch";
 import {Link} from "react-router-dom";
-
 
 export const Header = () => {
 
@@ -17,7 +16,8 @@ export const Header = () => {
     const InputValue = watch('InputValue')
 
 
-    const DataSyncSearch = useSelector(state => state.MovieSlice.syncSearch).map(value => <HeaderSyncSearch InputValue={InputValue} key={value.imdbID} value={value}/>)
+    const DataSyncSearch = useSelector(state => state.MovieSlice.syncSearch)
+    const SearchStatus = useSelector(state => state.MovieSlice.searchStatus)
 
 
 
@@ -28,11 +28,37 @@ export const Header = () => {
     }
 
     useEffect(()=>{
+        watch(({InputValue}) => {
 
-        const subscription = watch(({InputValue}) => InputValue.length >=3 && dispatch(GetImdbMovieDataSync(InputValue)));
-        return () => subscription.unsubscribe();
+            if (InputValue.length)
+            {
+                dispatch(GetImdbMovieDataSync(InputValue))
+            }
+            else if (!InputValue.length)
+            {
+                dispatch(CleanSyncSearch())
+            }
+        }) ;
+
+
 
     } , [watch])
+
+
+    let Render ;
+
+    if (SearchStatus === 'pending')
+    {
+        Render = <h3>Loading ... </h3>
+    }
+    else if (SearchStatus === 'success')
+    {
+        Render = DataSyncSearch.map(value => value && <HeaderSyncSearch InputValue={InputValue} key={value.imdbID} value={value}/>)
+    }
+    else if (SearchStatus === 'reject')
+    {
+        Render = <h3>Not Found Search</h3>
+    }
 
 
 
@@ -53,7 +79,7 @@ export const Header = () => {
                     </SearchInput>
 
                     <SyncSearch render={InputValue ? 'block' : 'none'}>
-                        {DataSyncSearch}
+                        {Render}
                     </SyncSearch>
 
                 </Search>

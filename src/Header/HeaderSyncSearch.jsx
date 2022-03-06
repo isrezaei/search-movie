@@ -35,7 +35,7 @@ const HeaderSyncSearch = ({value , InputValue}) => {
     `
 
     return (
-        <Link onClick={()=> InputValue.unsubscribe()} style={{textDecoration : 'none'}} to={`MovieDetails/${value.imdbID}`}>
+        <Link onClick={()=> InputValue.unsubscribe()} style={{textDecoration : 'none'}} to={`Details/${value.imdbID}`}>
             <SearchItems>
                 <Image src={value.Poster === 'N/A'  ? NoImageAvailable : value.Poster}/>
                 <Info>

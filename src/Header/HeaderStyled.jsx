@@ -48,6 +48,7 @@ export const SyncSearch =  styled.div`
   display: ${({render}) => render};
   width: 15vw;
   height: 20vw;
+  background: red;
   overflow-x: hidden;
   position: absolute;
   top: 3vw;

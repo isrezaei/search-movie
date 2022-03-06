@@ -2,9 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const SearchSlice = createSlice({
     name : 'search',
-    initialState : {
-        AsyncResultSearch : 'hello'
-    },
+    initialState : {},
     reducers : {
 
         AsyncResultSearch : (state , {payload}) =>

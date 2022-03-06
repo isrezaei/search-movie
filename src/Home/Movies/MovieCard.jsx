@@ -11,7 +11,7 @@ const MovieCard = ({ids}) => {
 
 
     return (
-        <Link to={`/MovieDetails/${imdbID}`} style={{textDecoration : 'none'}}>
+        <Link to={`/Details/${imdbID}`} style={{textDecoration : 'none'}}>
             <div className='cards'>
                 <img className='image' src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
                 <div className='year'>{Year}</div>

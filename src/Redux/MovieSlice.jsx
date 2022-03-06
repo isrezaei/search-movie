@@ -6,7 +6,7 @@ import {KeyApi} from "../Api/Key";
 
 
 
-export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params )=> {
+export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params= 'friends' )=> {
 
     return (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data
 
@@ -37,7 +37,8 @@ const MovieAdapter = createEntityAdapter({
 const initialState = MovieAdapter.getInitialState({
     status : 'idle',
     details : {} ,
-    syncSearch : []
+    syncSearch : [] ,
+    searchStatus : 'idle'
 })
 
 export const {selectIds : selectMovieIds , selectById : selectMovieByIds , selectAll , selectEntities : selectMovieEntities} = MovieAdapter.getSelectors(state => state.MovieSlice)
@@ -50,6 +51,10 @@ const MovieSlice = createSlice({
         {
             stata.details = {}
         },
+        CleanSyncSearch : (state)=> {
+            state.syncSearch = []
+        }
+
     } ,
     extraReducers : {
         [GetImdbMovieData.pending] : (state)=>
@@ -93,19 +98,20 @@ const MovieSlice = createSlice({
 
         [GetImdbMovieDataSync.pending] : (state)=>
         {
-
+            state.searchStatus = 'pending'
         },
         [GetImdbMovieDataSync.fulfilled] : (state , {payload})=> {
 
-            console.log(payload)
+            // console.log(payload)
 
+            state.searchStatus = 'success'
             state.syncSearch = payload ? payload : []
 
         }
         ,
         [GetImdbMovieDataSync.rejected] : (state)=>
         {
-
+            state.searchStatus = 'reject'
         }
         ,
         [AsyncResultSearch] : (state) =>
@@ -117,6 +123,6 @@ const MovieSlice = createSlice({
 
 })
 
-export const {CleanMovieDetails} = MovieSlice.actions
+export const {CleanMovieDetails , CleanSyncSearch} = MovieSlice.actions
 
 export default MovieSlice.reducer

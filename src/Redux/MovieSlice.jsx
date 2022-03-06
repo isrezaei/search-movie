@@ -20,7 +20,10 @@ export const GetImdbMovieDetails = createAsyncThunk('movie/MovieDetails' , async
 
 export const GetImdbMovieDataSync = createAsyncThunk('movie/MovieDataSync' ,  async (params)=> {
 
-    return (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data.Search
+    const Movie = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data.Search
+    const Series = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)).data.Search
+
+    return  Movie.concat(Series)
 
 })
 
@@ -94,7 +97,8 @@ const MovieSlice = createSlice({
         },
         [GetImdbMovieDataSync.fulfilled] : (state , {payload})=> {
 
-            // console.log(payload)
+            console.log(payload)
+
             state.syncSearch = payload ? payload : []
 
         }

@@ -4,7 +4,6 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import {nanoid} from "@reduxjs/toolkit";
 
 export const Preloaded = styled.div`
-
   width : 100%;
   display : grid;
   justify-content: center;
@@ -13,39 +12,40 @@ export const Preloaded = styled.div`
   grid-template-rows: repeat(2 , 26vw) ;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
-
+`
+const Skeletal = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 export const MoviePreloaded = ()=>
 {
 
     let ArrayLoaded = []
-    for (let C = 0 ; C < 10 ; C++){ ArrayLoaded.push(C) }
+    for (let C = 0 ; C < 10 ; C++)
+    {
+        ArrayLoaded.push(C)
+    }
 
     const Loading = ArrayLoaded.map(()=> {
 
         return (
 
-            <div key={nanoid()} style={{display : 'flex' , flexDirection : "column"}}>
+            <Skeletal key={nanoid()}>
                 <Skeleton/>
                 <Skeleton height='1vw' width= '6vw' />
                 <Skeleton height='1vw' width= '10vw' />
-            </div>
+            </Skeletal>
         )
     })
 
     return (
         <Preloaded>
-
             <SkeletonTheme baseColor="#202020" highlightColor="#444" height='23vw'>
                 {Loading}
             </SkeletonTheme>
-
-
-
         </Preloaded>
     )
-
 }
 
 

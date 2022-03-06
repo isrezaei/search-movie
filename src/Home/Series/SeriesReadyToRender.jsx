@@ -3,6 +3,7 @@ import SeriesShow from "./SeriesShow";
 import {useEffect} from "react";
 import {GetImdbSeriesData} from "../../Redux/SeriesSlice";
 import Choice from "../../Chose/Choice";
+import {MoviePreloaded} from "../Movies/MoviePreloaded";
 
 
 const SeriesReadyToRender = () => {
@@ -16,7 +17,7 @@ const SeriesReadyToRender = () => {
 
     if (status === 'pending')
     {
-        Rendering =  <h1>Loading ...</h1>
+        Rendering =  <MoviePreloaded/>
     }
     else if (status === 'success')
     {

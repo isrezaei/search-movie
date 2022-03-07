@@ -1,30 +1,29 @@
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {GetImdbMovieDetails} from "../Redux/MovieSlice";
-import {CleanMovieDetails} from "../Redux/MovieSlice";
+import {fetchDetails , CleanDetails} from "../Redux/DetailsSlice";
 import {useLayoutEffect} from "react";
 
 const Details = () => {
 
     const {imdbID} = useParams()
-    const MovieDetails = useSelector(state => state.MovieSlice.details)
+    const Details = useSelector(state => state.DetailsSlice.details)
     const dispatch = useDispatch()
 
-    const ShowDetails = Object.keys(MovieDetails).length !== 0
 
 
-    console.log(MovieDetails)
+
+    console.log(Details)
 
 
-    const {Actors , Awards , Country , Director , Genre , Language , Plot , Poster , Rated , Ratings , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes} = MovieDetails
+    const {Actors , Awards , Country , Director , Genre , Language , Plot , Poster , Rated , Ratings , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes} = Details
 
 
     useLayoutEffect(()=>{
 
-        dispatch(GetImdbMovieDetails(imdbID))
+        dispatch(fetchDetails(imdbID))
 
-        //Clean Up MovieDetails Object
-        return ()=> dispatch(CleanMovieDetails())
+        //Clean Up Details Object
+        return ()=> dispatch(CleanDetails())
 
     } , [dispatch])
 

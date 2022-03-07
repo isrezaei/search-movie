@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderStyled = styled.div `
-
+export const HeaderMasterStyle = styled.div `
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -9,13 +8,12 @@ export const HeaderStyled = styled.div `
   height: 4vw;
   background-color: #1a1923;
   margin: auto;
-
 `
-export const SearchAndLogo = styled.div`
+export const LeftSide = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex: 1;
+  flex: 25;
   padding: 0 2vw;
 `
 export const Logo = styled.div`
@@ -30,21 +28,25 @@ export const Search = styled.div`
   align-items: center;
   margin-left: 1.5vw;
 `
-
-export const Input = styled.input`
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #8f8f8f;
-`
-
-export const SearchInput = styled.div`
+export const ReadyToSearch = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  span
+  {
+    font-size: 1vw;
+    color: lightseagreen;
+    cursor: pointer;
+  }
+  input
+  {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #8f8f8f;
+  }
 `
-
-export const SyncSearch =  styled.div`
+export const RenderSearch =  styled.div`
   display: ${({render}) => render};
   width: 15vw;
   height: 20vw;
@@ -57,4 +59,7 @@ export const SyncSearch =  styled.div`
   {
     width: 0;
   }
+`
+export const RightSide = styled.div`
+    flex: 1;
 `

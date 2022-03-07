@@ -1,26 +1,11 @@
-import styled from "styled-components";
+import {PreloadStyle , Skeletal} from "./PreLoadedStyle";
 import Skeleton ,{SkeletonTheme} from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
 import {nanoid} from "@reduxjs/toolkit";
 
-export const Preloaded = styled.div`
-  width : 100%;
-  display : grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(5 , 16vw);
-  grid-template-rows: repeat(2 , 26vw) ;
-  grid-column-gap: 1vw;
-  grid-row-gap: 1vw;
-`
-const Skeletal = styled.div`
-  display: flex;
-  flex-direction: column;
-`
 
-export const MoviePreloaded = ()=>
+export const Preloaded = ()=>
 {
-
     let ArrayLoaded = []
     for (let C = 0 ; C < 10 ; C++)
     {
@@ -28,9 +13,7 @@ export const MoviePreloaded = ()=>
     }
 
     const Loading = ArrayLoaded.map(()=> {
-
         return (
-
             <Skeletal key={nanoid()}>
                 <Skeleton/>
                 <Skeleton height='1vw' width= '6vw' />
@@ -40,11 +23,11 @@ export const MoviePreloaded = ()=>
     })
 
     return (
-        <Preloaded>
+        <PreloadStyle>
             <SkeletonTheme baseColor="#202020" highlightColor="#444" height='23vw'>
                 {Loading}
             </SkeletonTheme>
-        </Preloaded>
+        </PreloadStyle>
     )
 }
 

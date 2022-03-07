@@ -3,13 +3,12 @@ import SeriesShow from "./SeriesShow";
 import {useEffect} from "react";
 import {GetImdbSeriesData} from "../../Redux/SeriesSlice";
 import Choice from "../../Chose/Choice";
-import {MoviePreloaded} from "../Movies/MoviePreloaded";
+import {Preloaded} from "../../PreLoaded/Preloaded";
 
 
 const SeriesReadyToRender = () => {
 
     const status = useSelector(state => state.SeriesSlice.status)
-    const AsyncResultSearch = useSelector(state => state.SearchSlice.AsyncResultSearch)
     const dispatch = useDispatch()
     // console.log(status)
     // console.log(MovieIds)
@@ -17,7 +16,7 @@ const SeriesReadyToRender = () => {
 
     if (status === 'pending')
     {
-        Rendering =  <MoviePreloaded/>
+        Rendering =  <Preloaded/>
     }
     else if (status === 'success')
     {
@@ -30,7 +29,7 @@ const SeriesReadyToRender = () => {
 
     useEffect(()=>{
 
-        status === 'idle' && dispatch(GetImdbSeriesData(AsyncResultSearch))
+        status === 'idle' && dispatch(GetImdbSeriesData())
 
     } , [dispatch , status])
 

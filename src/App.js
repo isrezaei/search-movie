@@ -1,9 +1,8 @@
 import {Routes, Route, Link} from "react-router-dom";
-import Header from "./Header/Header";
+import HeaderMaster from "./Header/HeaderMaster/HeaderMaster";
 import MovieReadyToRender from "./Home/Movies/MovieReadyToRender";
 import SeriesReadyToRender from "./Home/Series/SeriesReadyToRender";
 import Details from "./Details/Details";
-import SeriesDetails from "./Details/SeriesDetails";
 import NotFound404 from "./NotFound/NotFound404";
 import Footer from "./Footer/Footer";
 import styled from "styled-components";
@@ -19,7 +18,7 @@ const AppStyle = styled.div`
 function App() {
     return (
         <div>
-            <Header/>
+            <HeaderMaster/>
 
             <AppStyle>
                 <Routes>

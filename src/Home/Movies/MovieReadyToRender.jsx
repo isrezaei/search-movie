@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/MovieSlice";
 import Choice from "../../Chose/Choice";
-import {MoviePreloaded} from "./MoviePreloaded";
+import {Preloaded} from "../../PreLoaded/Preloaded";
 
 
 
@@ -12,7 +12,6 @@ const MovieReadyToRender = () => {
 
 
     const status = useSelector(state => state.MovieSlice.status)
-    const AsyncResultSearch = useSelector(state => state.SearchSlice.AsyncResultSearch)
 
     const dispatch = useDispatch()
     // console.log(status)
@@ -21,7 +20,7 @@ const MovieReadyToRender = () => {
 
     if (status === 'pending')
     {
-        Rendering = <MoviePreloaded/>
+        Rendering = <Preloaded/>
     }
     else if (status === 'success')
     {
@@ -34,9 +33,9 @@ const MovieReadyToRender = () => {
 
     useEffect(()=>{
 
-        status === 'idle' && dispatch(GetImdbMovieData(AsyncResultSearch))
+        status === 'idle' && dispatch(GetImdbMovieData())
 
-    } , [dispatch , status , AsyncResultSearch])
+    } , [dispatch , status ])
 
 
     return (

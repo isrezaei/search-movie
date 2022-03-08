@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { MdLocalMovies } from 'react-icons/md';
 import { RiMovie2Fill } from 'react-icons/ri';
 import {HiHome} from 'react-icons/hi'
@@ -13,19 +13,24 @@ const Sidebar = () => {
 
     const [Active , SetActive] = useState('Home')
 
+    const SlideInRight = keyframes`
+      0% { left: -5vw; }
+      100% {left: 0;}
+    `
 
-    const FooterStyle = styled.div`
+    const SidebarStyle = styled.div`
       width: 4%;
-      height: 60vw;
+      height: 20vw;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       background:#3b4856;
-      position: absolute;
-      top: 4vw;
+      position: fixed;
+      top: 15vw;
       left: 0;
-
+      border-radius: 0 1vw 1vw 0;
+      animation: ${SlideInRight} .5s ease-in-out;
     `
 
     const AdjustIcon = styled.span`
@@ -37,8 +42,7 @@ const Sidebar = () => {
       margin-top: 1.5vw;
       font-size: 1.8vw;
       cursor: pointer;
-      transition: .5s ease-in-out;
-     
+
     `
 
     const Icon = styled(AdjustIcon) `
@@ -52,45 +56,40 @@ const Sidebar = () => {
       }
     `
 
-
     return (
-        <FooterStyle >
+
+        <SidebarStyle>
 
 
-            <Link to={'/'} >
+            <Link to={'/'}  style={{textDecoration : 'none'}}>
                 <Animated
                     animationIn="tada"
-                    animateOnMount={Active === 'Home'}
-                >
+                    animateOnMount={Active === 'Home'}>
                     <Icon Name={'Home'} ActiveIcon={Active === 'Home'} onClick={() => SetActive('Home')}><HiHome/></Icon>
                 </Animated>
 
             </Link>
 
 
+            <Link to={'/'} style={{textDecoration : 'none'}}>
                 <Animated
                     animationIn="tada"
-                    animateOnMount={Active === 'Movie'}
-                >
-
+                    animateOnMount={Active === 'Movie'}>
                     <Icon Name={'Movie'} ActiveIcon={Active === 'Movie'} onClick={() => SetActive('Movie')}><MdLocalMovies/></Icon>
                 </Animated>
+            </Link>
 
-
-
-            <Link to={'/series'}>
+            <Link to={'/series'} style={{textDecoration : 'none'}}>
                 <Animated
                     animationIn="tada"
-                    animateOnMount={Active === 'Series'}
-                >
+                    animateOnMount={Active === 'Series'}>
                     <Icon Name={'Series'} ActiveIcon={Active === 'Series'} onClick={() => SetActive('Series')}><RiMovie2Fill/></Icon>
                 </Animated>
             </Link>
 
-            {/*<div><HeaderDMControl/></div>*/}
+            <Icon><HeaderDMControl/></Icon>
 
-
-        </FooterStyle>
+        </SidebarStyle>
     );
 };
 

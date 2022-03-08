@@ -13,7 +13,7 @@ const HeaderDMControl = () => {
         <DarkModeSwitch
             checked={isDarkMode}
             onChange={()=> toggleDarkMode(isDarkMode)}
-            size={35}
+            size={30}
         />
     );
 }

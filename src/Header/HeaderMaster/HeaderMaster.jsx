@@ -2,14 +2,14 @@ import {BiSearchAlt} from "react-icons/bi";
 import {useDispatch , useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
 import {useEffect} from "react";
-import {Link} from "react-router-dom";
+import {Link , useNavigate } from "react-router-dom";
 import {selectIdsSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchSyncSearch , CleanSyncSearch} from "../../Redux/SyncSearchSlice";
 import {GetImdbMovieData} from "../../Redux/MovieSlice";
 import {GetImdbSeriesData} from "../../Redux/SeriesSlice";
-import {HeaderMasterStyle,LeftSide,Logo,Search,ReadyToSearch,RenderSearch,RightSide} from "./HeaderMasterStyle";
+import {HeaderMasterStyle,LeftSide,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderMasterStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
-import HeaderDMControl from "../HeaderDMControl/HeaderDMControl";
+
 
 
 
@@ -18,6 +18,7 @@ export const HeaderMaster = () => {
 
     const SyncSearchId = useSelector(selectIdsSyncSearch)
     const SearchStatus = useSelector(state => state.SyncSearch.status)
+    const Navigate = useNavigate();
 
 
     const {register,watch , reset} = useForm();
@@ -27,9 +28,13 @@ export const HeaderMaster = () => {
 
 
     const onSubmit = () => {
-        dispatch(GetImdbMovieData(InputValue))
-        dispatch(GetImdbSeriesData(InputValue))
-        reset({InputValue : ''})
+        if (InputValue)
+        {
+            dispatch(GetImdbMovieData(InputValue))
+            dispatch(GetImdbSeriesData(InputValue))
+            reset({InputValue : ''})
+            Navigate('/')
+        }
     }
 
     useEffect(()=>{
@@ -73,15 +78,13 @@ export const HeaderMaster = () => {
 
             <LeftSide>
 
-                <Link style={{textDecoration : 'none'}} to='/'>
-                    <Logo>MOV</Logo>
-                </Link>
+                <Logo onClick={()=> Navigate('/')}>MOV</Logo>
 
                 <Search>
 
                     <ReadyToSearch>
                         <span onClick={onSubmit}><BiSearchAlt/></span>
-                        <input {...register('InputValue')} placeholder='Search something here...' type='text'/>
+                        <input  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
                     </ReadyToSearch>
 
                     <RenderSearch render={InputValue ? 'block' : 'none'}>
@@ -92,9 +95,7 @@ export const HeaderMaster = () => {
 
             </LeftSide>
 
-            <RightSide>
-                <HeaderDMControl/>
-            </RightSide>
+
 
         </HeaderMasterStyle>
     );

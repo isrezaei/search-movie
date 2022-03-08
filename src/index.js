@@ -5,6 +5,9 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./Redux/Store";
 import {createGlobalStyle ,ThemeProvider} from "styled-components";
+import styled from "styled-components";
+import Link from 'react-router-dom'
+
 const GlobalStyle =  createGlobalStyle `
   
 
@@ -25,8 +28,6 @@ const GlobalStyle =  createGlobalStyle `
     box-sizing: border-box;
     background-color : #2d2d3b;
   }
-  
-  
 `
 
 const Theme = {

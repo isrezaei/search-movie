@@ -19,6 +19,7 @@ export const LeftSide = styled.div`
 export const Logo = styled.div`
   font-weight: bolder;
   font-size: 1.5vw;
+  cursor: pointer;
   color: white;
 `
 export const Search = styled.div`
@@ -59,7 +60,4 @@ export const RenderSearch =  styled.div`
   {
     width: 0;
   }
-`
-export const RightSide = styled.div`
-    flex: 1;
 `

@@ -2,6 +2,7 @@ import {configureStore} from "@reduxjs/toolkit";
 import MovieSlice from "./MovieSlice";
 import SeriesSlice from "./SeriesSlice";
 import SyncSearch from "./SyncSearchSlice";
+import ResultSearchSlice from "./ResultSearchSlice";
 import DetailsSlice from "./DetailsSlice";
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
         MovieSlice,
         SeriesSlice,
         SyncSearch,
-        DetailsSlice
+        DetailsSlice,
+        ResultSearchSlice
     }
 })

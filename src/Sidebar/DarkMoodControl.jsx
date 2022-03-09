@@ -1,7 +1,7 @@
 import {useState} from "react";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-const HeaderDMControl = () => {
+const DarkMoodControl = () => {
 
     const [isDarkMode, setDarkMode] = useState(true);
 
@@ -18,4 +18,4 @@ const HeaderDMControl = () => {
     );
 }
 
-export default HeaderDMControl;
+export default DarkMoodControl;

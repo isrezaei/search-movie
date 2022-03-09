@@ -1,60 +1,17 @@
-import styled, {keyframes} from "styled-components";
+
 import { MdLocalMovies } from 'react-icons/md';
 import { RiMovie2Fill } from 'react-icons/ri';
 import {HiHome} from 'react-icons/hi'
-import HeaderDMControl from "../Header/HeaderDMControl/HeaderDMControl";
+import DarkMoodControl from "./DarkMoodControl";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Animated} from "react-animated-css";
-
+import {SidebarStyle , Icon } from "./SidebarStyle";
 
 
 const Sidebar = () => {
 
     const [Active , SetActive] = useState('Home')
-
-    const SlideInRight = keyframes`
-      0% { left: -5vw; }
-      100% {left: 0;}
-    `
-
-    const SidebarStyle = styled.div`
-      width: 4%;
-      height: 20vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background:#3b4856;
-      position: fixed;
-      top: 15vw;
-      left: 0;
-      border-radius: 0 1vw 1vw 0;
-      animation: ${SlideInRight} .5s ease-in-out;
-    `
-
-    const AdjustIcon = styled.span`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 3vw;
-      margin-top: 1.5vw;
-      font-size: 1.8vw;
-      cursor: pointer;
-
-    `
-
-    const Icon = styled(AdjustIcon) `
-      color: ${({ActiveIcon})=> ActiveIcon  ? '#20e28c' : '#6c7682'};
-      &:after
-      {
-        height: 1vw;
-        content: '${({Name})=> Name}';
-        display: ${({ActiveIcon})=> ActiveIcon ? 'block' : 'none'};;
-        font-size: .65vw;
-      }
-    `
 
     return (
 
@@ -71,7 +28,7 @@ const Sidebar = () => {
             </Link>
 
 
-            <Link to={'/'} style={{textDecoration : 'none'}}>
+            <Link to={'/search/movie'} style={{textDecoration : 'none'}}>
                 <Animated
                     animationIn="tada"
                     animateOnMount={Active === 'Movie'}>
@@ -87,7 +44,7 @@ const Sidebar = () => {
                 </Animated>
             </Link>
 
-            <Icon><HeaderDMControl/></Icon>
+            <Icon><DarkMoodControl/></Icon>
 
         </SidebarStyle>
     );

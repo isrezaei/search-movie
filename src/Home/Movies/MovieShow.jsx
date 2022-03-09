@@ -4,15 +4,18 @@ import MovieCard from "./MovieCard";
 import '../NativeStyle/NativeStyle.scss'
 
 
+
 const MovieShow = () => {
     const MovieIds = useSelector(selectMovieIds)
 
     const MovieShow = MovieIds.map(ids => <MovieCard key={ids} ids={ids}/>)
 
     return (
-        <div className='show_movie'>
-            {MovieShow}
-        </div>
+
+            <div className='show_movie'>
+                {MovieShow}
+            </div>
+
     );
 };
 

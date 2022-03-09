@@ -1,11 +1,8 @@
 import {useSelector} from "react-redux";
-import {selectResultSearchIds , selectAllResultSearch} from "../../Redux/ResultSearchSlice";
-import ResultSearchMovieShow from "./ResultSearchMovieShow";
 import {Preloaded} from "../../PreLoaded/Preloaded";
+import ResultSeriesShow from "./ResultSeriesShow";
 
-const ResultSearchReadyToRender = () => {
-
-
+const ResultSeriesRender = () => {
 
     const Status = useSelector(state => state.ResultSearchSlice.status)
 
@@ -21,7 +18,7 @@ const ResultSearchReadyToRender = () => {
     }
     else if (Status === 'success')
     {
-        Render = <ResultSearchMovieShow/>
+        Render = <ResultSeriesShow/>
     }
     else if (Status === 'reject')
     {
@@ -39,4 +36,4 @@ const ResultSearchReadyToRender = () => {
     );
 };
 
-export default ResultSearchReadyToRender;
+export default ResultSeriesRender;

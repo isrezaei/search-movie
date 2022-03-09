@@ -22,19 +22,24 @@ export const HeaderMaster = () => {
     const Navigate = useNavigate();
 
 
-    const {register,watch , reset} = useForm();
+    const {register,watch,reset} = useForm({
+        defaultValues : {
+            TypeOfShow : 'Movie'
+        }
+    });
+
     const dispatch = useDispatch()
 
     const InputValue = watch('InputValue')
+    const TypeOfShow = watch('TypeOfShow')
 
 
     const onSubmit = () => {
         if (InputValue)
         {
-            dispatch(fetchResultSearch(InputValue))
-            dispatch(GetImdbSeriesData(InputValue))
+            dispatch(fetchResultSearch({InputValue , TypeOfShow}))
             reset({InputValue : ''})
-            Navigate('/search/movie')
+            Navigate(`/search/${TypeOfShow}`)
         }
     }
 
@@ -86,6 +91,10 @@ export const HeaderMaster = () => {
                     <ReadyToSearch>
                         <span onClick={onSubmit}><BiSearchAlt/></span>
                         <input  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
+                        <select {...register('TypeOfShow')}>
+                            <option>Movie</option>
+                            <option>Series</option>
+                        </select>
                     </ReadyToSearch>
 
                     <RenderSearch render={InputValue ? 'block' : 'none'}>

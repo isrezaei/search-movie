@@ -1,12 +1,12 @@
 import {useSelector} from "react-redux";
 import {selectAllResultSearch} from "../../Redux/ResultSearchSlice";
-import ResultSearchMovieCard from "./ResultSearchMovieCard";
+import ResultMovieCard from "./ResultMovieCard";
 
 
-const ResultSearchMovieShow = () => {
+const ResultMovieShow = () => {
 
     const FilterMovie = useSelector(selectAllResultSearch).filter(value => value.Type === 'movie')
-    const ResultSearchMovie = FilterMovie.map(MovieData => <ResultSearchMovieCard key={MovieData.imdbID} MovieData={MovieData}/>)
+    const ResultSearchMovie = FilterMovie.map(MovieData => <ResultMovieCard key={MovieData.imdbID} MovieData={MovieData}/>)
 
     return (
         <div className='show_movie'>
@@ -15,4 +15,4 @@ const ResultSearchMovieShow = () => {
     )
 };
 
-export default ResultSearchMovieShow;
+export default ResultMovieShow;

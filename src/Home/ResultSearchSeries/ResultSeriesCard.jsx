@@ -2,11 +2,10 @@ import {Link} from "react-router-dom";
 import {Animated} from "react-animated-css";
 import NoImageAvailable from "../../NoImageAvailable.svg";
 
-const ResultSearchMovieCard = ({MovieData}) => {
-    const {Poster , Title , Type , Year , imdbID} = MovieData
+const ResultSeriesCard = ({SeriesData}) => {
 
 
-    console.log(MovieData)
+    const {Poster , Title , Type , Year , imdbID} = SeriesData
 
     return (
 
@@ -22,6 +21,8 @@ const ResultSearchMovieCard = ({MovieData}) => {
 
 
     );
+
+
 };
 
-export default ResultSearchMovieCard;
+export default ResultSeriesCard;

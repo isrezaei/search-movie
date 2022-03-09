@@ -1,15 +1,19 @@
-import {createSlice, createAsyncThunk, createEntityAdapter} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk, createEntityAdapter , createSelector} from "@reduxjs/toolkit";
 import ImdbApi from "../Api/ImdbApi";
 import {KeyApi} from "../Api/Key";
 
 
 export const fetchResultSearch = createAsyncThunk('Movie&Series/ResultSearch' , async (params)=>{
 
-    const Movie = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data.Search
-    const Series = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)).data.Search
+    const {InputValue , TypeOfShow} = params
 
+    const Movie = (await ImdbApi.get(`?s=${InputValue}&apikey=${KeyApi}&type=movie`)).data.Search
+    const Series = (await ImdbApi.get(`?s=${InputValue}&apikey=${KeyApi}&type=series`)).data.Search
 
-    return Movie.concat(Series)
+    return {
+        SearchResult : Movie.concat(Series),
+        TypeOfShow
+    }
 })
 
 
@@ -20,20 +24,32 @@ const ResultSearchAdapter = createEntityAdapter({
 
 const initialState  = ResultSearchAdapter.getInitialState({
     status : 'idle',
+    activeIconMove : 'Home'
 })
 
 
-export const {selectIds : selectResultSearchIds , selectById : selectResultSearchByIds , selectAll : selectAllResultSearch } = ResultSearchAdapter.getSelectors(state => state.ResultSearchSlice)
+export const {
+    selectIds : selectResultSearchIds,
+    selectById : selectResultSearchByIds,
+    selectAll : selectAllResultSearch ,
+} = ResultSearchAdapter.getSelectors(state => state.ResultSearchSlice)
+
+
 
 
 
 export const ResultSearchSlice = createSlice({
     name : 'ShowResultSearch',
     initialState ,
-    reducers : {},
+    reducers : {
+        ChangeActiveIcon : (state , {payload}) =>
+        {
+            state.activeIconMove = payload
+        }
+    },
     extraReducers : {
 
-        [fetchResultSearch.pending] : (state)=>
+        [fetchResultSearch.pending] : (state , {payload})=>
         {
             state.status = 'pending'
             ResultSearchAdapter.removeAll(state)
@@ -41,7 +57,8 @@ export const ResultSearchSlice = createSlice({
         [fetchResultSearch.fulfilled] : (state , {payload})=>
         {
             state.status = 'success'
-            ResultSearchAdapter.upsertMany(state , payload)
+            state.activeIconMove = payload.TypeOfShow
+            ResultSearchAdapter.upsertMany(state , payload.SearchResult)
         },
         [fetchResultSearch.rejected] : (state)=>
         {
@@ -53,3 +70,4 @@ export const ResultSearchSlice = createSlice({
 })
 
 export default ResultSearchSlice.reducer
+export const {ChangeActiveIcon} = ResultSearchSlice.actions

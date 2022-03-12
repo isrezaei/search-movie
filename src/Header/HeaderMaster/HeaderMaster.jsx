@@ -5,9 +5,7 @@ import {useEffect} from "react";
 import {Link , useNavigate } from "react-router-dom";
 import {selectIdsSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchSyncSearch , CleanSyncSearch} from "../../Redux/SyncSearchSlice";
-import {fetchResultSearch} from "../../Redux/ResultSearchSlice";
-import {GetImdbMovieData} from "../../Redux/MovieSlice";
-import {GetImdbSeriesData} from "../../Redux/SeriesSlice";
+import {fetchResultSearch, ActiveIcone , SearchValue} from "../../Redux/ResultSearchSlice";
 import {HeaderMasterStyle,LeftSide,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderMasterStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
 
@@ -37,7 +35,10 @@ export const HeaderMaster = () => {
     const onSubmit = () => {
         if (InputValue)
         {
-            dispatch(fetchResultSearch({InputValue , TypeOfShow}))
+            dispatch(fetchResultSearch(InputValue))
+            dispatch(ActiveIcone(TypeOfShow))
+            dispatch(SearchValue(InputValue))
+
             reset({InputValue : ''})
             Navigate(`/search/${TypeOfShow}`)
         }

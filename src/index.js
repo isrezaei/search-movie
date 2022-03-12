@@ -35,8 +35,6 @@ const Theme = {
 }
 
 
-
-
 ReactDOM.render(
       <BrowserRouter>
               <Provider store={store}>

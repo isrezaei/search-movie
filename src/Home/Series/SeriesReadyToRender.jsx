@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import SeriesShow from "./SeriesShow";
 import {useEffect} from "react";
 import {GetImdbSeriesData} from "../../Redux/SeriesSlice";
-import Choice from "../../Chose/Choice";
+import TextSearchValue from "../../TextSearchValue/TextSearchValue";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 
 
@@ -36,7 +36,7 @@ const SeriesReadyToRender = () => {
 
     return (
         <>
-            <Choice/>
+            <TextSearchValue/>
             {Rendering}
         </>
     );

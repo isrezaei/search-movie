@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import ResultSeriesShow from "./ResultSeriesShow";
+import TextSearchValue from "../../TextSearchValue/TextSearchValue";
 
 const ResultSeriesRender = () => {
 
@@ -30,6 +31,7 @@ const ResultSeriesRender = () => {
     return (
 
         <>
+            <TextSearchValue/>
             {Render}
         </>
 

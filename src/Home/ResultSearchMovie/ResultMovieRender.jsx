@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux";
 import ResultMovieShow from "./ResultMovieShow";
 import {Preloaded} from "../../PreLoaded/Preloaded";
+import TextSearchValue from "../../TextSearchValue/TextSearchValue";
 
 
 const ResultMovieRender = () => {
@@ -31,6 +32,7 @@ const ResultMovieRender = () => {
     return (
 
         <>
+            <TextSearchValue/>
             {Render}
         </>
 

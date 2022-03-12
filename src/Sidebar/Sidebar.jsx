@@ -16,15 +16,21 @@ const Sidebar = () => {
 
     const dispatch = useDispatch()
 
-    const ActiveIconMove = useSelector(state => state.ResultSearchSlice.activeIconMove)
+    const activeIconSidebar = useSelector(state => state.ResultSearchSlice.activeIconSidebar)
 
-    const ActiveHome = ActiveIconMove === 'Home'
-    const ActiveMovie = ActiveIconMove === 'Movie'
-    const ActiveSeries = ActiveIconMove === 'Series'
+    console.log(activeIconSidebar)
+
+    const ActiveHome = activeIconSidebar === 'Home'
+    const ActiveMovie = activeIconSidebar === 'Movie'
+    const ActiveSeries = activeIconSidebar === 'Series'
 
 
-    console.log(ActiveHome)
+    const onSubmit = (IconName) =>
+    {
+        dispatch(ChangeActiveIcon(IconName))
+        sessionStorage.setItem('IconName' , JSON.stringify(IconName))
 
+    }
 
 
     return (
@@ -36,7 +42,7 @@ const Sidebar = () => {
                 <Animated
                     animationIn="tada"
                     animateOnMount={ActiveHome}>
-                    <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> dispatch(ChangeActiveIcon('Home'))}><HiHome/></Icon>
+                    <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Home')}><HiHome/></Icon>
                 </Animated>
             </Link>
 
@@ -45,7 +51,7 @@ const Sidebar = () => {
                 <Animated
                     animationIn="tada"
                     animateOnMount={ActiveMovie}>
-                    <Icon Name={'Movie'} ActiveIcon={ActiveMovie} onClick={()=> dispatch(ChangeActiveIcon('Movie'))}><MdLocalMovies/></Icon>
+                    <Icon Name={'Movie'} ActiveIcon={ActiveMovie} onClick={()=> onSubmit('Movie')}><MdLocalMovies/></Icon>
                 </Animated>
             </Link>
 
@@ -53,7 +59,7 @@ const Sidebar = () => {
                 <Animated
                     animationIn="tada"
                     animateOnMount={ActiveSeries}>
-                    <Icon Name={'Series'} ActiveIcon={ActiveSeries} onClick={()=> dispatch(ChangeActiveIcon('Series'))}><RiMovie2Fill/></Icon>
+                    <Icon Name={'Series'} ActiveIcon={ActiveSeries} onClick={()=> onSubmit('Series')}><RiMovie2Fill/></Icon>
                 </Animated>
             </Link>
 

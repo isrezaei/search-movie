@@ -83,7 +83,7 @@ export const HeaderMaster = () => {
     return (
         <HeaderMasterStyle>
 
-            <LeftSide>
+
 
                 <Logo onClick={()=> Navigate('/')}>MOV</Logo>
 
@@ -104,7 +104,7 @@ export const HeaderMaster = () => {
 
                 </Search>
 
-            </LeftSide>
+
 
 
 

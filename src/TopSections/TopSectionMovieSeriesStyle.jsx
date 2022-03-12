@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-
-
-
 export const TextSearchStyle = styled.div`
   width: 85%;
   height: 6vw;
@@ -16,17 +13,12 @@ export const TextSearchStyle = styled.div`
 `
 
 export const TextSearch = styled.div`
-
   font-size: 1.9vw;
   font-weight: bold;
   color: #bdbcbc;
-
-
 `
 
-
 export const TypeSearch = styled.div `
-
   width: 100%;
   display: flex;
   justify-content: space-around;

@@ -2,32 +2,29 @@ import styled from "styled-components";
 
 export const HeaderMasterStyle = styled.div `
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 4vw;
-  background-color: #1a1923;
+  background-color:#1b2634;
   margin: auto;
 `
-export const LeftSide = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 25;
-  padding: 0 2vw;
-`
 export const Logo = styled.div`
+  margin-left: 2vw;
   font-weight: bolder;
   font-size: 1.5vw;
   cursor: pointer;
   color: white;
 `
 export const Search = styled.div`
+  margin-right: 2vw;
+  width: 20%;
+  height: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 1.5vw;
+  background: rebeccapurple;
 `
 export const ReadyToSearch = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import ResultSeriesShow from "./ResultSeriesShow";
-import TextSearchValue from "../../TextSearchValue/TextSearchValue";
+import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries";
 
 const ResultSeriesRender = () => {
 
@@ -31,7 +31,7 @@ const ResultSeriesRender = () => {
     return (
 
         <>
-            {Status === 'success' && <TextSearchValue/>}
+            {Status === 'success' && <TopSectionMovieSeries/>}
             {Render}
         </>
 

@@ -1,8 +1,8 @@
 import {useSelector} from "react-redux";
-import {TextSearch ,TextSearchStyle , TypeSearch} from "./TextSearchValueStyle";
+import {TextSearch ,TextSearchStyle , TypeSearch} from "./TopSectionMovieSeriesStyle";
 
 
-const TextSearchValue = () => {
+const TopSectionMovieSeries = () => {
 
     const SearchValue = useSelector(state => state.ResultSearchSlice.searchValue)
     const ActiveCategory = useSelector(state => state.ResultSearchSlice.activeCategory)
@@ -34,4 +34,4 @@ const TextSearchValue = () => {
     );
 };
 
-export default TextSearchValue;
+export default TopSectionMovieSeries;

@@ -12,7 +12,7 @@ export const GridDisplay = styled.div`
 `
 
 export const CardParent = styled.div`
-  
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,12 +20,34 @@ export const CardParent = styled.div`
   align-items: flex-start;
   transition: .1s ease-in;
   cursor: pointer;
-
+  &:hover
+  {
+    transform: scale(0.96);
+  }
 `
+
+export const CardType = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 1vw;
+  position: absolute;
+  z-index: 1;
+  right: .5vw;
+  top: 1vw;
+  border-radius: 2vw;
+  background: #63efb1;
+  font-size: .7vw;
+  font-weight: bolder;
+  color: black;
+`
+
 export const CardImage = styled.img`
   width: 16vw;
   height: 23vw;
   margin: .5vw 0;
+  filter: brightness(80%);
 `
 
 export const CardYear = styled.div`

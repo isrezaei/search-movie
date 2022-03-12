@@ -1,13 +1,15 @@
 import {useSelector} from "react-redux";
-import MovieShow from "./MovieShow";
+import ResultHomeShow from "./ResultHomeShow";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {GetImdbMovieData} from "../../Redux/MovieSlice";
+import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
+import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries";
+import TopSectionHome from "../../TopSections/TopSectionHome";
 
 
 
-const MovieReadyToRender = () => {
+const ResultHomeReadyToRender = () => {
 
 
     const status = useSelector(state => state.MovieSlice.status)
@@ -23,7 +25,7 @@ const MovieReadyToRender = () => {
     }
     else if (status === 'success')
     {
-        Rendering = <MovieShow/>
+        Rendering = <ResultHomeShow/>
     }
     else if (status === 'reject')
     {
@@ -39,9 +41,10 @@ const MovieReadyToRender = () => {
 
     return (
         <>
+            <TopSectionHome/>
             {Rendering}
         </>
     );
 };
 
-export default MovieReadyToRender;
+export default ResultHomeReadyToRender;

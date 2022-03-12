@@ -23,7 +23,7 @@ const initialState = MovieAdapter.getInitialState({
 
 export const {selectIds : selectMovieIds , selectById : selectMovieByIds} = MovieAdapter.getSelectors(state => state.MovieSlice)
 
-const MovieSlice = createSlice({
+const ResultFirstRenderSlice = createSlice({
     name : 'movie',
     initialState ,
     reducers : {} ,
@@ -52,4 +52,4 @@ const MovieSlice = createSlice({
 
 })
 
-export default MovieSlice.reducer
+export default ResultFirstRenderSlice.reducer

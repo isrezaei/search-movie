@@ -1,14 +1,14 @@
 import {useSelector} from "react-redux";
-import {selectMovieIds} from "../../Redux/MovieSlice";
-import MovieCard from "./MovieCard";
+import {selectMovieIds} from "../../Redux/ResultFirstRenderSlice";
+import ResultHomeCard from "./ResultHomeCard";
 import {GridDisplay} from "../ResultStyled/ResultStyled";
 
 
 
-const MovieShow = () => {
+const ResultHomeShow = () => {
     const MovieIds = useSelector(selectMovieIds)
 
-    const MovieShow = MovieIds.map(ids => <MovieCard key={ids} ids={ids}/>)
+    const MovieShow = MovieIds.map(ids => <ResultHomeCard key={ids} ids={ids}/>)
 
     return (
 
@@ -19,4 +19,4 @@ const MovieShow = () => {
     );
 };
 
-export default MovieShow;
+export default ResultHomeShow;

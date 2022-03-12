@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-import MovieSlice from "./MovieSlice";
+import MovieSlice from "./ResultFirstRenderSlice";
 import SeriesSlice from "./SeriesSlice";
 import SyncSearch from "./SyncSearchSlice";
 import ResultSearchSlice from "./ResultSearchSlice";

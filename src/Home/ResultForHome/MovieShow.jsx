@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectMovieIds} from "../../Redux/MovieSlice";
 import MovieCard from "./MovieCard";
-import '../NativeStyle/NativeStyle.scss'
+import {GridDisplay} from "../ResultStyled/ResultStyled";
 
 
 
@@ -12,9 +12,9 @@ const MovieShow = () => {
 
     return (
 
-            <div className='show_movie'>
+            <GridDisplay>
                 {MovieShow}
-            </div>
+            </GridDisplay>
 
     );
 };

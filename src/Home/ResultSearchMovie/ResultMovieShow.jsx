@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectAllResultSearch} from "../../Redux/ResultSearchSlice";
 import ResultMovieCard from "./ResultMovieCard";
+import {GridDisplay} from "../ResultStyled/ResultStyled";
 
 
 const ResultMovieShow = () => {
@@ -9,9 +10,9 @@ const ResultMovieShow = () => {
     const ResultSearchMovie = FilterMovie.map(MovieData => <ResultMovieCard key={MovieData.imdbID} MovieData={MovieData}/>)
 
     return (
-        <div className='show_movie'>
+        <GridDisplay>
             {ResultSearchMovie}
-        </div>
+        </GridDisplay>
     )
 };
 

@@ -4,7 +4,12 @@ import {KeyApi} from "../Api/Key";
 
 
 export const GetImdbMovieData = createAsyncThunk('movie/MovieData' , async (params= 'friends' )=> {
-    return (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data
+
+    const Movie =  (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data.Search
+    const Series = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)).data.Search
+
+    return Movie.concat(Series)
+
 })
 
 const MovieAdapter = createEntityAdapter({
@@ -30,15 +35,13 @@ const MovieSlice = createSlice({
         },
         [GetImdbMovieData.fulfilled] : (state , {payload})=>
         {
-            if (payload.Search)
-            {
-                state.status = 'success'
-                MovieAdapter.upsertMany(state , payload.Search)
-            }
-            else
-            {
-                state.status = 'reject'
-            }
+
+            console.log(payload)
+
+            state.status = 'success'
+            MovieAdapter.upsertMany(state , payload)
+
+
         },
         [GetImdbMovieData.rejected] : (state)=>
         {

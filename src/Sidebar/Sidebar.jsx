@@ -12,17 +12,15 @@ import {Animated} from "react-animated-css";
 const Sidebar = () => {
 
 
-
-
     const dispatch = useDispatch()
 
-    const activeIconSidebar = useSelector(state => state.ResultSearchSlice.activeIconSidebar)
+    const ActiveCategory = useSelector(state => state.ResultSearchSlice.activeCategory)
 
-    console.log(activeIconSidebar)
+    // console.log(ActiveIconSidebar)
 
-    const ActiveHome = activeIconSidebar === 'Home'
-    const ActiveMovie = activeIconSidebar === 'Movie'
-    const ActiveSeries = activeIconSidebar === 'Series'
+    const ActiveHome = ActiveCategory === 'Home'
+    const ActiveMovie = ActiveCategory === 'Movie'
+    const ActiveSeries = ActiveCategory === 'Series'
 
 
     const onSubmit = (IconName) =>

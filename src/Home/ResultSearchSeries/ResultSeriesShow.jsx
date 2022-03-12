@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectAllResultSearch} from "../../Redux/ResultSearchSlice";
 import ResultSeriesCard from "./ResultSeriesCard";
+import {GridDisplay} from "../ResultStyled/ResultStyled";
 
 const ResultSeriesShow = () => {
 
@@ -9,9 +10,9 @@ const ResultSeriesShow = () => {
 
 
     return (
-        <div className='show_movie'>
+        <GridDisplay>
             {ResultSearchSeries}
-        </div>
+        </GridDisplay>
     );
 };
 

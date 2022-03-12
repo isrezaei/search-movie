@@ -5,6 +5,7 @@ import {TextSearch ,TextSearchStyle , TypeSearch} from "./TextSearchValueStyle";
 const TextSearchValue = () => {
 
     const SearchValue = useSelector(state => state.ResultSearchSlice.searchValue)
+    const ActiveCategory = useSelector(state => state.ResultSearchSlice.activeCategory)
 
 
     return (
@@ -22,7 +23,7 @@ const TextSearchValue = () => {
 
           <p>Your Search</p>
           <hr/>
-          <div>Type of</div>
+          <div>{ActiveCategory}</div>
 
       </TypeSearch>
 

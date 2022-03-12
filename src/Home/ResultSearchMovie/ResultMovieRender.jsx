@@ -32,7 +32,7 @@ const ResultMovieRender = () => {
     return (
 
         <>
-            <TextSearchValue/>
+            {Status === 'success' && <TextSearchValue/>}
             {Render}
         </>
 

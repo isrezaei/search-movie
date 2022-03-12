@@ -1,16 +1,13 @@
-import {createSlice, createAsyncThunk, createEntityAdapter , createSelector} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk, createEntityAdapter} from "@reduxjs/toolkit";
 import ImdbApi from "../Api/ImdbApi";
 import {KeyApi} from "../Api/Key";
 
 
 export const fetchResultSearch = createAsyncThunk('Movie&Series/ResultSearch' , async (params)=>{
-
-
     const Movie = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=movie`)).data.Search
     const Series = (await ImdbApi.get(`?s=${params}&apikey=${KeyApi}&type=series`)).data.Search
 
     return Movie.concat(Series)
-
 })
 
 
@@ -24,9 +21,8 @@ const ResultSearchAdapter = createEntityAdapter({
 
 const initialState  = ResultSearchAdapter.getInitialState({
     status : 'idle',
-    activeIconSidebar : DefaultIconName || 'Home',
+    activeCategory : DefaultIconName || 'Home',
     searchValue : ''
-
 })
 
 
@@ -44,12 +40,12 @@ export const ResultSearchSlice = createSlice({
     reducers : {
         ActiveIcone : (state , {payload})=>
         {
-            state.activeIconSidebar = payload
+            state.activeCategory = payload
             sessionStorage.setItem('IconName' , JSON.stringify(payload))
         },
         ChangeActiveIcon : (state , {payload}) =>
         {
-            state.activeIconSidebar = payload
+            state.activeCategory = payload
         },
         SearchValue : (state , {payload}) =>
         {

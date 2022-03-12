@@ -1,20 +1,21 @@
 import {Link} from "react-router-dom";
 import {Animated} from "react-animated-css";
 import NoImageAvailable from "../../NoImageAvailable.svg";
+import {CardImage, CardParent, CardTitle, CardYear} from "../ResultStyled/ResultStyled";
 
 const ResultMovieCard = ({MovieData}) => {
 
-    const {Poster , Title , Type , Year , imdbID} = MovieData
+    const {Poster , Title , Year , imdbID} = MovieData
 
     return (
 
         <Link to={`/Details/${imdbID}`} style={{textDecoration : 'none'}}>
             <Animated animationIn='bounceIn'>
-                <div className='cards'>
-                    <img className='image' src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
-                    <div className='year'>{Year}</div>
-                    <div className='title'>{Title}</div>
-                </div>
+                <CardParent>
+                    <CardImage src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
+                    <CardYear>{Year}</CardYear>
+                    <CardTitle>{Title}</CardTitle>
+                </CardParent>
             </Animated>
         </Link>
 

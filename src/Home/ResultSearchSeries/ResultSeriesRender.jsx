@@ -31,7 +31,7 @@ const ResultSeriesRender = () => {
     return (
 
         <>
-            <TextSearchValue/>
+            {Status === 'success' && <TextSearchValue/>}
             {Render}
         </>
 

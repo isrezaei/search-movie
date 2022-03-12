@@ -3,7 +3,6 @@ import MovieShow from "./MovieShow";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/MovieSlice";
-import TextSearchValue from "../../TextSearchValue/TextSearchValue";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 
 

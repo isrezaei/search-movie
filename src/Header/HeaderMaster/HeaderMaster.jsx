@@ -44,6 +44,8 @@ export const HeaderMaster = () => {
         }
     }
 
+
+
     useEffect(()=>{
 
         watch(({InputValue}) => {
@@ -57,6 +59,7 @@ export const HeaderMaster = () => {
                 dispatch(CleanSyncSearch())
             }
         }) ;
+
 
     },[watch , dispatch])
 
@@ -85,7 +88,7 @@ export const HeaderMaster = () => {
 
 
 
-                <Logo onClick={()=> Navigate('/')}>MOV</Logo>
+                <Logo onClick={()=> Navigate('/')}>MOV.</Logo>
 
                 <Search>
 

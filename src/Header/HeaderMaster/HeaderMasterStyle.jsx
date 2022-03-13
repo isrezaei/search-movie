@@ -18,31 +18,52 @@ export const Logo = styled.div`
 `
 export const Search = styled.div`
   margin-right: 2vw;
-  width: 20%;
+  width: auto;
   height: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rebeccapurple;
 `
 export const ReadyToSearch = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   span
   {
-    font-size: 1vw;
+    display: flex;
+    font-size: 2vw;
     color: lightseagreen;
     cursor: pointer;
+    margin-right: .5vw;
   }
   input
   {
+    width: 14vw;
+    height: 1.5vw;
     border: none;
     outline: none;
     background: transparent;
     color: #8f8f8f;
+    font-size: 1vw;
+    border-bottom: .5px solid lightseagreen;
+   
   }
+  
+  select {
+    width: 4vw;
+    height: 1.5vw;
+    border: none;
+    background: lightseagreen;
+    text-align: center;
+    margin-left: 1vw;
+    outline: none;
+    font-size: .75vw;
+  }
+  
+
+
+  
 `
 export const RenderSearch =  styled.div`
   display: ${({render}) => render};

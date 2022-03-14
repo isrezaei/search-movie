@@ -1,6 +1,3 @@
-
-import styled from "styled-components";
-
 export const SliderData = [
     {
         id : 1 ,
@@ -27,41 +24,3 @@ export const SliderData = [
         image: 'https://user-images.githubusercontent.com/77073972/158150491-d9977b6d-ff5c-4501-9cd1-54b3c0cb5bdc.jpg'
     }
 ]
-
-
-
-export const SliderImage = styled.img`
-  width: 100vw;
-  filter: brightness(80%);
-`
-export const SliderPosterName = styled.p`
-  font-family: 'Secular One', sans-serif;
-  position: absolute;
-  top: 26.5vw;
-  left: 1.2vw;
-  font-size: 2vw;
-  color: snow;
-`
-export const SliderImdbRate = styled.p`
-  font-family: 'Comfortaa', cursive;
-  position: absolute;
-  top : 21.5vw;
-  left: 1.2vw;
-  font-size: 1.2vw;
-  font-weight: lighter;
-  color: whitesmoke;
-`
-
-export const BoldRate =styled.b`
-  color: yellow;
-  font-size: 1.8vw;
-  font-weight: bolder;
-`
-
-export const SliderImdbLogo = styled.img`
-  width: 4vw;
-  position: absolute;
-  top : 23.9vw;
-  left: 1.2vw;
-  border-radius: 2vw;
-`

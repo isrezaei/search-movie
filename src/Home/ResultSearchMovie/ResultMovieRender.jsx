@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import ResultMovieShow from "./ResultMovieShow";
 import {Preloaded} from "../../PreLoaded/Preloaded";
-import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries";
+import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries/TopSectionMovieSeries";
 
 
 const ResultMovieRender = () => {

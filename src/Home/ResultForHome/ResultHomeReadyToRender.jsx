@@ -4,7 +4,8 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
-import TopSectionHome from "../../TopSections/TopSectionHome";
+import {UpperSlider , UnderSlider} from "./HomeElementStyle";
+import TopSectionHome from "../../TopSections/TopSectionHomeSlider/TopSectionHome";
 
 const ResultHomeReadyToRender = () => {
 
@@ -38,7 +39,9 @@ const ResultHomeReadyToRender = () => {
 
     return (
         <>
+            <UpperSlider/>
             <TopSectionHome/>
+            <UnderSlider/>
             {Rendering}
         </>
     );

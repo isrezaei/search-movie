@@ -35,13 +35,8 @@ const ResultFirstRenderSlice = createSlice({
         },
         [GetImdbMovieData.fulfilled] : (state , {payload})=>
         {
-
-            console.log(payload)
-
             state.status = 'success'
             MovieAdapter.upsertMany(state , payload)
-
-
         },
         [GetImdbMovieData.rejected] : (state)=>
         {

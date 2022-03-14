@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import {Carousel} from '3d-react-carousal';
-import Image1 from './1.jpg'
-import Image2 from './2.jpg'
-import Image3 from './3.jpg'
-import Image4 from './4.jpg'
+import ImdbLogo from '../ImdbLogo.png'
+
+import {SliderData, SliderImage, SliderPosterName, SliderImdbRate, SliderImdbLogo , BoldRate} from "./TopSectionSliderData";
 
 
 const TopSectionHome = () => {
@@ -14,29 +13,38 @@ const TopSectionHome = () => {
       margin: 2vw auto;
     `
 
-    const SlideImage = styled.img`
-    
-        width: 100vw;
-      
-    
-    
-    `
-
-
     let slides = [
-        <SlideImage  src={Image1} alt="1" />,
-        <SlideImage  src={Image2} alt="2" />  ,
-        <SlideImage  src={Image3} alt="3" />  ,
-        <SlideImage  src={Image4} alt="4" />  ,
+        <div>
+            <SliderImage src={SliderData[0].image} alt={SliderData[0].id}/>
+            <SliderImdbRate><BoldRate>{SliderData[0].imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderPosterName>{SliderData[0].posterName}</SliderPosterName>
+        </div>,
+        <div>
+            <SliderImage src={SliderData[1].image} alt={SliderData[0].id}/>
+            <SliderImdbRate><BoldRate>{SliderData[1].imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderPosterName>{SliderData[1].posterName}</SliderPosterName>
+        </div>,
+        <div>
+            <SliderImage src={SliderData[2].image} alt={SliderData[0].id}/>
+            <SliderImdbRate><BoldRate>{SliderData[2].imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderPosterName>{SliderData[2].posterName}</SliderPosterName>
+        </div>,
+        <div>
+            <SliderImage src={SliderData[3].image} alt={SliderData[0].id}/>
+            <SliderImdbRate><BoldRate>{SliderData[3].imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderPosterName>{SliderData[3].posterName}</SliderPosterName>
+        </div>,
     ];
-
-
 
 
     return (
 
         <TextTopHome>
-            <Carousel slides={slides} autoplay={true} interval={2500}/>
+            <Carousel slides={slides} autoplay={false} interval={5000}/>
         </TextTopHome>
     );
 };

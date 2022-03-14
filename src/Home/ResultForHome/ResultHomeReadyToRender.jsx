@@ -4,11 +4,7 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
-import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries";
 import TopSectionHome from "../../TopSections/TopSectionHome";
-import {HomeStyle} from "../ResultStyled/ResultStyled";
-
-
 
 const ResultHomeReadyToRender = () => {
 

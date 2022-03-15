@@ -4,13 +4,13 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
-import {UpperSlider , UnderSlider} from "./HomeElementStyle";
+import {UpperSlider , UnderSlider} from "./Upper&UnderHomeSlider/UpperUnderHomeSlider";
 import TopSectionHome from "../../TopSections/TopSectionHomeSlider/TopSectionHome";
 
 const ResultHomeReadyToRender = () => {
 
 
-    const status = useSelector(state => state.MovieSlice.status)
+    const status = useSelector(state => state.ResultFirstRenderSlice.status)
 
     const dispatch = useDispatch()
     // console.log(status)

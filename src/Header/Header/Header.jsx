@@ -6,14 +6,14 @@ import {Link , useNavigate } from "react-router-dom";
 import {selectIdsSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchSyncSearch , CleanSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchResultSearch, ActiveIcone , SearchValue} from "../../Redux/ResultSearchSlice";
-import {HeaderMasterStyle,LeftSide,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderMasterStyle";
+import {HeaderStyle,LeftSide,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
 
 
 
 
 
-export const HeaderMaster = () => {
+export const Header = () => {
 
     const SyncSearchId = useSelector(selectIdsSyncSearch)
     const SearchStatus = useSelector(state => state.SyncSearch.status)
@@ -84,7 +84,7 @@ export const HeaderMaster = () => {
 
 
     return (
-        <HeaderMasterStyle>
+        <HeaderStyle>
 
 
 
@@ -111,8 +111,8 @@ export const HeaderMaster = () => {
 
 
 
-        </HeaderMasterStyle>
+        </HeaderStyle>
     );
 };
 
-export default HeaderMaster;
+export default Header;

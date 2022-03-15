@@ -1,5 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-import HeaderMaster from "./Header/HeaderMaster/HeaderMaster";
+import Header from "./Header/Header/Header";
 import ResultHomeReadyToRender from "./Home/ResultForHome/ResultHomeReadyToRender";
 import ResultMovieRender from "./Home/ResultSearchMovie/ResultMovieRender";
 import ResultSeriesRender from "./Home/ResultSearchSeries/ResultSeriesRender";
@@ -15,9 +15,7 @@ import Sidebar from "./Sidebar/Sidebar";
 function App() {
     return (
         <div>
-
-            <HeaderMaster/>
-
+            <Header/>
                 <Routes>
                     <Route path='/' exact element={<ResultHomeReadyToRender/>}/>
                     <Route path='/search/movie'  element={<ResultMovieRender/>}/>
@@ -25,10 +23,7 @@ function App() {
                     <Route path='Details/:imdbID' element={<Details/>}/>
                     <Route path='*' element={<NotFound404/>}/>
                 </Routes>
-
-
             <Sidebar/>
-
         </div>
     )
 }

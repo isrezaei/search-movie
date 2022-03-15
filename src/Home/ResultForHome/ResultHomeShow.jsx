@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectMovieIds} from "../../Redux/ResultFirstRenderSlice";
 import ResultHomeCard from "./ResultHomeCard";
-import {GridDisplay} from "../ResultStyled/ResultStyled";
+import {GridDisplay} from "../MainStyled/MainStyled";
 
 
 

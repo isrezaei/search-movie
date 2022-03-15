@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectAllResultSearch} from "../../Redux/ResultSearchSlice";
 import ResultMovieCard from "./ResultMovieCard";
-import {GridDisplay} from "../ResultStyled/ResultStyled";
+import {GridDisplay} from "../MainStyled/MainStyled";
 
 
 const ResultMovieShow = () => {

@@ -1,18 +1,16 @@
-import {useState} from "react";
+import {useDispatch , useSelector} from "react-redux";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import {ChangeDarkMood} from "../Redux/DarkMoodSlice";
 
 const DarkMoodControl = () => {
 
-    const [isDarkMode, setDarkMode] = useState(true);
-
-    const toggleDarkMode = (checked) => {
-        setDarkMode(!checked);
-    }
+    const isDarkMood = useSelector(state => state.DarkMoodSlice.darkMood)
+    const dispatch = useDispatch()
 
     return (
         <DarkModeSwitch
-            checked={isDarkMode}
-            onChange={()=> toggleDarkMode(isDarkMode)}
+            checked={isDarkMood}
+            onChange={()=> dispatch(ChangeDarkMood())}
             size={30}
         />
     );

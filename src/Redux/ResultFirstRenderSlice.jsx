@@ -21,7 +21,7 @@ const initialState = MovieAdapter.getInitialState({
     status : 'idle',
 })
 
-export const {selectIds : selectMovieIds , selectById : selectMovieByIds} = MovieAdapter.getSelectors(state => state.MovieSlice)
+export const {selectIds : selectMovieIds , selectById : selectMovieByIds} = MovieAdapter.getSelectors(state => state.ResultFirstRenderSlice)
 
 const ResultFirstRenderSlice = createSlice({
     name : 'movie',

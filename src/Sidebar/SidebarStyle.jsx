@@ -1,12 +1,4 @@
-import styled, {keyframes} from "styled-components";
-
-
-
-
-
-
-
-
+import styled from "styled-components";
 
 export const SidebarStyle = styled.div`
   width: 4%;
@@ -15,11 +7,12 @@ export const SidebarStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:#3b4856;
+  background: ${props => props.theme.background_sidebar};
   position: fixed;
   top: 50%;
-  left: 0%;
+  left: 0;
   transform: translate(0% , -50%);
+  transition: .1s;
   border-radius: 0 1vw 1vw 0;
 `
 
@@ -35,13 +28,14 @@ const AdjustIcon = styled.div`
 `
 
 export const Icon = styled(AdjustIcon) `
-  color: ${({ActiveIcon})=> ActiveIcon  ? '#20e28c' : '#6c7682'};
+  color: ${({ActiveIcon , theme})=> ActiveIcon  ? theme.color_sidebar_active_icon : theme.color_sidebar_disable_icon};
   &:after
   {
     height: 1vw;
     content: '${({Name})=> Name}';
     display: ${({ActiveIcon})=> ActiveIcon ? 'block' : 'none'};;
     font-size: .65vw;
+    transition: .1s;
   }
 `
 

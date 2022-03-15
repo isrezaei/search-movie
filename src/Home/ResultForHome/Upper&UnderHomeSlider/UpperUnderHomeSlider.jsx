@@ -1,3 +1,4 @@
+import React from "react";
 import {createRef} from "react";
 import {ScrollTo} from "react-scroll-to";
 import { Upper, Under , Latest , UnderSliderSection , UnderSliderScrollToBtn } from "./UpperUnderHomeSliderStyle";

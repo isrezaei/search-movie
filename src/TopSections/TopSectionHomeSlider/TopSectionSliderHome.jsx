@@ -3,6 +3,7 @@ import ImdbLogo from '../../ImdbLogo.png'
 import {Carousel} from '3d-react-carousal';
 import {RiHeartAddFill} from 'react-icons/ri'
 import {SliderData} from "./SliderData";
+import React from "react";
 import {
     SliderImage,
     SliderPosterName,
@@ -11,7 +12,7 @@ import {
     BoldRate,
     SliderAddFavorite} from "./SliderStyle";
 
-const TopSectionHome = () => {
+const TopSectionSliderHome = () => {
 
     const Parent = styled.div`
       width: 95%;
@@ -37,4 +38,4 @@ const TopSectionHome = () => {
     );
 };
 
-export default TopSectionHome;
+export default React.memo(TopSectionSliderHome);

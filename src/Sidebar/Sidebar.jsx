@@ -8,6 +8,7 @@ import {SidebarStyle , Icon } from "./SidebarStyle";
 import {ChangeActiveIcon} from "../Redux/ResultSearchSlice";
 import {useDispatch} from "react-redux";
 import {Animated} from "react-animated-css";
+import React from "react";
 
 const Sidebar = () => {
 
@@ -67,4 +68,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default React.memo(Sidebar);

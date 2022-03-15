@@ -1,12 +1,13 @@
+import React from "react";
 import {BiSearchAlt} from "react-icons/bi";
 import {useDispatch , useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
 import {useEffect} from "react";
-import {Link , useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import {selectIdsSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchSyncSearch , CleanSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchResultSearch, ActiveIcone , SearchValue} from "../../Redux/ResultSearchSlice";
-import {HeaderStyle,LeftSide,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderStyle";
+import {HeaderStyle,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
 
 
@@ -115,4 +116,4 @@ export const Header = () => {
     );
 };
 
-export default Header;
+export default React.memo(Header);

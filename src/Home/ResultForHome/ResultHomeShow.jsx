@@ -1,3 +1,4 @@
+import React from "react";
 import {useSelector} from "react-redux";
 import {selectMovieIds} from "../../Redux/ResultFirstRenderSlice";
 import ResultHomeCard from "./ResultHomeCard";
@@ -6,6 +7,7 @@ import {GridDisplay} from "../MainStyled/MainStyled";
 
 
 const ResultHomeShow = () => {
+
     const MovieIds = useSelector(selectMovieIds)
 
     const MovieShow = MovieIds.map(ids => <ResultHomeCard key={ids} ids={ids}/>)
@@ -19,4 +21,4 @@ const ResultHomeShow = () => {
     );
 };
 
-export default ResultHomeShow;
+export default React.memo(ResultHomeShow);

@@ -1,11 +1,11 @@
 import {useSelector} from "react-redux";
 import ResultHomeShow from "./ResultHomeShow";
-import {useEffect} from "react";
+import {useEffect, useMemo} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import {UpperSlider , UnderSlider} from "./Upper&UnderHomeSlider/UpperUnderHomeSlider";
-import TopSectionHome from "../../TopSections/TopSectionHomeSlider/TopSectionHome";
+import TopSectionHome from "../../TopSections/TopSectionHomeSlider/TopSectionSliderHome";
 
 const ResultHomeReadyToRender = () => {
 

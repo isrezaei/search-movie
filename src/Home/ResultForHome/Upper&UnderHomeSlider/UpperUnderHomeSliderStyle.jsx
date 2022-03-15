@@ -9,20 +9,21 @@ export const Upper = styled.div`
   align-items: center;
 
   h3 {
-    color: #9ca0ab;
+    color: ${props => props.theme.color_upper_slider_welcome_text};
     font-size: .95vw;
   }
 
   hr {
-    width: 65%;
-    border: 1px solid #424242;
+    width: 70%;
+    border: 1px solid ${props => props.theme.color_upper_slider_hr_line};
+    transition: .1s;
   }
 `
 export const Latest = styled.div`
   width: 6.5vw;
-  height: 1.5vw;
-  background-color: #20e28c;
-  color: #212121;
+  height: 1.8vw;
+  background-color: ${props => props.theme.color_upper_slider_right_btn};
+  color:  ${props => props.theme.color_upper_slider_right_btn_innerText};
   margin: 0 .3vw;
   border-radius: 5vw;
   display: flex;
@@ -30,13 +31,14 @@ export const Latest = styled.div`
   align-items: center;
   font-size: .75vw;
   font-weight: bolder;
-  cursor : default;
+  cursor: default;
+  transition: .1s;
 `
 
 export const UnderSliderScrollToBtn = styled(Latest)`
   width: 10vw;
-  background-color: #525763;
-  color: #9ca0ab;
+  background-color: ${props => props.theme.color_upper_slider_left_btn};
+  color: ${props => props.theme.color_upper_slider_left_btn_innerText};
   cursor: pointer;
 `
 

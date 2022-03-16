@@ -3,7 +3,7 @@ import {selectMovieByIds} from "../../Redux/ResultFirstRenderSlice";
 import {Link} from "react-router-dom";
 import NoImageAvailable from '../../NoImageAvailable.svg'
 import {Animated} from "react-animated-css";
-import {CardParent, CardImage, CardYear, CardTitle, CardType} from "../MainStyled/MainStyled";
+import {CardParent, CardImage, CardYear, CardTitle, CardType} from "../ResultComponentsStyled/ResultComponentsStyle";
 
 
 const ResultHomeCard = ({ids}) => {

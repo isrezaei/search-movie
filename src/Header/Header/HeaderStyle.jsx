@@ -15,7 +15,8 @@ export const Logo = styled.div`
   font-weight: bolder;
   font-size: 1.5vw;
   cursor: pointer;
-  color: ${props => props.theme.color_logo};
+  color: ${props => props.theme.color_Header_logo};
+  transition: .1s;
 `
 export const Search = styled.div`
   margin-right: 2vw;
@@ -37,6 +38,7 @@ export const ReadyToSearch = styled.div`
     color: ${props => props.theme.color_search_component};
     cursor: pointer;
     margin-right: .5vw;
+    transition: .1s;
   }
   input
   {
@@ -48,7 +50,7 @@ export const ReadyToSearch = styled.div`
     color: #8f8f8f;
     font-size: 1vw;
     border-bottom: .5px solid ${props => props.theme.color_search_component};
-   
+    transition: .1s;
   }
   
   select {
@@ -56,15 +58,14 @@ export const ReadyToSearch = styled.div`
     height: 1.5vw;
     border: none;
     background: ${props => props.theme.color_search_component};
+    color: ${props => props.theme.color_search_select_innerText};;
     text-align: center;
     margin-left: 1vw;
     outline: none;
     font-size: .75vw;
+    border-radius: 1vw;
+    transition: .1s;
   }
-  
-
-
-  
 `
 export const RenderSearch =  styled.div`
   display: ${({render}) => render};

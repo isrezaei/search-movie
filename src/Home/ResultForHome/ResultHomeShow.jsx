@@ -2,7 +2,7 @@ import React from "react";
 import {useSelector} from "react-redux";
 import {selectMovieIds} from "../../Redux/ResultFirstRenderSlice";
 import ResultHomeCard from "./ResultHomeCard";
-import {GridDisplay} from "../MainStyled/MainStyled";
+import {GridDisplay} from "../ResultComponentsStyled/ResultComponentsStyle";
 
 
 

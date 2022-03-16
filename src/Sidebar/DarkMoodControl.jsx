@@ -9,9 +9,11 @@ const DarkMoodControl = () => {
 
     return (
         <DarkModeSwitch
+            sunColor = {!isDarkMood && '#f9a825'}
+            moonColor = {isDarkMood && '#9fa8da'}
             checked={isDarkMood}
             onChange={()=> dispatch(ChangeDarkMood())}
-            size={30}
+            size={35}
         />
     );
 }

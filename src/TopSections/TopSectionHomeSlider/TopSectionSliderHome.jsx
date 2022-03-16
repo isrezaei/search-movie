@@ -10,15 +10,12 @@ import {
     SliderImdbRate,
     SliderImdbLogo,
     BoldRate,
+    ParentSlider,
     SliderAddFavorite} from "./SliderStyle";
 
 const TopSectionSliderHome = () => {
 
-    const Parent = styled.div`
-      width: 95%;
-      height: 75vh;
-      margin: 2vw auto;
-    `
+
 
     let slides = SliderData.map(data =>
         <div>
@@ -32,9 +29,9 @@ const TopSectionSliderHome = () => {
 
     return (
 
-        <Parent>
+        <ParentSlider>
             <Carousel slides={slides} autoplay={true} interval={5000}/>
-        </Parent>
+        </ParentSlider>
     );
 };
 

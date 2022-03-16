@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectAllResultSearch} from "../../Redux/ResultSearchSlice";
 import ResultSeriesCard from "./ResultSeriesCard";
-import {GridDisplay} from "../MainStyled/MainStyled";
+import {GridDisplay} from "../ResultComponentsStyled/ResultComponentsStyle";
 
 const ResultSeriesShow = () => {
 

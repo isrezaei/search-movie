@@ -2,6 +2,7 @@ import {useSelector} from "react-redux";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import ResultSeriesShow from "./ResultSeriesShow";
 import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries/TopSectionMovieSeries";
+import PleaseSearchSomething from "../PleaseSearchSomething/PleaseSearchSomething";
 
 const ResultSeriesRender = () => {
 
@@ -11,7 +12,7 @@ const ResultSeriesRender = () => {
 
     if (Status ==='idle')
     {
-        Render = <h1>Please search movie or series</h1>
+        Render = <PleaseSearchSomething/>
     }
     else if (Status === 'pending')
     {

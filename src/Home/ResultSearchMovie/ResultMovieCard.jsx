@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import {Animated} from "react-animated-css";
 import NoImageAvailable from "../../NoImageAvailable.svg";
-import {CardImage, CardParent, CardTitle, CardYear} from "../MainStyled/MainStyled";
+import {CardImage, CardParent, CardTitle, CardYear} from "../ResultComponentsStyled/ResultComponentsStyle";
 
 const ResultMovieCard = ({MovieData}) => {
 

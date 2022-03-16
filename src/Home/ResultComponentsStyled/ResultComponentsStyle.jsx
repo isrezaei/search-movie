@@ -53,7 +53,8 @@ export const CardImage = styled.img`
 export const CardYear = styled.div`
   width: 60%;
   font-size: .85vw;
-  color: #bdbcbc;
+  font-weight: bold;
+  color: ${props => props.theme.color_card_Year};
 `
 
 export const CardTitle = styled.div`
@@ -63,7 +64,7 @@ export const CardTitle = styled.div`
   text-overflow: ellipsis;
   font-size: 1vw;
   font-weight: bold;
-  color: whitesmoke;
+  color: ${props => props.theme.color_card_title};
 `
 
 

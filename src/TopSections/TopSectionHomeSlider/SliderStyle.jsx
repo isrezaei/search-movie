@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const ParentSlider = styled.div`
+  width: 95%;
+  height: 75vh;
+  margin: 2vw auto;
+`
 export const SliderImage = styled.img`
   width: 100vw;
   filter: brightness(80%);

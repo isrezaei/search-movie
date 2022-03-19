@@ -1,5 +1,5 @@
-import NotFoundImageDark from './ResultNotFoundDark.png'
-import NotFoundImageLight from './ResultNotFoundLight.png'
+import NotFoundImageDark from '../../ResultNotFoundDark.png'
+import NotFoundImageLight from '../../ResultNotFoundLight.png'
 import styled from "styled-components";
 import {useSelector} from "react-redux";
 import {Animated} from "react-animated-css";

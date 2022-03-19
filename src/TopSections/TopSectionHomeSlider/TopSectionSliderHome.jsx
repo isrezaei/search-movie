@@ -10,13 +10,21 @@ import {
     SliderImdbLogo,
     BoldRate,
     ParentSlider,
+    DivMobileSlider,
     SliderAddFavorite} from "./SliderStyle";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {EffectCards} from 'swiper';
+
+import 'swiper/css';
+import "swiper/css/bundle";
+import "swiper/css/effect-cards";
+
+
 
 const TopSectionSliderHome = () => {
 
-
-
-    let slides = SliderData.map(data =>
+    let ScreenSlider = SliderData.map(data =>
         <div>
             <SliderImage src={data.image} alt={data.id}/>
             <SliderImdbRate><BoldRate>{data.imdbRate}</BoldRate>/10</SliderImdbRate>
@@ -26,11 +34,38 @@ const TopSectionSliderHome = () => {
         </div>
     )
 
+
+    let MobileSlider = SliderData.map(data =>
+        <SwiperSlide key={data.id}>
+            <SliderImage src={data.image} alt={data.id}/>
+            <SliderImdbRate><BoldRate>{data.imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderPosterName>{data.posterName}</SliderPosterName>
+            <SliderAddFavorite><RiHeartAddFill/></SliderAddFavorite>
+        </SwiperSlide>
+    )
+
+
     return (
 
-        <ParentSlider>
-            <Carousel slides={slides} autoplay={true} interval={5000}/>
-        </ParentSlider>
+        <>
+            <DivMobileSlider>
+                <Swiper
+                    modules={[EffectCards]}
+                    effect={"cards"}
+                    grabCursor={true}
+                >
+                    {MobileSlider}
+                </Swiper>
+            </DivMobileSlider>
+
+
+            <ParentSlider>
+                <Carousel slides={ScreenSlider} autoplay={true} interval={5000}/>
+            </ParentSlider>
+
+
+        </>
     );
 };
 

@@ -1,17 +1,37 @@
 import styled from "styled-components";
 
+
+export const DivMobileSlider = styled.div`
+
+  display: none;
+
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 65%;
+    display: block ;
+    margin: auto;
+  }
+`
+
+
+
 export const ParentSlider = styled.div`
   width: 95%;
   height: 75vh;
   margin: 2vw auto;
-  
+
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    height: 20vh;
+    display: none;
   }
 `
 export const SliderImage = styled.img`
   width: 100vw;
   filter: brightness(80%);
+
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 200vw;
+    height: 60vh;
+   
+  }
 `
 export const SliderPosterName = styled.p`
   font-family: 'Secular One', sans-serif;

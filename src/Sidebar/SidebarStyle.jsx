@@ -9,23 +9,23 @@ export const SidebarStyle = styled.div`
   align-items: center;
   background: ${props => props.theme.background_sidebar};
   position: fixed;
-  top: 50%;
   bottom: 0;
   left: 0;
-  transform: translate(0% , -50%);
+  transform: translate(0% , -70%);
   transition: .1s;
   border-radius: 0 1vw 1vw 0;
 
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 100%;
     height: 18vw;
-    top: 132vw;
+    bottom: 0;
     transform: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 0;
+    z-index: 1000;
   }
 `
 

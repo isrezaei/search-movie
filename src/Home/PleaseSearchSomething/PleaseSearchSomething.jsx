@@ -7,27 +7,30 @@ import {Animated} from "react-animated-css";
 
 const PleaseSearch = styled.div`
 
-  width: auto;
-  height: 41vw;
+  width: 85vw;
+  height: 44vw;
   margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 1.2vw;
 
   img
   {
-    width: 50vw;
+    width: 47vw;
+    transition: .1s;
   }
   p
   {
     font-size: 1.5vw;
     color: ${props => props.theme.color_please_search_text};
+    transition: .1s;
+    
   }
   strong
   {
     color: ${props => props.theme.color_please_search_text_strong};
+    transition: .1s;
   }
   
 `

@@ -13,7 +13,7 @@ const DarkMoodControl = () => {
             moonColor = {isDarkMood && '#9fa8da'}
             checked={isDarkMood}
             onChange={()=> dispatch(ChangeDarkMood())}
-            size={35}
+            size={30}
         />
     );
 }

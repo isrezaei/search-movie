@@ -9,6 +9,7 @@ export const GridDisplay = styled.div`
   grid-template-rows: repeat(2 , 26vw) ;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
+
 `
 
 export const CardParent = styled.div`

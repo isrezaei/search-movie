@@ -68,6 +68,7 @@ export const ResultSearchSlice = createSlice({
         {
             state.status = 'reject'
             ResultSearchAdapter.removeAll(state)
+
         },
     }
 })

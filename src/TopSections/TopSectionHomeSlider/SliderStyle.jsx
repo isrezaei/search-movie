@@ -4,6 +4,10 @@ export const ParentSlider = styled.div`
   width: 95%;
   height: 75vh;
   margin: 2vw auto;
+  
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    height: 20vh;
+  }
 `
 export const SliderImage = styled.img`
   width: 100vw;
@@ -12,7 +16,7 @@ export const SliderImage = styled.img`
 export const SliderPosterName = styled.p`
   font-family: 'Secular One', sans-serif;
   position: absolute;
-  top: 26.5vw;
+  top: 29.5vw;
   left: 1.2vw;
   font-size: 2vw;
   color: snow;
@@ -20,7 +24,7 @@ export const SliderPosterName = styled.p`
 export const SliderImdbRate = styled.p`
   font-family: 'Comfortaa', cursive;
   position: absolute;
-  top : 21.5vw;
+  top : 24.5vw;
   left: 1.2vw;
   font-size: 1.2vw;
   font-weight: lighter;
@@ -36,7 +40,7 @@ export const BoldRate =styled.b`
 export const SliderImdbLogo = styled.img`
   width: 4vw;
   position: absolute;
-  top : 23.9vw;
+  top : 26.9vw;
   left: 1.2vw;
   border-radius: 2vw;
 `

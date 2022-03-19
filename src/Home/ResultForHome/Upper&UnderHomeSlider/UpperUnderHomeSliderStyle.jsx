@@ -18,6 +18,21 @@ export const Upper = styled.div`
     border: 1px solid ${props => props.theme.color_upper_slider_hr_line};
     transition: .1s;
   }
+
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    h3 {
+      display: none;
+    }
+    hr {
+    display: none;
+    }
+  }
 `
 export const Latest = styled.div`
   width: 6.5vw;
@@ -33,6 +48,13 @@ export const Latest = styled.div`
   font-weight: bolder;
   cursor: default;
   transition: .1s;
+
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 45vw;
+    height: 8vw;
+    font-size: 3.5vw;
+  }
+  
 `
 
 export const UnderSliderScrollToBtn = styled(Latest)`
@@ -40,6 +62,12 @@ export const UnderSliderScrollToBtn = styled(Latest)`
   background-color: ${props => props.theme.color_upper_slider_left_btn};
   color: ${props => props.theme.color_upper_slider_left_btn_innerText};
   cursor: pointer;
+
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 45vw;
+    height: 8vw;
+    font-size: 3.5vw;
+  }
 `
 
 export const Under = styled(Upper)``

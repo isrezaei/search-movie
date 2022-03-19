@@ -3,6 +3,7 @@ import ResultMovieShow from "./ResultMovieShow";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import TopSectionMovieSeries from "../../TopSections/TopSectionMovieSeries/TopSectionMovieSeries";
 import PleaseSearchSomething from "../PleaseSearchSomething/PleaseSearchSomething";
+import ResultNotFound from "../ResultNotFound/ResultNotFound";
 
 
 const ResultMovieRender = () => {
@@ -25,7 +26,7 @@ const ResultMovieRender = () => {
     }
     else if (Status === 'reject')
     {
-        Render = <h1>Error</h1>
+        Render = <ResultNotFound/>
     }
 
 

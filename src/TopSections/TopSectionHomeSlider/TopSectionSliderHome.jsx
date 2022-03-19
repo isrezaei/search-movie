@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import ImdbLogo from '../../ImdbLogo.png'
 import {Carousel} from '3d-react-carousal';
 import {RiHeartAddFill} from 'react-icons/ri'

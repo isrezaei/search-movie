@@ -9,6 +9,13 @@ export const HeaderStyle = styled.div `
   background-color: ${props => props.theme.background_header};
   margin: auto;
   transition: .1s;
+  
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25vw;
+  }
 `
 export const Logo = styled.div`
   margin-left: 2vw;
@@ -17,6 +24,10 @@ export const Logo = styled.div`
   cursor: pointer;
   color: ${props => props.theme.color_Header_logo};
   transition: .1s;
+  
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    font-size: 7vw;
+  }
 `
 export const Search = styled.div`
   margin-right: 2vw;
@@ -26,11 +37,22 @@ export const Search = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 100%;
+  }
 `
 export const ReadyToSearch = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 95%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
   span
   {
     display: flex;
@@ -39,6 +61,14 @@ export const ReadyToSearch = styled.div`
     cursor: pointer;
     margin-right: .5vw;
     transition: .1s;
+    
+    @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+      flex: .09;
+      font-size: 6vw;
+      margin-right: 0;
+      order: 3;
+      justify-content: center;
+    }
   }
   input
   {
@@ -51,6 +81,19 @@ export const ReadyToSearch = styled.div`
     font-size: 1vw;
     border-bottom: .5px solid ${props => props.theme.color_search_component};
     transition: .1s;
+    
+    @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+      flex: 1vw;
+      height: 5vw;
+      font-size: 3.5vw;
+      order: 2;
+      margin-left: 2vw;
+      border: none;
+      color: ${props => props.theme.color_search_component};
+      &::placeholder {
+        color: ${props => props.theme.color_search_component};
+      }
+    }
   }
   
   select {
@@ -65,6 +108,17 @@ export const ReadyToSearch = styled.div`
     font-size: .75vw;
     border-radius: 1vw;
     transition: .1s;
+    
+    @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+      flex: .25;
+      height: 6vw;
+      font-size: 3.5vw;
+      border-radius: 0;
+      margin-left: 0;
+      order: 1;
+      background: transparent;
+      color:${props => props.theme.color_search_component} ;
+    }
   }
 `
 export const RenderSearch =  styled.div`

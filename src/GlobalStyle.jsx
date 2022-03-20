@@ -2,13 +2,18 @@ import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyle =  createGlobalStyle `
   //Reset
-  html, div, span,
+  div, span,
   h1, h2, h3, h4, h5, h6, p,img {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  html
+  {
+    overflow-x: hidden;
   }
   
   body

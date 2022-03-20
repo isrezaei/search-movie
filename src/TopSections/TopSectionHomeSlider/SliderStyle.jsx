@@ -1,6 +1,24 @@
 import styled from "styled-components";
 
 
+export const ParentSlider = styled.div`
+  width: 95%;
+  height: 75vh;
+  margin: 2vw auto;
+
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    display: none;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    display: none;
+  }
+`
+
+
+
+
 export const DivMobileSlider = styled.div`
 
   display: none;
@@ -14,25 +32,13 @@ export const DivMobileSlider = styled.div`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    width: 70%;
+    width: 75%;
     height: 70vh;
     display: block ;
     margin: auto;
   }
 `
 
-export const ParentSlider = styled.div`
-  width: 95%;
-  height: 75vh;
-  margin: 2vw auto;
-
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    display: none;
-  }
-  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    display: none;
-  }
-`
 
 
 export const SliderImage = styled.img`
@@ -48,7 +54,7 @@ export const SliderImage = styled.img`
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
-    height: 100vw;
+    height: 110vw;
     filter: brightness(65%);
   }
 `
@@ -68,9 +74,9 @@ export const SliderPosterName = styled.p`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    top: 65.5vw;
+    top: 100vw;
     left: 3.5vw;
-    font-size: 3.5vw;
+    font-size: 5vw;
   }
 `
 export const SliderImdbRate = styled.p`
@@ -90,9 +96,9 @@ export const SliderImdbRate = styled.p`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    top : 52.5vw;
+    top : 81.5vw;
     left: 3.5vw;
-    font-size: 3vw;
+    font-size: 4.5vw;
   }
 `
 
@@ -108,7 +114,7 @@ export const BoldRate =styled.b`
   
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 5vw;
+    font-size: 6vw;
   }
 
 `
@@ -129,10 +135,10 @@ export const SliderImdbLogo = styled.img`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    width: 10vw;
-    top : 59vw;
+    width: 15vw;
+    top : 90vw;
     left: 3.5vw;
-    border-radius: 2vw;
+    border-radius: 56vw;
   }
 `
 export const SliderAddFavorite = styled.div`

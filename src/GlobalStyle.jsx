@@ -19,5 +19,6 @@ export const GlobalStyle =  createGlobalStyle `
     box-sizing: border-box;
     background-color : ${props => props.theme.background_project};
     transition: .1s;
+    overflow-x: hidden;
   }
 `

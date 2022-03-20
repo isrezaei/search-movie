@@ -37,7 +37,7 @@ const TopSectionSliderHome = () => {
 
     let MobileSlider = SliderData.map(data =>
         <SwiperSlide key={data.id}>
-            <SliderImage src={data.image} alt={data.id}/>
+            <SliderImage src={data.smallImage} alt={data.id}/>
             <SliderImdbRate><BoldRate>{data.imdbRate}</BoldRate>/10</SliderImdbRate>
             <SliderImdbLogo src={ImdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>

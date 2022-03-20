@@ -5,14 +5,21 @@ export const DivMobileSlider = styled.div`
 
   display: none;
 
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 65%;
+    width: 56%;
+    height: auto;
+    display: block ;
+    margin: auto;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 56%;
+    height: auto;
     display: block ;
     margin: auto;
   }
 `
-
-
 
 export const ParentSlider = styled.div`
   width: 95%;
@@ -22,15 +29,27 @@ export const ParentSlider = styled.div`
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     display: none;
   }
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    display: none;
+  }
 `
+
+
 export const SliderImage = styled.img`
   width: 100vw;
   filter: brightness(80%);
 
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 200vw;
-    height: 60vh;
-   
+    width: 100%;
+    height: auto;
+    filter: brightness(65%);
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 100%;
+    height: auto;
+    filter: brightness(65%);
   }
 `
 export const SliderPosterName = styled.p`
@@ -40,6 +59,19 @@ export const SliderPosterName = styled.p`
   left: 1.2vw;
   font-size: 2vw;
   color: snow;
+  
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    top: 65.5vw;
+    left: 3.5vw;
+    font-size: 3.5vw;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    top: 65.5vw;
+    left: 3.5vw;
+    font-size: 3.5vw;
+  }
 `
 export const SliderImdbRate = styled.p`
   font-family: 'Comfortaa', cursive;
@@ -49,12 +81,36 @@ export const SliderImdbRate = styled.p`
   font-size: 1.2vw;
   font-weight: lighter;
   color: whitesmoke;
+  
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    top : 52.5vw;
+    left: 3.5vw;
+    font-size: 3vw;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    top : 52.5vw;
+    left: 3.5vw;
+    font-size: 3vw;
+  }
 `
 
 export const BoldRate =styled.b`
   color: yellow;
   font-size: 1.8vw;
   font-weight: bolder;
+
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    font-size: 5vw;
+  }
+  
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    font-size: 5vw;
+  }
+
 `
 
 export const SliderImdbLogo = styled.img`
@@ -63,6 +119,21 @@ export const SliderImdbLogo = styled.img`
   top : 26.9vw;
   left: 1.2vw;
   border-radius: 2vw;
+
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 10vw;
+    top : 59vw;
+    left: 3.5vw;
+    border-radius: 2vw;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 10vw;
+    top : 59vw;
+    left: 3.5vw;
+    border-radius: 2vw;
+  }
 `
 export const SliderAddFavorite = styled.div`
 
@@ -78,6 +149,19 @@ export const SliderAddFavorite = styled.div`
   transition: .3s;
   &:hover {
     color: pink;
+  }
+
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    font-size: 8vw;
+    right: 4vw;
+    top: 2vw;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    font-size: 8vw;
+    right: 4vw;
+    top: 2vw;
   }
 
 `

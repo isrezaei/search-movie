@@ -15,17 +15,31 @@ export const SidebarStyle = styled.div`
   transition: .1s;
   border-radius: 0 1vw 1vw 0;
 
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 100%;
     height: 18vw;
     bottom: 0;
     transform: none;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 0;
-    z-index: 1000;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 100%;
+    height: 18vw;
+    bottom: 0;
+    transform: none;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0;
   }
 `
 
@@ -34,15 +48,24 @@ const AdjustIcon = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  
   height: 3vw;
   margin-top: 1.5vw;
   font-size: 1.8vw;
   cursor: pointer;
 
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    flex-direction: column;
-    font-size: 8vw;
-    height: 8vw;
+    font-size: 10vw;
+    height: 10vw;
+    margin-top: 0;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    font-size: 10vw;
+    height: 10vw;
+    margin-top: 0;
   }
 `
 
@@ -56,7 +79,12 @@ export const Icon = styled(AdjustIcon) `
     font-size: .65vw;
     transition: .1s;
 
+    //320px
     @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+      display: none;
+    }
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
       display: none;
     }
   }

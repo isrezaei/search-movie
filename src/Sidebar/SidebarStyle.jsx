@@ -31,7 +31,7 @@ export const SidebarStyle = styled.div`
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
-    height: 18vw;
+    height: 14vw;
     bottom: 0;
     transform: none;
     position: fixed;
@@ -63,8 +63,8 @@ const AdjustIcon = styled.div`
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 10vw;
-    height: 10vw;
+    font-size: 8.5vw;
+    height: 8vw;
     margin-top: 0;
   }
 `

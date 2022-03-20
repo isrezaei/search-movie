@@ -82,7 +82,7 @@ export const Latest = styled.div`
   
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    width: 45vw;
+    width: 30vw;
     height: 8vw;
     font-size: 3.5vw;
   }

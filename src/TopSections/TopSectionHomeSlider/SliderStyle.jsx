@@ -14,8 +14,8 @@ export const DivMobileSlider = styled.div`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    width: 56%;
-    height: auto;
+    width: 70%;
+    height: 70vh;
     display: block ;
     margin: auto;
   }
@@ -48,7 +48,7 @@ export const SliderImage = styled.img`
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
-    height: auto;
+    height: 100vw;
     filter: brightness(65%);
   }
 `

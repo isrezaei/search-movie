@@ -24,6 +24,7 @@ export const DivMobileSlider = styled.div`
     height: auto;
     display: block ;
     margin: auto;
+   
   }
 
   //320px

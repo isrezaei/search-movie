@@ -49,16 +49,24 @@ const TopSectionSliderHome = () => {
     return (
 
         <>
-            <DivMobileSlider>
-                <Swiper
-                    modules={[EffectCards]}
-                    effect={"cards"}
-                    grabCursor={true}
-                >
-                    {MobileSlider}
-                </Swiper>
-            </DivMobileSlider>
+            <div style={{
+                width : '100%',
+                height : '70vh',
+                display : 'flex',
+                justifyContent : 'center',
+                alignItems : 'center'
+            }}>
 
+                <DivMobileSlider>
+                    <Swiper
+                        modules={[EffectCards]}
+                        effect={"cards"}
+                        grabCursor={true}
+                    >
+                        {MobileSlider}
+                    </Swiper>
+                </DivMobileSlider>
+            </div>
 
             <ParentSlider>
                 <Carousel slides={ScreenSlider} autoplay={true} interval={5000}/>

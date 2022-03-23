@@ -14,11 +14,11 @@ export const SidebarStyle = styled.div`
   transform: translate(0% , -70%);
   transition: .1s;
   border-radius: 0 1vw 1vw 0;
-
-  //320px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+  
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
-    height: 18vw;
+    height: 14vw;
     bottom: 0;
     transform: none;
     position: fixed;
@@ -28,10 +28,10 @@ export const SidebarStyle = styled.div`
     align-items: center;
     border-radius: 0;
   }
-  //480px
-  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 100%;
-    height: 14vw;
+    height: 18vw;
     bottom: 0;
     transform: none;
     position: fixed;
@@ -54,17 +54,17 @@ const AdjustIcon = styled.div`
   font-size: 1.8vw;
   cursor: pointer;
 
-  //320px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    font-size: 10vw;
-    height: 10vw;
-    margin-top: 0;
-  }
-
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 8.5vw;
     height: 8vw;
+    margin-top: 0;
+  }
+  
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    font-size: 10vw;
+    height: 10vw;
     margin-top: 0;
   }
 `
@@ -79,14 +79,16 @@ export const Icon = styled(AdjustIcon) `
     font-size: .65vw;
     transition: .1s;
 
-    //320px
-    @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-      display: none;
-    }
     //480px
     @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
       display: none;
     }
+    
+    //320px
+    @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+      display: none;
+    }
+    
   }
 `
 

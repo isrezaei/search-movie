@@ -122,7 +122,7 @@ export const UnderSliderSection = styled.div`
     align-items: center;
     width: 100%;
     height: 8vw;
-    font-size: 7vw;
+    font-size: 5vw;
     left: 0;
     right: 0;
     margin: auto;

@@ -21,7 +21,7 @@ export const DivMobileSlider = styled.div`
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 75%;
-    height: 70vh;
+    height: auto;
     display: block ;
     margin: auto;
   }

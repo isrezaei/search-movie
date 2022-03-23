@@ -49,13 +49,7 @@ const TopSectionSliderHome = () => {
     return (
 
         <>
-            <div style={{
-                width : '100%',
-                height : '70vh',
-                display : 'flex',
-                justifyContent : 'center',
-                alignItems : 'center'
-            }}>
+
 
                 <DivMobileSlider>
                     <Swiper
@@ -66,7 +60,6 @@ const TopSectionSliderHome = () => {
                         {MobileSlider}
                     </Swiper>
                 </DivMobileSlider>
-            </div>
 
             <ParentSlider>
                 <Carousel slides={ScreenSlider} autoplay={true} interval={5000}/>

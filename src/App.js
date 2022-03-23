@@ -42,7 +42,7 @@ function App() {
         color_please_search_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
 
         responsive : {
-            small_mobile : '320px',
+            small_mobile : '350px',
             medium_mobile : '480px',
             large_mobile : '600px',
             xlarge_mobile : '768px',

@@ -8,10 +8,11 @@ import {
     SliderPosterName,
     SliderImdbRate,
     SliderImdbLogo,
-    BoldRate,
     ParentSlider,
     DivMobileSlider,
-    SliderAddFavorite} from "./SliderStyle";
+    SliderAddFavorite,
+    SliderYellowRate
+} from "./SliderStyle";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {EffectCards} from 'swiper';
@@ -27,7 +28,7 @@ const TopSectionSliderHome = () => {
     let ScreenSlider = SliderData.map(data =>
         <div>
             <SliderImage src={data.image} alt={data.id}/>
-            <SliderImdbRate><BoldRate>{data.imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbRate><SliderYellowRate>{data.imdbRate}</SliderYellowRate>/10</SliderImdbRate>
             <SliderImdbLogo src={ImdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>
             <SliderAddFavorite><RiHeartAddFill/></SliderAddFavorite>
@@ -38,7 +39,7 @@ const TopSectionSliderHome = () => {
     let MobileSlider = SliderData.map(data =>
         <SwiperSlide key={data.id}>
             <SliderImage src={data.smallImage} alt={data.id}/>
-            <SliderImdbRate><BoldRate>{data.imdbRate}</BoldRate>/10</SliderImdbRate>
+            <SliderImdbRate><SliderYellowRate>{data.imdbRate}</SliderYellowRate>/10</SliderImdbRate>
             <SliderImdbLogo src={ImdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>
             <SliderAddFavorite><RiHeartAddFill/></SliderAddFavorite>

@@ -1,30 +1,36 @@
 import React from "react";
 import {createRef} from "react";
 import {ScrollTo} from "react-scroll-to";
-import { Upper, Under , Latest , UnderSliderSection , UnderSliderScrollToBtn } from "./UpperUnderHomeSliderStyle";
+import {
+    UnderSliderSection,
+    UnderSection,
+    UpperSection,
+    ReferenceToLatestMovie,
+    ReferenceToRandomMovie
+} from "./UpperUnderHomeSliderStyle";
 
 const UnderSlideTextRef = createRef()
 export const UpperSlider = () =>
 {
     return (
-        <Upper>
+        <UpperSection>
             <h3>Welcome</h3>
             <hr/>
             <ScrollTo>
                 {({ scroll }) => (
-                    <UnderSliderScrollToBtn onClick={() => scroll({ x: 0 , y: UnderSlideTextRef.current.offsetTop , smooth: true})}> Random movies and series</UnderSliderScrollToBtn>
+                    <ReferenceToRandomMovie onClick={() => scroll({ x: 0 , y: UnderSlideTextRef.current.offsetTop , smooth: true})}> Random movies and series</ReferenceToRandomMovie>
                 )}
             </ScrollTo>
-            <Latest >The Latest Movie</Latest>
-        </Upper>
+            <ReferenceToLatestMovie>The Latest Movie</ReferenceToLatestMovie>
+        </UpperSection>
     )
 }
 
 export const UnderSlider = () =>
 {
     return (
-        <Under ref={UnderSlideTextRef}>
+        <UnderSection ref={UnderSlideTextRef}>
             <UnderSliderSection>Random movies and series</UnderSliderSection>
-        </Under>
+        </UnderSection>
     )
 }

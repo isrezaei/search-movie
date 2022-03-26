@@ -7,7 +7,14 @@ import {useNavigate } from "react-router-dom";
 import {selectIdsSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchSyncSearch , CleanSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchResultSearch, ActiveIcone , SearchValue} from "../../Redux/ResultSearchSlice";
-import {HeaderStyle,Logo,Search,ReadyToSearch,RenderSearch} from "./HeaderStyle";
+import {
+    HeaderStyle,
+    HeaderLogo,
+    HeaderSearchSection,
+    RenderSearch,
+    HeaderSearchElements,
+    HeaderBtnSearch, HeaderInputSearch, HeaderSelectTypeShow,
+} from "./HeaderStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
 
 
@@ -87,24 +94,24 @@ export const Header = () => {
 
 
 
-                <Logo onClick={()=> Navigate('/')}>MOV.</Logo>
+                <HeaderLogo onClick={()=> Navigate('/')}>MOV.</HeaderLogo>
 
-                <Search>
+                <HeaderSearchSection>
 
-                    <ReadyToSearch>
-                        <span onClick={onSubmit}><BiSearchAlt/></span>
-                        <input  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
-                        <select {...register('TypeOfShow')}>
+                    <HeaderSearchElements>
+                        <HeaderBtnSearch onClick={onSubmit}><BiSearchAlt/></HeaderBtnSearch>
+                        <HeaderInputSearch  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
+                        <HeaderSelectTypeShow {...register('TypeOfShow')}>
                             <option>Movie</option>
                             <option>Series</option>
-                        </select>
-                    </ReadyToSearch>
+                        </HeaderSelectTypeShow>
+                    </HeaderSearchElements>
 
                     <RenderSearch render={InputValue ? 'block' : 'none'}>
                         {Render}
                     </RenderSearch>
 
-                </Search>
+                </HeaderSearchSection>
 
 
 

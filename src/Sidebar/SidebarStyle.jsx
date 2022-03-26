@@ -14,32 +14,34 @@ export const SidebarStyle = styled.div`
   transform: translate(0% , -70%);
   transition: .1s;
   border-radius: 0 1vw 1vw 0;
+  z-index: 1000;
+  
+  //900px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 60%;
+    height: 8vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4vw 4vw 0 0;
+    margin: auto;
+  }
   
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
     height: 14vw;
-    bottom: 0;
-    transform: none;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     border-radius: 0;
   }
   //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 100%;
     height: 18vw;
-    bottom: 0;
-    transform: none;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 0;
   }
 `
 
@@ -47,16 +49,22 @@ const AdjustIcon = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  
+  justify-content: center;
   height: 3vw;
   margin-top: 1.5vw;
   font-size: 1.8vw;
   cursor: pointer;
 
+  //900px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    height: 4vw;
+    margin-top: 0;
+    font-size: 4vw;
+  }
+
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 8.5vw;
+    font-size: 9vw !important;
     height: 8vw;
     margin-top: 0;
   }
@@ -79,15 +87,14 @@ export const Icon = styled(AdjustIcon) `
     font-size: .65vw;
     transition: .1s;
 
-    //480px
-    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    //600px
+    @media(max-width: ${props => props.theme.responsive.large_mobile}) {
       display: none;
     }
     
+    //420px
     //320px
-    @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-      display: none;
-    }
+    //no need
     
   }
 `

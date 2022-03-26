@@ -6,9 +6,15 @@ export const GridDisplay = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(5 , 16vw);
-  grid-template-rows: repeat(2 , 26vw) ;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
+  
+  //600px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+
+    grid-template-columns: repeat(3 , 28vw);
+    grid-column-gap: 2vw;
+  }
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
@@ -20,13 +26,7 @@ export const GridDisplay = styled.div`
   }
   
   //320px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20vw;
-  }
+  //no need
 `
 
 export const CardParent = styled.div`
@@ -59,6 +59,16 @@ export const CardType = styled.span`
   font-size: .7vw;
   font-weight: bolder;
   color: black;
+  
+  //600px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 7vw;
+    height: 3vw;
+    right: 1vw;
+    top: 1.5vw;
+    font-size: 1.9vw;
+  }
+  
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 15vw;
@@ -69,10 +79,6 @@ export const CardType = styled.span`
   }
   //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 15vw;
-    height: 4.5vw;
-    font-size: 3.5vw;
-    right: 2.5vw;
     top: 3vw;
   }
 `
@@ -83,6 +89,11 @@ export const CardImage = styled.img`
   margin: .5vw 0;
   filter: brightness(80%);
 
+  //600px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 28vw;
+    height: 40vw;
+  }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 70vw;
@@ -93,7 +104,6 @@ export const CardImage = styled.img`
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 60vw;
     height: 85vw;
-    margin: 2vw auto;
   }
 `
 
@@ -103,17 +113,17 @@ export const CardYear = styled.div`
   font-weight: bold;
   color: ${props => props.theme.color_card_Year};
 
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 1.8vw;
+  }
+  
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     margin-top: 1vw;
     font-size: 3.5vw;
   }
-  
   //320px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    margin-top: 1vw;
-    font-size: 3.5vw;
-  }
+  //no need
 `
 
 export const CardTitle = styled.div`
@@ -125,16 +135,17 @@ export const CardTitle = styled.div`
   font-weight: bold;
   color: ${props => props.theme.color_card_title};
 
+  //600px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 2vw;
+  }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 4vw;
   }
   
   //320px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    font-size: 4vw;
-  }
-
+  //no need
 `
 
 

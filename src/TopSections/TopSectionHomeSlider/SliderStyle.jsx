@@ -35,7 +35,7 @@ export const DivMobileSlider = styled.div`
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 60%;
   }
-  //noo need
+  //no need
 `
 export const SliderImage = styled.img`
   width: 100vw;

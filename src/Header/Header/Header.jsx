@@ -7,18 +7,17 @@ import {useNavigate } from "react-router-dom";
 import {selectIdsSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchSyncSearch , CleanSyncSearch} from "../../Redux/SyncSearchSlice";
 import {fetchResultSearch, ActiveIcone , SearchValue} from "../../Redux/ResultSearchSlice";
+import {RenderSearch} from "../HeaderSyncSearch/HeaderSyncSearchStyle";
 import {
     HeaderStyle,
     HeaderLogo,
     HeaderSearchSection,
-    RenderSearch,
     HeaderSearchElements,
     HeaderBtnSearch, HeaderInputSearch, HeaderSelectTypeShow,
 } from "./HeaderStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
-
-
-
+import {MutatingDots} from "react-loader-spinner";
+import HeaderSyncSearchSpinner from "../HeaderSyncSearch/HeaderSyncSearchSpinner";
 
 
 export const Header = () => {
@@ -73,20 +72,24 @@ export const Header = () => {
 
 
     let Render ;
+    let SyncSearchPreRender ;
+
 
     if (SearchStatus === 'pending')
     {
-        Render = <h3>Loading ... </h3>
+        Render = <HeaderSyncSearchSpinner/>
+        SyncSearchPreRender = '5vw'
     }
     else if (SearchStatus === 'success')
     {
         Render = SyncSearchId.map(ids => ids && <HeaderSyncSearch InputValue={InputValue} key={ids} ids={ids}/>)
+        SyncSearchPreRender = '20vw'
     }
     else if (SearchStatus === 'reject')
     {
-        Render = <h3>Not Found Search</h3>
+        Render = <h1>Not Found</h1>
+        SyncSearchPreRender = '5vw'
     }
-
 
 
     return (
@@ -94,27 +97,24 @@ export const Header = () => {
 
 
 
-                <HeaderLogo onClick={()=> Navigate('/')}>MOV.</HeaderLogo>
+            <HeaderLogo onClick={()=> Navigate('/')}>MOV.</HeaderLogo>
 
-                <HeaderSearchSection>
+            <HeaderSearchSection>
 
-                    <HeaderSearchElements>
-                        <HeaderBtnSearch onClick={onSubmit}><BiSearchAlt/></HeaderBtnSearch>
-                        <HeaderInputSearch  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
-                        <HeaderSelectTypeShow {...register('TypeOfShow')}>
-                            <option>Movie</option>
-                            <option>Series</option>
-                        </HeaderSelectTypeShow>
-                    </HeaderSearchElements>
+                <HeaderSearchElements>
+                    <HeaderBtnSearch onClick={onSubmit}><BiSearchAlt/></HeaderBtnSearch>
+                    <HeaderInputSearch  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
+                    <HeaderSelectTypeShow {...register('TypeOfShow')}>
+                        <option>Movie</option>
+                        <option>Series</option>
+                    </HeaderSelectTypeShow>
+                </HeaderSearchElements>
 
-                    <RenderSearch render={InputValue ? 'block' : 'none'}>
-                        {Render}
-                    </RenderSearch>
+                <RenderSearch render={InputValue ? 'block' : 'none'} preRender={SyncSearchPreRender}>
+                    {Render}
+                </RenderSearch>
 
-                </HeaderSearchSection>
-
-
-
+            </HeaderSearchSection>
 
 
         </HeaderStyle>

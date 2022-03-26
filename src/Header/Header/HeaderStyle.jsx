@@ -209,20 +209,3 @@ export const HeaderSelectTypeShow = styled.select `
     color:${props => props.theme.color_search_component} ;
   }
 `
-
-
-
-export const RenderSearch =  styled.div`
-  display: ${({render}) => render};
-  width: 15vw;
-  height: 20vw;
-  background: red;
-  overflow-x: hidden;
-  position: absolute;
-  top: 3vw;
-  z-index: 1;
-  ::-webkit-scrollbar
-  {
-    width: 0;
-  }
-`

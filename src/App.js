@@ -45,7 +45,7 @@ function App() {
         color_please_search_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
 
         responsive : {
-            small_mobile : '380px',
+            small_mobile : '320px',
             medium_mobile : '480px',
             small_screen : '900px',
             medium_screen : '1200px',

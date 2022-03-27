@@ -17,9 +17,9 @@ function App() {
     const isDarkMood = useSelector(state => state.DarkMoodSlice.darkMood)
 
     const ThemeProject = {
-        background_project : isDarkMood ? '#253240' : '#eceff1',
-        background_header : isDarkMood ? '#1b2634' : '#e0e0e0',
-        background_sidebar : isDarkMood ? '#3b4856' : '#e0e0e0',
+        background_project : isDarkMood ? '#000000' : '#eceff1',
+        background_header : isDarkMood ? '#212121' : '#e0e0e0',
+        background_sidebar : isDarkMood ? '#212121' : '#e0e0e0',
         color_header_sync_search : isDarkMood ? '#e5e5e5' : '#2c2c2c',
         color_Header_logo : isDarkMood ? 'white' : '#484848',
         color_search_component : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',

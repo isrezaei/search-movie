@@ -78,17 +78,14 @@ export const Header = () => {
     if (SearchStatus === 'pending')
     {
         Render = <HeaderSyncSearchSpinner/>
-        SyncSearchPreRender = '3vw'
     }
     else if (SearchStatus === 'success')
     {
         Render = SyncSearchId.map(ids => ids && <HeaderSyncSearch InputValue={InputValue} key={ids} ids={ids}/>)
-        SyncSearchPreRender = '20vw'
     }
     else if (SearchStatus === 'reject')
     {
         Render = <HeaderSyncSearchNotFound/>
-        SyncSearchPreRender = '3vw'
     }
 
 
@@ -110,7 +107,7 @@ export const Header = () => {
                     </HeaderSelectTypeShow>
                 </HeaderSearchElements>
 
-                <RenderSearch render={InputValue ? 'block' : 'none'} preRender={SyncSearchPreRender}>
+                <RenderSearch render={InputValue ? 'block' : 'none'}>
                     {Render}
                 </RenderSearch>
 

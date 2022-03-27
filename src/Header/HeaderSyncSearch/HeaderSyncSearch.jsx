@@ -18,8 +18,8 @@ const HeaderSyncSearch = ({InputValue , ids}) => {
                 <img src={Poster === 'N/A'  ? NoImageAvailable : Poster} alt={Title}/>
                 <section>
                     <h4>{Title}</h4>
-                    <div>{Year}</div>
-                    <div>Type : {Type}</div>
+                    <p>{Year}</p>
+                    <p>Type : {Type}</p>
                 </section>
             </SearchItems>
         </Link>

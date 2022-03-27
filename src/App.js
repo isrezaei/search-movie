@@ -34,6 +34,8 @@ function App() {
         color_upper_slider_hr_line : isDarkMood ? '#424242' : '#cfcfcf',
         color_card_Year : isDarkMood ? '#8c8c8c' : '#a8a8a8',
         color_card_title : isDarkMood ? 'whitesmoke' : '#616161',
+        color_card_type :isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
+        color_card_type_innerText : isDarkMood ? '#212121' : '#fff',
         color_top_section_search_result_text : isDarkMood ? '#bdbcbc' : '#616161',
         color_top_section_search_result_type : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
         color_top_section_search_result_type_innerText : isDarkMood ? '#212121' : '#fff',
@@ -46,8 +48,8 @@ function App() {
             small_mobile : '380px',
             medium_mobile : '480px',
             small_screen : '900px',
-            medium_screen : '1024px',
-            large_screen : '1200px'
+            medium_screen : '1200px',
+            large_screen : '1920px'
         }
     }
 

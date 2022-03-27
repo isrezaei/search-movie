@@ -12,7 +12,7 @@ export const HeaderStyle = styled.div `
   
   //1024
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    height: 5vw;
+    height: 7vw;
   }
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {

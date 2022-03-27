@@ -37,31 +37,31 @@ const Sidebar = () => {
         <SidebarStyle>
 
 
-            <Link to={'/'}  style={{textDecoration : 'none'}}>
-                <Animated
-                    animationIn="tada"
-                    animateOnMount={ActiveHome}>
+
+            <Animated
+                animationIn="tada"
+                animateOnMount={ActiveHome}>
+                <Link to={'/'}>
                     <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Home')}><HiHome/></Icon>
-                </Animated>
-            </Link>
+                </Link>
+            </Animated>
 
-
-            <Link to={'/search/movie'} style={{textDecoration : 'none'}}>
-                <Animated
-                    animationIn="tada"
-                    animateOnMount={ActiveMovie}>
+            <Animated
+                animationIn="tada"
+                animateOnMount={ActiveMovie}>
+                <Link to={'/search/movie'}>
                     <Icon Name={'Movie'} ActiveIcon={ActiveMovie} onClick={()=> onSubmit('Movie')}><MdLocalMovies/></Icon>
-                </Animated>
-            </Link>
+                </Link>
+            </Animated>
 
-            <Link to={'/search/series'} style={{textDecoration : 'none'}}>
-                <Animated
-                    animationIn="tada"
-                    animateOnMount={ActiveSeries}>
+            <Animated
+                animationIn="tada"
+                animateOnMount={ActiveSeries}>
+                <Link to={'/search/series'}>
                     <Icon Name={'Series'} ActiveIcon={ActiveSeries} onClick={()=> onSubmit('Series')}><RiMovie2Fill/></Icon>
-                </Animated>
-            </Link>
+                </Link>
 
+            </Animated>
             <Icon><DarkMoodControl/></Icon>
 
         </SidebarStyle>

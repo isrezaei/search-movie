@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SidebarStyle = styled.div`
   width: 4%;
-  height: 20vw;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,14 +11,23 @@ export const SidebarStyle = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  transform: translate(0% , -70%);
+  transform: translate(0% , -15vw);
   transition: .1s;
   border-radius: 0 1vw 1vw 0;
   z-index: 1000;
   
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    transform: translate(0% , 0);
+    width: 5%;
+    height: 30vw;
+    border-radius: 3vw 3vw 0 0;
+    left: 2vw;
+    
+  }
   //900px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
-    width: 60%;
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    width: 40%;
     height: 8vw;
     bottom: 0;
     left: 0;
@@ -29,7 +38,7 @@ export const SidebarStyle = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 4vw 4vw 0 0;
+    border-radius: 3vw 3vw 0 0;
     margin: auto;
   }
   
@@ -39,7 +48,7 @@ export const SidebarStyle = styled.div`
     height: 14vw;
     border-radius: 0;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     height: 18vw;
   }
@@ -50,13 +59,18 @@ const AdjustIcon = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 3vw;
-  margin-top: 1.5vw;
+  height: 4vw;
   font-size: 1.8vw;
   cursor: pointer;
 
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    height: 6vw;
+    font-size: 3vw;
+  }
+
   //900px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     height: 4vw;
     margin-top: 0;
     font-size: 4vw;
@@ -69,7 +83,7 @@ const AdjustIcon = styled.div`
     margin-top: 0;
   }
   
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     font-size: 10vw;
     height: 10vw;
@@ -86,16 +100,19 @@ export const Icon = styled(AdjustIcon) `
     display: ${({ActiveIcon})=> ActiveIcon ? 'block' : 'none'};;
     font-size: .65vw;
     transition: .1s;
+    font-weight: bold;
 
-    //600px
-    @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    //1024
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      font-size: 1vw;
+    }
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
       display: none;
     }
-    
     //420px
-    //320px
+    //380px
     //no need
-    
   }
 `
 

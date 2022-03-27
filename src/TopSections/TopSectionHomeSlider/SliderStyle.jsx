@@ -5,9 +5,12 @@ export const ParentSlider = styled.div`
   height: 75vh;
   margin: 2vw auto;
   
-  
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    height: 40vw;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 100%;
     height: 38vw;
     .slider-right, 
@@ -19,7 +22,7 @@ export const ParentSlider = styled.div`
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     display: none;
   }
-  //320px
+  //380px
   //no need
 `
 export const DivMobileSlider = styled.div`
@@ -31,7 +34,7 @@ export const DivMobileSlider = styled.div`
     display: block ;
     margin: auto;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 60%;
   }
@@ -47,7 +50,7 @@ export const SliderImage = styled.img`
     height: 110vw;
     filter: brightness(65%);
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 100%;
     height: auto;
@@ -61,8 +64,8 @@ export const SliderPosterName = styled.p`
   font-size: 2vw;
   color: snow;
 
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     top: 30.5vw;
     left: 1.2vw;
     font-size: 3vw;
@@ -73,7 +76,7 @@ export const SliderPosterName = styled.p`
     left: 3.5vw;
     font-size: 5vw;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     top: 65.5vw;
     left: 3.5vw;
@@ -86,15 +89,15 @@ export const SliderYellowRate =styled.b`
   font-size: 1.8vw;
   font-weight: bolder;
 
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 3vw;
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 6vw;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     font-size: 5vw;
   }
@@ -109,8 +112,8 @@ export const SliderImdbRate = styled.p`
   font-weight: lighter;
   color: whitesmoke;
 
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     top : 23vw;
     left: 1.2vw;
     font-size: 2vw;
@@ -121,7 +124,7 @@ export const SliderImdbRate = styled.p`
     left: 3.5vw;
     font-size: 4.5vw;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     top : 52.5vw;
     left: 3.5vw;
@@ -135,8 +138,8 @@ export const SliderImdbLogo = styled.img`
   left: 1.2vw;
   border-radius: 2vw;
   
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 6vw;
   }
   //480px
@@ -146,7 +149,7 @@ export const SliderImdbLogo = styled.img`
     left: 3.5vw;
     border-radius: 56vw;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 10vw;
     top : 59vw;
@@ -168,19 +171,23 @@ export const SliderAddFavorite = styled.div`
   &:hover {
     color: pink;
   }
-
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
-    font-size: 4vw;
+  
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    font-size: 3vw;
     right: 1.5vw;
     top: 1.5vw;
   }
-  
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    font-size: 4vw;
+  }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 8vw;
     right: 4vw;
     top: 2vw;
   }
-  //320px
+  //380px
   //no need
 `

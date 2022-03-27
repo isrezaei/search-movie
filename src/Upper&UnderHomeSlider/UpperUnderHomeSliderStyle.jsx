@@ -20,12 +20,13 @@ export const UpperSection = styled.div`
   }
   //1024
   @media(max-width:${props => props.theme.responsive.medium_screen}) {
-    height: 15.5vw;
+    height: 8.5vw;
     h3 {
-      font-size: 1.8vw;
+      font-size: 1.7vw;
     }
     hr {
       width: 55%;
+      border: none;
     }
   }
   //900px
@@ -110,9 +111,10 @@ export const ReferenceToLatestMovie = styled.div`
   
   //1024
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    width: 11vw;
-    height: 2.7vw;
+    width: 15vw;
+    height: 2.5vw;
     font-size: 1.3vw;
+    margin: 0 .5vw;
   }
 
   //900px
@@ -138,12 +140,9 @@ export const ReferenceToRandomMovie = styled(ReferenceToLatestMovie)`
   cursor: pointer;
   //1024
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    width: 16.5vw;
-  }
-  //900px
-  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     display: none;
   }
+  //900px
   //480px
   //380px
   //no need
@@ -156,12 +155,20 @@ export const UnderSliderSection = styled.div`
   font-weight: bolder;
   color: #9ca0ab;
 
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 2.5vw;
+    color: ${props => props.theme.color_upper_slider_right_btn};
+  }
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    width: auto;
     left: 6vw;
     font-size: 2.5vw;
   }
-
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     display: flex;

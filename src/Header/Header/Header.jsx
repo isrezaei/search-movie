@@ -16,7 +16,6 @@ import {
     HeaderBtnSearch, HeaderInputSearch, HeaderSelectTypeShow,
 } from "./HeaderStyle";
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
-import {MutatingDots} from "react-loader-spinner";
 import HeaderSyncSearchSpinner from "../HeaderSyncSearch/HeaderSyncSearchSpinner";
 import HeaderSyncSearchNotFound from "../HeaderSyncSearch/HeaderSyncSearchNotFound";
 

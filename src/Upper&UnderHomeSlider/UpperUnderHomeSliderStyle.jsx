@@ -7,7 +7,7 @@ export const UpperSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  h3 
+  h3
   {
     color: ${props => props.theme.color_upper_slider_welcome_text};
     font-size: .95vw;
@@ -18,8 +18,18 @@ export const UpperSection = styled.div`
     border: 1px solid ${props => props.theme.color_upper_slider_hr_line};
     transition: .1s;
   }
-  //600px
-  @media(max-width:${props => props.theme.responsive.large_mobile}) {
+  //1024
+  @media(max-width:${props => props.theme.responsive.medium_screen}) {
+    height: 15.5vw;
+    h3 {
+      font-size: 1.8vw;
+    }
+    hr {
+      width: 55%;
+    }
+  }
+  //900px
+  @media(max-width:${props => props.theme.responsive.small_screen}) {
     height: 10vw;
     h3 {
       font-size: 2.5vw;
@@ -37,7 +47,7 @@ export const UpperSection = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    h3 
+    h3
     {
       display: none;
     }
@@ -46,21 +56,26 @@ export const UpperSection = styled.div`
       display: none;
     }
   }
-  //320px
+  //380px
   //no need
 `
 
 export const UnderSection = styled.div`
 
- width: 85%;
+  width: 85%;
   height: 5vw;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  //600px
-  @media(max-width:${props => props.theme.responsive.large_mobile}) {
+
+  //1024
+  @media(max-width:${props => props.theme.responsive.medium_screen}) {
+    height: 6vw;
+  }
+
+  //900px
+  @media(max-width:${props => props.theme.responsive.small_screen}) {
     height: 8vw;
   }
 
@@ -73,8 +88,8 @@ export const UnderSection = styled.div`
     justify-content: space-evenly;
     align-items: center;
   }
-  
-  //320px
+
+  //380px
   //no need
 `
 
@@ -92,21 +107,27 @@ export const ReferenceToLatestMovie = styled.div`
   font-weight: bolder;
   cursor: default;
   transition: .1s;
+  
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 11vw;
+    height: 2.7vw;
+    font-size: 1.3vw;
+  }
 
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 18vw;
     height: 3.5vw;
     font-size: 1.8vw;
   }
-
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 30vw;
     height: 8vw;
     font-size: 3.5vw;
   }
-  //320px
+  //380px
   //no need
 `
 
@@ -115,13 +136,16 @@ export const ReferenceToRandomMovie = styled(ReferenceToLatestMovie)`
   background-color: ${props => props.theme.color_upper_slider_left_btn};
   color: ${props => props.theme.color_upper_slider_left_btn_innerText};
   cursor: pointer;
-
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 16.5vw;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     display: none;
   }
   //480px
-  //320px
+  //380px
   //no need
 `
 
@@ -131,9 +155,9 @@ export const UnderSliderSection = styled.div`
   font-size: 3vw;
   font-weight: bolder;
   color: #9ca0ab;
-  
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     left: 6vw;
     font-size: 2.5vw;
   }
@@ -152,8 +176,8 @@ export const UnderSliderSection = styled.div`
     text-align: center;
     color: ${props => props.theme.color_upper_slider_right_btn};
   }
-  
-  //320px
+
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     font-size: 4.5vw;
   }

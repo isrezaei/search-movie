@@ -150,7 +150,6 @@ export const HeaderInputSearch= styled.input`
     height: 2vw;
     font-size: 1.3vw;
   }
-
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 25vw;
@@ -204,9 +203,8 @@ export const HeaderSelectTypeShow = styled.select `
     height: 2vw;
     font-size: 1.2vw;
   }
-
   //900px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 8vw;
     height: 3vw;
     font-size: 1.5vw;

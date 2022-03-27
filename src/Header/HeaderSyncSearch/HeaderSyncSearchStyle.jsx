@@ -34,10 +34,10 @@ export const RenderSearch =  styled.div`
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    width: 60vw;
+    width: 80vw;
     height: 93vw;
     top: 25vw;
-    right: 20vw;
+    right: 10vw;
     z-index: 1000;
   }
 `
@@ -122,7 +122,7 @@ export const SearchItems = styled.div`
       padding: 1.5vw 0;
     }
     section {
-      width: 33vw;
+      width: 45vw;
       padding: .5vw 1vw;
     }
 

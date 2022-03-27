@@ -9,10 +9,13 @@ export const HeaderStyle = styled.div `
   background-color: ${props => props.theme.background_header};
   margin: auto;
   transition: .1s;
-
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
-    width: 100%;
+  
+  //1024
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    height: 5vw;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     height: 8.5vw;
   }
   //480px
@@ -22,7 +25,7 @@ export const HeaderStyle = styled.div `
     align-items: center;
     height: 25vw;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex-direction: column;
     justify-content: space-evenly;
@@ -37,16 +40,20 @@ export const HeaderLogo = styled.div`
   cursor: pointer;
   color: ${props => props.theme.color_Header_logo};
   transition: .1s;
-
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  
+  //1024px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    font-size: 2.5vw;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 4vw;
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 7vw;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     font-size: 7vw;
   }
@@ -65,7 +72,7 @@ export const HeaderSearchSection = styled.div`
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 100%;
   }
@@ -98,9 +105,13 @@ export const HeaderBtnSearch = styled.span`
   cursor: pointer;
   margin-right: .5vw;
   transition: .1s;
-
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  
+  //1024px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    font-size: 3vw;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 4vw;
   }
   //480px
@@ -111,7 +122,7 @@ export const HeaderBtnSearch = styled.span`
     order: 3;
     justify-content: center;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex: .09;
     font-size: 6vw;
@@ -132,9 +143,16 @@ export const HeaderInputSearch= styled.input`
   font-size: 1vw;
   border-bottom: .5px solid ${props => props.theme.color_search_component};
   transition: .1s;
+  
+  //1024px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 20vw;
+    height: 2vw;
+    font-size: 1.3vw;
+  }
 
-  //600px
-  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 25vw;
     height: 3vw;
     font-size: 1.9vw;
@@ -152,7 +170,7 @@ export const HeaderInputSearch= styled.input`
       color: ${props => props.theme.color_search_component};
     }
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex: 1vw;
     height: 5vw;
@@ -180,7 +198,14 @@ export const HeaderSelectTypeShow = styled.select `
   font-size: .75vw;
   transition: .1s;
 
-  //600px
+  //1024px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 7vw;
+    height: 2vw;
+    font-size: 1.2vw;
+  }
+
+  //900px
   @media(max-width: ${props => props.theme.responsive.large_mobile}) {
     width: 8vw;
     height: 3vw;
@@ -197,7 +222,7 @@ export const HeaderSelectTypeShow = styled.select `
     background: transparent;
     color:${props => props.theme.color_search_component} ;
   }
-  //320px
+  //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex: .25;
     height: 6vw;

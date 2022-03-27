@@ -20,6 +20,7 @@ function App() {
         background_project : isDarkMood ? '#253240' : '#eceff1',
         background_header : isDarkMood ? '#1b2634' : '#e0e0e0',
         background_sidebar : isDarkMood ? '#3b4856' : '#e0e0e0',
+        color_header_sync_search : isDarkMood ? '#e5e5e5' : '#2c2c2c',
         color_Header_logo : isDarkMood ? 'white' : '#484848',
         color_search_component : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
         color_search_select_innerText : isDarkMood ? '#212121' : '#fff',
@@ -44,8 +45,6 @@ function App() {
         responsive : {
             small_mobile : '380px',
             medium_mobile : '480px',
-            large_mobile : '900px',
-            xlarge_mobile : '768px',
             small_screen : '900px',
             medium_screen : '1024px',
             large_screen : '1200px'

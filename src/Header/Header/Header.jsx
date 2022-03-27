@@ -18,6 +18,7 @@ import {
 import HeaderSyncSearch from "../HeaderSyncSearch/HeaderSyncSearch";
 import {MutatingDots} from "react-loader-spinner";
 import HeaderSyncSearchSpinner from "../HeaderSyncSearch/HeaderSyncSearchSpinner";
+import HeaderSyncSearchNotFound from "../HeaderSyncSearch/HeaderSyncSearchNotFound";
 
 
 export const Header = () => {
@@ -78,7 +79,7 @@ export const Header = () => {
     if (SearchStatus === 'pending')
     {
         Render = <HeaderSyncSearchSpinner/>
-        SyncSearchPreRender = '5vw'
+        SyncSearchPreRender = '3vw'
     }
     else if (SearchStatus === 'success')
     {
@@ -87,8 +88,8 @@ export const Header = () => {
     }
     else if (SearchStatus === 'reject')
     {
-        Render = <h1>Not Found</h1>
-        SyncSearchPreRender = '5vw'
+        Render = <HeaderSyncSearchNotFound/>
+        SyncSearchPreRender = '3vw'
     }
 
 

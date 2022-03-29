@@ -17,27 +17,28 @@ import {
 } from "../ResultComponentsStyled/ResultComponentsStyle";
 import {useState} from "react";
 import {toast} from "react-toastify";
+import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 
 
 const ResultHomeCard = ({ids}) => {
 
     const MovieData = useSelector(state => selectMovieByIds(state , ids))
+    const MovieFavorite = useSelector(state => selectFavoriteById(state , ids))
     const dispatch = useDispatch()
-    const [isFavorite , SetFavorite] = useState(false)
+
     const {Poster , Title , Type , Year , imdbID} = MovieData
+    const isFavorite = MovieFavorite && MovieFavorite.favorite
 
 
     const AddF = () =>
     {
-        dispatch(AddFavorite({imdbID , Type , Year , Title , Poster}))
-        SetFavorite(true)
+        dispatch(AddFavorite({imdbID , Type , Year , Title , Poster , favorite : true}))
         AddNotify()
     }
 
     const DeleteF = () =>
     {
-        dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster}))
-        SetFavorite(false)
+        dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster , favorite : false}))
         RemoveNotify()
     }
 
@@ -50,6 +51,9 @@ const ResultHomeCard = ({ids}) => {
         position: "top-center",
         autoClose: 3000,
     });
+
+
+
     return (
 
             <Animated animationIn='bounceIn'>

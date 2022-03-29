@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import {UpperSlider , UnderSlider} from "../../Upper&UnderHomeSlider/UpperUnderHomeSlider";
-import TopSectionHome from "../../TopSections/TopSectionHomeSlider/TopSectionSliderHome";
+import TopSectionHome from "../../TopSections/TopSectionHomeSlider/SliderHome";
 
 const ResultHomeReadyToRender = () => {
 

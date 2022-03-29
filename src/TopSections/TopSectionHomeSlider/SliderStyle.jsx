@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ParentSlider = styled.div`
   width: 95%;
-  height: 75vh;
+  height: 40vw;
   margin: 2vw auto;
   
   //1024

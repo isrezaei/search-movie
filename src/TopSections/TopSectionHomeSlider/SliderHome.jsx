@@ -23,7 +23,7 @@ import "swiper/css/effect-cards";
 
 
 
-const TopSectionSliderHome = () => {
+const SliderHome = () => {
 
     let ScreenSlider = SliderData.map(data =>
         <div>
@@ -71,4 +71,4 @@ const TopSectionSliderHome = () => {
     );
 };
 
-export default React.memo(TopSectionSliderHome);
+export default React.memo(SliderHome);

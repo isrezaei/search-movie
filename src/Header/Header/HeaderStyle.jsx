@@ -10,7 +10,7 @@ export const HeaderStyle = styled.div `
   margin: auto;
   transition: .1s;
   
-  //1024
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     height: 7vw;
   }
@@ -25,7 +25,7 @@ export const HeaderStyle = styled.div `
     align-items: center;
     height: 25vw;
   }
-  //380px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex-direction: column;
     justify-content: space-evenly;
@@ -41,7 +41,7 @@ export const HeaderLogo = styled.div`
   color: ${props => props.theme.color_Header_logo};
   transition: .1s;
   
-  //1024px
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     font-size: 2.5vw;
   }
@@ -53,7 +53,7 @@ export const HeaderLogo = styled.div`
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 7vw;
   }
-  //380px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     font-size: 7vw;
   }
@@ -72,7 +72,7 @@ export const HeaderSearchSection = styled.div`
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 100%;
   }
-  //380px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     width: 100%;
   }
@@ -106,7 +106,7 @@ export const HeaderBtnSearch = styled.span`
   margin-right: .5vw;
   transition: .1s;
   
-  //1024px
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     font-size: 3vw;
   }
@@ -122,7 +122,7 @@ export const HeaderBtnSearch = styled.span`
     order: 3;
     justify-content: center;
   }
-  //380px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex: .09;
     font-size: 6vw;
@@ -144,7 +144,7 @@ export const HeaderInputSearch= styled.input`
   border-bottom: .5px solid ${props => props.theme.color_search_component};
   transition: .1s;
   
-  //1024px
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     width: 20vw;
     height: 2vw;
@@ -169,7 +169,7 @@ export const HeaderInputSearch= styled.input`
       color: ${props => props.theme.color_search_component};
     }
   }
-  //380px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex: 1vw;
     height: 5vw;
@@ -197,7 +197,7 @@ export const HeaderSelectTypeShow = styled.select `
   font-size: .75vw;
   transition: .1s;
 
-  //1024px
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     width: 7vw;
     height: 2vw;
@@ -220,7 +220,7 @@ export const HeaderSelectTypeShow = styled.select `
     background: transparent;
     color:${props => props.theme.color_search_component} ;
   }
-  //380px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     flex: .25;
     height: 6vw;

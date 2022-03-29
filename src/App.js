@@ -1,8 +1,8 @@
 import {Routes, Route} from "react-router-dom";
 import Header from "./Header/Header/Header";
-import ResultHomeReadyToRender from "./Home/ResultForHome/ResultHomeReadyToRender";
-import ResultMovieRender from "./Home/ResultSearchMovie/ResultMovieRender";
-import ResultSeriesRender from "./Home/ResultSearchSeries/ResultSeriesRender";
+import ResultHomeReadyToRender from "./Results/ResultForHome/ResultHomeReadyToRender";
+import ResultMovieRender from "./Results/ResultSearchMovie/ResultMovieRender";
+import ResultSeriesRender from "./Results/ResultSearchSeries/ResultSeriesRender";
 import Details from "./Details/Details";
 import NotFound404 from "./NotFound/NotFound404";
 import Sidebar from "./Sidebar/Sidebar";
@@ -48,8 +48,8 @@ function App() {
             small_mobile : '320px',
             medium_mobile : '480px',
             small_screen : '900px',
-            medium_screen : '1200px',
-            large_screen : '1920px'
+            medium_screen : '1280px',
+            large_screen : '1900px'
         }
     }
 

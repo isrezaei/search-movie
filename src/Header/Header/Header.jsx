@@ -72,7 +72,6 @@ export const Header = () => {
 
 
     let Render ;
-    let SyncSearchPreRender ;
 
 
     if (SearchStatus === 'pending')

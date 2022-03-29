@@ -18,14 +18,14 @@ export const UpperSection = styled.div`
     border: 1px solid ${props => props.theme.color_upper_slider_hr_line};
     transition: .1s;
   }
-  //1024
+  //1280px
   @media(max-width:${props => props.theme.responsive.medium_screen}) {
+    width: 80%;
     height: 8.5vw;
     h3 {
       font-size: 1.7vw;
     }
     hr {
-      width: 55%;
       border: none;
     }
   }
@@ -151,7 +151,7 @@ export const ReferenceToRandomMovie = styled(ReferenceToLatestMovie)`
 export const UnderSliderSection = styled.div`
   position: absolute;
   left: 7.5vw;
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: bolder;
   color: #9ca0ab;
 

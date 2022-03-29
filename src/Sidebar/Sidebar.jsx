@@ -19,7 +19,7 @@ const Sidebar = () => {
 
     // console.log(ActiveIconSidebar)
 
-    const ActiveHome = ActiveCategory === 'Home'
+    const ActiveHome = ActiveCategory === 'Results'
     const ActiveMovie = ActiveCategory === 'Movie'
     const ActiveSeries = ActiveCategory === 'Series'
 
@@ -42,7 +42,7 @@ const Sidebar = () => {
                 animationIn="tada"
                 animateOnMount={ActiveHome}>
                 <Link to={'/'}>
-                    <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Home')}><HiHome/></Icon>
+                    <Icon Name={'Results'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Results')}><HiHome/></Icon>
                 </Link>
             </Animated>
 

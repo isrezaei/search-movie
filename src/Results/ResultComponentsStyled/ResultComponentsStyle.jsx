@@ -66,14 +66,11 @@ export const CardImage = styled.img`
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 70vw;
-    height: 95vw;
+    height: 100vw;
     margin: 2vw auto;
   }
   //380px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 75vw;
-    height: 110vw;
-  }
+  //no need
 `
 
 export const CardType = styled.span`
@@ -159,6 +156,7 @@ export const CardTitleFavorites = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: red;
 `
 
 export const CardTitle = styled.div`
@@ -184,9 +182,7 @@ export const CardTitle = styled.div`
     font-size: 4vw;
   }
   //380px
-  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    font-size: 4.5vw;
-  }
+  //no need
 `
 
 export const CardFavorites = styled.div`

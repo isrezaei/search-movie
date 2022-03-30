@@ -71,8 +71,8 @@ export const CardImage = styled.img`
   }
   //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 70vw;
-    height: 90vw;
+    width: 75vw;
+    height: 110vw;
   }
 `
 
@@ -181,10 +181,12 @@ export const CardTitle = styled.div`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
   //380px
-  //no need
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    font-size: 5vw;
+  }
 `
 
 export const CardFavorites = styled.div`

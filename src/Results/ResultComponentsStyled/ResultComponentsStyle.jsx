@@ -70,7 +70,7 @@ export const CardImage = styled.img`
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 70vw;
     height: 100vw;
-    margin: 2vw auto;
+    margin: 1vw auto;
   }
   //380px
   //no need
@@ -144,7 +144,7 @@ export const CardYear = styled.div`
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    margin-top: 1vw;
+    
     font-size: 3.5vw;
   }
   //380px
@@ -182,6 +182,7 @@ export const CardTitle = styled.div`
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 3.5vw;
+    height: 6vw;
   }
   //380px
   //no need

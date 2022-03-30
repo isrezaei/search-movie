@@ -22,11 +22,15 @@ import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 const ResultHomeCard = ({ids}) => {
 
     const MovieData = useSelector(state => selectMovieByIds(state , ids))
-    // const MovieFavorite = useSelector(state => selectFavoriteById(state , ids))
+    const MovieFavorite = useSelector(state => selectFavoriteById(state , ids))
     const dispatch = useDispatch()
 
     const {Poster , Title , Type , Year , imdbID} = MovieData
-    // const isFavorite = MovieFavorite && MovieFavorite.favorite
+
+
+    console.log(MovieFavorite && MovieFavorite)
+
+    const isFavorite = MovieFavorite && MovieFavorite.favorite
 
 
     const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
@@ -65,8 +69,8 @@ const ResultHomeCard = ({ids}) => {
                 </Link>
                 <CardTitleFavorites>
                     <CardTitle>{Title}</CardTitle>
-                    <CardFavorites>
-                        <RiHeart3Line onClick={AddF}/>
+                    <CardFavorites isFavorite={isFavorite}>
+                        {isFavorite ? <RiHeart3Fill onClick={DeleteF}/> : <RiHeart3Line onClick={AddF}/>}
                     </CardFavorites>
                 </CardTitleFavorites>
             </CardParent>

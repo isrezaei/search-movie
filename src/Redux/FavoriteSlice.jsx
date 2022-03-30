@@ -7,7 +7,6 @@ const FavoriteSliceAdapter = createEntityAdapter({
 })
 
 const initialState = FavoriteSliceAdapter.getInitialState({
-    entities : JSON.parse(localStorage.getItem('save favorite'))
 })
 
 export const {selectEntities : selectFavoriteEntities , selectById : selectFavoriteById} = FavoriteSliceAdapter.getSelectors(state => state.FavoriteSlice)

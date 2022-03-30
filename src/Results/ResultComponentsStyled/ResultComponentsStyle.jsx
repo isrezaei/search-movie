@@ -43,6 +43,9 @@ export const CardParent = styled.div`
   &:hover
   {
     transform: scale(0.96);
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      transform: none;
+    }
   }
 `
 
@@ -156,11 +159,10 @@ export const CardTitleFavorites = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: red;
 `
 
 export const CardTitle = styled.div`
-  width: 60%;
+  width: 100%;
   //white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

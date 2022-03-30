@@ -148,6 +148,9 @@ export const CardYear = styled.div`
     font-size: 3.5vw;
   }
   //380px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    font-size: 4vw;
+  }
   //no need
 `
 

@@ -162,8 +162,8 @@ export const CardTitleFavorites = styled.div`
 `
 
 export const CardTitle = styled.div`
-  width: 100%;
-  //white-space: nowrap;
+  width: 60%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1vw;

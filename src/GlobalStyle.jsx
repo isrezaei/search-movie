@@ -15,6 +15,7 @@ export const GlobalStyle =  createGlobalStyle `
   html
   {
     overflow-x: hidden;
+    user-select: none
   }
   
   body

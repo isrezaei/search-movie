@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SidebarStyle = styled.div`
   width: 4%;
-  height: 20vw;
+  height: 24vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,10 +91,12 @@ const AdjustIcon = styled.div`
 `
 
 export const Icon = styled(AdjustIcon) `
+  width: 100%;
+  height: 4vw;
   color: ${({ActiveIcon , theme})=> ActiveIcon  ? theme.color_sidebar_active_icon : theme.color_sidebar_disable_icon};
   &:after
   {
-    height: 1vw;
+    height: 0;
     content: '${({Name})=> Name}';
     display: ${({ActiveIcon})=> ActiveIcon ? 'block' : 'none'};;
     font-size: .65vw;
@@ -113,6 +115,23 @@ export const Icon = styled(AdjustIcon) `
     //380px
     //no need
   }
+`
+
+export const FavoriteBag = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.1vw;
+  height: 1.1vw;
+  bottom: 8.3vw;
+  right: .8vw;
+  font-size: .70vw;
+  font-weight: bolder;
+  color: lavender;
+  position: absolute;
+  background: #ea3e3e;
+  
+  border-radius: 50%;
 `
 
 

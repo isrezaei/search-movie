@@ -1,10 +1,11 @@
 import { MdLocalMovies } from 'react-icons/md';
-import { RiMovie2Fill } from 'react-icons/ri';
+import { RiMovie2Fill} from 'react-icons/ri';
+import {GoListUnordered} from 'react-icons/go'
 import {HiHome} from 'react-icons/hi'
 import DarkMoodControl from "./DarkMoodControl";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {SidebarStyle , Icon } from "./SidebarStyle";
+import {SidebarStyle, Icon, FavoriteBag} from "./SidebarStyle";
 import {ChangeActiveIcon} from "../Redux/ResultSearchSlice";
 import {useDispatch} from "react-redux";
 import {Animated} from "react-animated-css";
@@ -19,16 +20,16 @@ const Sidebar = () => {
 
     // console.log(ActiveIconSidebar)
 
-    const ActiveHome = ActiveCategory === 'Results'
+    const ActiveHome = ActiveCategory === 'Home'
     const ActiveMovie = ActiveCategory === 'Movie'
     const ActiveSeries = ActiveCategory === 'Series'
+    const ActiveFavorite = ActiveCategory === 'Favorite'
 
 
     const onSubmit = (IconName) =>
     {
         dispatch(ChangeActiveIcon(IconName))
         sessionStorage.setItem('IconName' , JSON.stringify(IconName))
-
     }
 
 
@@ -42,7 +43,7 @@ const Sidebar = () => {
                 animationIn="tada"
                 animateOnMount={ActiveHome}>
                 <Link to={'/'}>
-                    <Icon Name={'Results'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Results')}><HiHome/></Icon>
+                    <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Home')}><HiHome/></Icon>
                 </Link>
             </Animated>
 
@@ -62,6 +63,20 @@ const Sidebar = () => {
                 </Link>
 
             </Animated>
+
+
+            <Animated
+                animationIn="tada"
+                animateOnMount={ActiveSeries}>
+
+                    <Icon Name={'Favorite'} ActiveIcon={ActiveFavorite} onClick={()=> onSubmit('Favorite')}>
+                        <FavoriteBag>0</FavoriteBag>
+                        <GoListUnordered/>
+                    </Icon>
+
+            </Animated>
+
+
             <Icon><DarkMoodControl/></Icon>
 
         </SidebarStyle>

@@ -15,7 +15,6 @@ import {
     Card_Title_Favorites,
     CardFavorites
 } from "../ResultComponentsStyled/ResultComponentsStyle";
-import {useState} from "react";
 import {toast} from "react-toastify";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 
@@ -42,12 +41,12 @@ const ResultHomeCard = ({ids}) => {
         RemoveNotify()
     }
 
-    const AddNotify = () => toast.success(`" ${Title} "  Added to your favorites list`, {
+    const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
         position: "top-center",
         autoClose: 3000,
     });
 
-    const RemoveNotify = () => toast.error(`" ${Title} "  Removed to your favorites list`, {
+    const RemoveNotify = () => toast.error(`" ${Title} " Removed to your favorites list`, {
         position: "top-center",
         autoClose: 3000,
     });

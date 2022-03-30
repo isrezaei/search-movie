@@ -19,7 +19,7 @@ export const SidebarStyle = styled.div`
   //1200
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     width: 5%;
-    height: 30vw;
+    height: 35vw;
     border-radius: 3vw 3vw 3vw 3vw;
     left: 2vw;
   }
@@ -91,9 +91,28 @@ const AdjustIcon = styled.div`
 `
 
 export const Icon = styled(AdjustIcon) `
-  width: 100%;
+  width: auto;
   height: 4vw;
   color: ${({ActiveIcon , theme})=> ActiveIcon  ? theme.color_sidebar_active_icon : theme.color_sidebar_disable_icon};
+
+  //1280
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    height: 3vw;
+    margin: 1.5vw 0;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    height: 5vw;
+  }
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    height: 7.5vw;
+  }
+  //360px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    height: 10vw;
+  }
+  
   &:after
   {
     height: 0;

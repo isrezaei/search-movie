@@ -198,6 +198,7 @@ export const CardFavorites = styled.div`
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 3vw;
+    margin-right: 0;
   }
 
   //480px

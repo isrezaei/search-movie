@@ -27,9 +27,6 @@ const ResultHomeCard = ({ids}) => {
 
     const {Poster , Title , Type , Year , imdbID} = MovieData
 
-
-    console.log(MovieFavorite && MovieFavorite)
-
     const isFavorite = MovieFavorite && MovieFavorite.favorite
 
 
@@ -62,7 +59,7 @@ const ResultHomeCard = ({ids}) => {
 
             <Animated animationIn='bounceIn'>
             <CardParent>
-                <Link to={`/Details/${imdbID}`}>
+                <Link to={`/details/${imdbID}`}>
                 <CardType>{Type}</CardType>
                     <CardImage src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
                 <CardYear>{Year}</CardYear>

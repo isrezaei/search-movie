@@ -13,7 +13,7 @@ const HeaderSyncSearch = ({InputValue , ids}) => {
     const CleanSearchInput = () => InputValue.unsubscribe()
 
     return (
-        <Link onClick={CleanSearchInput} style={{textDecoration : 'none'}} to={`Details/${imdbID}`}>
+        <Link onClick={CleanSearchInput} to={`/details/${imdbID}`}>
             <SearchItems>
                 <img src={Poster === 'N/A'  ? NoImageAvailable : Poster} alt={Title}/>
                 <section>

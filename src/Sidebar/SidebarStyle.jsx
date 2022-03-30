@@ -130,7 +130,6 @@ export const FavoriteBag = styled.div`
   color: lavender;
   position: absolute;
   background: #ea3e3e;
-  
   border-radius: 50%;
 `
 

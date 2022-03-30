@@ -6,10 +6,12 @@ import DarkMoodControl from "./DarkMoodControl";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import {SidebarStyle, Icon, FavoriteBag} from "./SidebarStyle";
+import {selectFavoriteId} from "../Redux/FavoriteSlice";
 import {ChangeActiveIcon} from "../Redux/ResultSearchSlice";
 import {useDispatch} from "react-redux";
 import {Animated} from "react-animated-css";
 import React from "react";
+
 
 const Sidebar = () => {
 
@@ -17,6 +19,7 @@ const Sidebar = () => {
     const dispatch = useDispatch()
 
     const ActiveCategory = useSelector(state => state.ResultSearchSlice.activeCategory)
+    const LenghtFavorite = useSelector(selectFavoriteId).length
 
     // console.log(ActiveIconSidebar)
 
@@ -69,10 +72,13 @@ const Sidebar = () => {
                 animationIn="tada"
                 animateOnMount={ActiveSeries}>
 
+                <Link to={'/favorite'}>
                     <Icon Name={'Favorite'} ActiveIcon={ActiveFavorite} onClick={()=> onSubmit('Favorite')}>
-                        <FavoriteBag>0</FavoriteBag>
+                        {LenghtFavorite ? <FavoriteBag>{LenghtFavorite}</FavoriteBag> : null}
                         <GoListUnordered/>
                     </Icon>
+                </Link>
+
 
             </Animated>
 

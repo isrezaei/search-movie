@@ -71,8 +71,8 @@ export const CardImage = styled.img`
   }
   //380px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-    width: 60vw;
-    height: 85vw;
+    width: 70vw;
+    height: 90vw;
   }
 `
 
@@ -164,7 +164,7 @@ export const CardTitle = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1vw;
-  font-weight: bold;
+  font-weight: bolder;
   color: ${props => props.theme.color_card_title};
 
   //1200
@@ -178,7 +178,7 @@ export const CardTitle = styled.div`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 3.5vw;
+    font-size: 4.2vw;
   }
   //380px
   //no need

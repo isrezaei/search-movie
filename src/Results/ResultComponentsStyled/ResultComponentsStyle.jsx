@@ -36,10 +36,11 @@ export const CardParent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   transition: .1s ease-in;
   cursor: pointer;
+
   &:hover
   {
     transform: scale(0.96);
@@ -94,11 +95,11 @@ export const CardType = styled.span`
   transition: .1s;
 }
 
-//1200
+//1280px
 @media(max-width: ${props => props.theme.responsive.medium_screen}) {
   width: 5vw;
   height: 2vw;
-  right: 3vw;
+  right: 2vw;
   top: 1.3vw;
   font-size: 1.3vw;
 }
@@ -159,6 +160,13 @@ export const CardTitleFavorites = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 93%;
+  }
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    width: 100%;
+  }
 `
 
 export const CardTitle = styled.div`
@@ -196,7 +204,6 @@ export const CardFavorites = styled.div`
   //1280
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     font-size: 2.5vw;
-    margin-right: 2vw;
   }
   
   //900px

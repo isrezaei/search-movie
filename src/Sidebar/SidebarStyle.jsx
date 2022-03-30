@@ -18,8 +18,8 @@ export const SidebarStyle = styled.div`
   
   //1200
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    width: 5%;
-    height: 35vw;
+    width: 4%;
+    height: 28vw;
     border-radius: 3vw 3vw 3vw 3vw;
     left: 2vw;
   }
@@ -97,7 +97,7 @@ export const Icon = styled(AdjustIcon) `
 
   //1280
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    height: 3vw;
+    height: 2vw;
     margin: 1.5vw 0;
   }
   //900px
@@ -124,7 +124,7 @@ export const Icon = styled(AdjustIcon) `
 
     //1024
     @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-      font-size: 1vw;
+      font-size: .80vw;
     }
     //900px
     @media(max-width: ${props => props.theme.responsive.small_screen}) {

@@ -151,7 +151,7 @@ export const CardYear = styled.div`
   //no need
 `
 
-export const Card_Title_Favorites = styled.div`
+export const CardTitleFavorites = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;

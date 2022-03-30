@@ -12,11 +12,12 @@ import {
     CardYear,
     CardTitle,
     CardType,
-    Card_Title_Favorites,
+    CardTitleFavorites,
     CardFavorites
 } from "../ResultComponentsStyled/ResultComponentsStyle";
 import {toast} from "react-toastify";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
+
 
 const ResultHomeCard = ({ids}) => {
 
@@ -25,9 +26,7 @@ const ResultHomeCard = ({ids}) => {
     const dispatch = useDispatch()
 
     const {Poster , Title , Type , Year , imdbID} = MovieData
-    // const isFavorite = MovieFavorite && MovieFavorite.favorite
-    //
-    // console.log(isFavorite)
+    const isFavorite = MovieFavorite && MovieFavorite.favorite
 
     const AddF = () =>
     {
@@ -62,12 +61,12 @@ const ResultHomeCard = ({ids}) => {
                     <CardImage src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
                 <CardYear>{Year}</CardYear>
                 </Link>
-                <Card_Title_Favorites>
+                <CardTitleFavorites>
                     <CardTitle>{Title}</CardTitle>
-                    <CardFavorites >
-                        <RiHeart3Line onClick={AddF}/>
+                    <CardFavorites isFavorite={isFavorite}>
+                        {isFavorite ? <RiHeart3Fill onClick={DeleteF}/> : <RiHeart3Line onClick={AddF}/>}
                     </CardFavorites>
-                </Card_Title_Favorites>
+                </CardTitleFavorites>
             </CardParent>
             </Animated>
 

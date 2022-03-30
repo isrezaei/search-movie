@@ -163,7 +163,7 @@ export const CardTitleFavorites = styled.div`
 
 export const CardTitle = styled.div`
   width: 60%;
-  white-space: nowrap;
+  //white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1vw;
@@ -181,7 +181,7 @@ export const CardTitle = styled.div`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   //380px
   //no need

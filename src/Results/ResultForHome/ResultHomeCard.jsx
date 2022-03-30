@@ -18,8 +18,6 @@ import {
 import {toast} from "react-toastify";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 
-//test
-
 const ResultHomeCard = ({ids}) => {
 
     const MovieData = useSelector(state => selectMovieByIds(state , ids))
@@ -27,8 +25,9 @@ const ResultHomeCard = ({ids}) => {
     const dispatch = useDispatch()
 
     const {Poster , Title , Type , Year , imdbID} = MovieData
-    const isFavorite = MovieFavorite && MovieFavorite.favorite
-
+    // const isFavorite = MovieFavorite && MovieFavorite.favorite
+    //
+    // console.log(isFavorite)
 
     const AddF = () =>
     {
@@ -65,8 +64,8 @@ const ResultHomeCard = ({ids}) => {
                 </Link>
                 <Card_Title_Favorites>
                     <CardTitle>{Title}</CardTitle>
-                    <CardFavorites isFavorite={isFavorite}>
-                        {isFavorite ? <RiHeart3Fill onClick={DeleteF}/> : <RiHeart3Line onClick={AddF}/>}
+                    <CardFavorites >
+                        <RiHeart3Line onClick={AddF}/>
                     </CardFavorites>
                 </Card_Title_Favorites>
             </CardParent>

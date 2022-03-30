@@ -188,5 +188,25 @@ export const CardFavorites = styled.div`
   font-size: 1.5vw;
   color: ${props => props.isFavorite ?'#ff5131' : 'cadetblue'};
   transition: .1s;
+
+  //1280
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    font-size: 2.5vw;
+    margin-right: 2vw;
+  }
+  
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    font-size: 3vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    font-size: 6vw;
+  }
+  
+  //320px
+  //no need
+  
 `
 

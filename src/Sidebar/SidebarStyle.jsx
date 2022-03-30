@@ -62,7 +62,7 @@ const AdjustIcon = styled.div`
   font-size: 1.8vw;
   cursor: pointer;
 
-  //1024
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     height: 6vw;
     font-size: 3vw;
@@ -108,7 +108,7 @@ export const Icon = styled(AdjustIcon) `
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     height: 7.5vw;
   }
-  //360px
+  //320px
   @media(max-width: ${props => props.theme.responsive.small_mobile}) {
     height: 10vw;
   }
@@ -150,6 +150,44 @@ export const FavoriteBag = styled.div`
   position: absolute;
   background: #ea3e3e;
   border-radius: 50%;
+  
+
+  //1280
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 1.7vw;
+    height: 1.7vw;
+    right: .6vw;
+    bottom: 12vw;
+    font-size: 1.2vw;
+  }
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    width: 2vw;
+    height: 2vw;
+    right: 9.8vw;
+    bottom: 4.5vw;
+    font-size: 1.5vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 4.5vw;
+    height: 4.5vw;
+    right: 25.5vw;
+    bottom: 7.5vw;
+    font-size: 3.5vw;
+  }
+  
+  //320px
+  @media(max-width: ${props => props.theme.responsive.small_mobile}) {
+    width: 5.5vw;
+    height: 5.5vw;
+    right: 25.5vw;
+    bottom: 9.5vw;
+    font-size: 4vw;
+  }
+  
 `
 
 

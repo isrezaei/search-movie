@@ -23,35 +23,35 @@ const ResultHomeCard = ({ids}) => {
 
     const MovieData = useSelector(state => selectMovieByIds(state , ids))
     // const MovieFavorite = useSelector(state => selectFavoriteById(state , ids))
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const {Poster , Title , Type , Year , imdbID} = MovieData
     // const isFavorite = MovieFavorite && MovieFavorite.favorite
 
 
-    // const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
-    //     position: "top-center",
-    //     autoClose: 3000,
-    // });
-    //
-    // const RemoveNotify = () => toast.error(`" ${Title} " Removed to your favorites list`, {
-    //     position: "top-center",
-    //     autoClose: 3000,
-    // });
-    //
+    const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
+        position: "top-center",
+        autoClose: 3000,
+    });
 
-    // const AddF = () =>
-    // {
-    //     dispatch(AddFavorite({imdbID , Type , Year , Title , Poster , favorite : true}))
-    //     AddNotify()
-    // }
-    //
-    // const DeleteF = () =>
-    // {
-    //     dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster , favorite : false}))
-    //     RemoveNotify()
-    // }
-    //
+    const RemoveNotify = () => toast.error(`" ${Title} " Removed to your favorites list`, {
+        position: "top-center",
+        autoClose: 3000,
+    });
+
+
+    const AddF = () =>
+    {
+        dispatch(AddFavorite({imdbID , Type , Year , Title , Poster , favorite : true}))
+        AddNotify()
+    }
+
+    const DeleteF = () =>
+    {
+        dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster , favorite : false}))
+        RemoveNotify()
+    }
+
 
 
     return (
@@ -65,9 +65,9 @@ const ResultHomeCard = ({ids}) => {
                 </Link>
                 <CardTitleFavorites>
                     <CardTitle>{Title}</CardTitle>
-                    {/*<CardFavorites isFavorite={isFavorite}>*/}
-                    {/*    {isFavorite ? <RiHeart3Fill onClick={DeleteF}/> : <RiHeart3Line onClick={AddF}/>}*/}
-                    {/*</CardFavorites>*/}
+                    <CardFavorites>
+                        <RiHeart3Line onClick={AddF}/>
+                    </CardFavorites>
                 </CardTitleFavorites>
             </CardParent>
             </Animated>

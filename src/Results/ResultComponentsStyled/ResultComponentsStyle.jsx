@@ -37,7 +37,7 @@ export const CardParent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   transition: .1s ease-in;
   cursor: pointer;
   &:hover
@@ -122,7 +122,7 @@ export const CardType = styled.span`
 }
 //380px
 @media(max-width: ${props => props.theme.responsive.small_mobile}) {
-  top: 3vw;
+  top: 4.5vw;
 }
 `
 
@@ -178,7 +178,7 @@ export const CardTitle = styled.div`
   }
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   //380px
   //no need

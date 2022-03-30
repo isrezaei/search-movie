@@ -13,6 +13,6 @@ export const store = configureStore({
         DetailsSlice,
         ResultSearchSlice,
         DarkMoodSlice,
-        FavoriteSlice
+        // FavoriteSlice
     }
 })

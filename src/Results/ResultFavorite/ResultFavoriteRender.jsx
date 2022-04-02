@@ -1,6 +1,8 @@
 import {useSelector} from "react-redux";
 import {selectFavoriteId} from "../../Redux/FavoriteSlice";
 import ResultFavoriteShow from "./ResultFavoriteShow";
+import {FavoriteParent} from "../ResultComponentsStyled/ResultComponentsStyle";
+
 
 const ResultFavoriteRender = () => {
 
@@ -8,12 +10,12 @@ const ResultFavoriteRender = () => {
 
     const RenderFavorite = FavoriteIds.map(ids => <ResultFavoriteShow key={ids} ids={ids}/>)
 
-    const FavoriteLenght = FavoriteIds.length
+    const FavoriteLength = FavoriteIds.length
 
     return (
-        <div>
-            {FavoriteLenght ? RenderFavorite : <h1>your Favorite list is empty</h1>}
-        </div>
+        <FavoriteParent>
+            {FavoriteLength ? RenderFavorite : <h1>your Favorite list is empty</h1>}
+        </FavoriteParent>
     );
 };
 

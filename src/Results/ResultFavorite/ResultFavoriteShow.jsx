@@ -1,5 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
+import {FavoriteInfo, FavoriteSection, FavoriteImage} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {RiDeleteBin2Fill} from 'react-icons/ri'
 
 const ResultFavoriteShow = ({ids}) => {
 
@@ -9,14 +11,19 @@ const ResultFavoriteShow = ({ids}) => {
     const {imdbID, Type, Year, Title, Poster, favorite} = FavoriteItems
 
     return (
-        <div style={{width : '80%' , display : 'flex' ,flexDirection : 'column' , justifyContent : 'center' , alignItems : 'center'}}>
+        <FavoriteSection>
 
-            <img src={Poster} style={{width : '25%'}}/>
-            <h1>{Title}</h1>
-            <h3>{Year}</h3>
-            <h4>{Type}</h4>
+            <FavoriteImage src={Poster} />
 
-        </div>
+            <FavoriteInfo>
+                <div className='FavoriteTitle'><p>{Title}</p></div>
+                <div className='FavoriteName'><p>{Year}</p></div>
+                <div className='FavoriteType'><p>{Type}</p></div>
+                <div className='FavoriteDetails'><p>Details</p></div>
+                <div className='FavoriteRemove'><RiDeleteBin2Fill/></div>
+            </FavoriteInfo>
+
+        </FavoriteSection>
     );
 };
 

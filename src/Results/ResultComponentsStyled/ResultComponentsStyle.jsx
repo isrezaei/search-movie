@@ -145,7 +145,7 @@ export const CardYear = styled.div`
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    
+
     font-size: 3.5vw;
   }
   //380px
@@ -205,7 +205,7 @@ export const CardFavorites = styled.div`
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     font-size: 2.5vw;
   }
-  
+
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 3vw;
@@ -216,9 +216,100 @@ export const CardFavorites = styled.div`
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     font-size: 6vw;
   }
-  
   //320px
   //no need
-  
 `
 
+export const FavoriteParent = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  height: 40vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  overflow-y: scroll;
+  margin: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`
+
+export const FavoriteSection = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1vw 0;
+  width: 100%;
+  padding: 1vw 0;
+  border: 1px solid cadetblue;
+
+`
+
+export const FavoriteImage = styled.img`
+    width: 8vw;
+`
+
+export const FavoriteInfo = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  
+  .FavoriteTitle
+  {
+    flex: 1.5;
+    font-size: 1.1vw;
+    white-space: nowrap;
+    overflow: clip;
+    font-weight: bolder;
+    text-align: start;
+  }
+  .FavoriteName
+  {
+    flex: 1;
+    font-size: .95vw;
+    font-weight: bolder;
+  }
+  .FavoriteType
+  {
+    flex: .8;
+    font-weight: bolder;
+    color: snow;
+    p
+    {
+      width: 50%;
+      height: 1.2vw;
+      margin: auto;
+      border-radius: 1vw;
+      background: cadetblue;
+    }
+  }
+  
+  .FavoriteDetails
+  {
+    flex: .8;
+    font-weight: bolder;
+    color: snow;
+    p
+    {
+      width: 80%;
+      height: 1.2vw;
+      margin: auto;
+      border-radius: 1vw;
+      background: cadetblue;
+    }
+  }
+  
+  .FavoriteRemove
+  {
+    flex: 1;
+    font-size: 1.3vw;
+    color: indianred;
+  }
+  
+`

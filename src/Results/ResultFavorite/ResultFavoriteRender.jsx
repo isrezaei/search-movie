@@ -2,6 +2,9 @@ import {useSelector} from "react-redux";
 import {selectFavoriteId} from "../../Redux/FavoriteSlice";
 import ResultFavoriteShow from "./ResultFavoriteShow";
 import {FavoriteParent} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {Animated} from "react-animated-css";
+import {MdOutlinePlaylistAdd} from "react-icons/md";
+import {FavoriteList , FavoriteIcon} from "../ResultComponentsStyled/ResultComponentsStyle";
 
 
 const ResultFavoriteRender = () => {
@@ -14,7 +17,15 @@ const ResultFavoriteRender = () => {
 
     return (
         <FavoriteParent>
-            {FavoriteLength ? RenderFavorite : <h1>your Favorite list is empty</h1>}
+            {FavoriteLength ?
+                RenderFavorite :
+                    <FavoriteList>
+                        <Animated animationIn="tada">
+                            <FavoriteIcon><MdOutlinePlaylistAdd/></FavoriteIcon>
+                        </Animated>
+                        <p>Your favorite list is empty <strong> Add something </strong></p>
+                    </FavoriteList>
+            }
         </FavoriteParent>
     );
 };

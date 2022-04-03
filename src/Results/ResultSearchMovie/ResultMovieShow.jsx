@@ -3,7 +3,6 @@ import {selectAllResultSearch} from "../../Redux/ResultSearchSlice";
 import ResultMovieCard from "./ResultMovieCard";
 import {GridDisplay} from "../ResultComponentsStyled/ResultComponentsStyle";
 
-
 const ResultMovieShow = () => {
 
     const FilterMovie = useSelector(selectAllResultSearch).filter(value => value.Type === 'movie')

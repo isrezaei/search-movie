@@ -220,6 +220,61 @@ export const CardFavorites = styled.div`
   //no need
 `
 
+
+export const PleaseSearch = styled.div`
+  width: 85vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  p
+  {
+    font-size: 1.5vw;
+    color: ${props => props.theme.color_please_search_text};
+    transition: .1s;
+  }
+  strong
+  {
+    color: ${props => props.theme.color_please_search_text_strong};
+    transition: .1s;
+  }
+`
+export const SearchIcon = styled.div `
+
+  font-size: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${props => props.theme.color_please_search_text_strong};
+  transition: .1s;
+`
+
+//extended from "PleaseSearch"
+export const NotFoundSearch = styled(PleaseSearch)`
+  p
+  {
+    color: ${props => props.theme.color_NotFound_text};
+  }
+  strong
+  {
+    color: ${props => props.theme.color_please_search_text_strong};
+  }
+`
+//extended from "SearchIcon"
+export const NotFoundIcon = styled(SearchIcon)`
+  color: ${props => props.theme.color_NotFound_text_strong};
+`
+
+//extended from "PleaseSearch"
+export const FavoriteList = styled(PleaseSearch)``
+//extended from "SearchIcon"
+export const FavoriteIcon = styled(SearchIcon)``
+
 export const FavoriteParent = styled.div `
   display: flex;
   flex-direction: column;
@@ -246,7 +301,6 @@ export const FavoriteSection = styled.div`
   width: 100%;
   padding: 1vw 0;
   border: 1px solid cadetblue;
-
 `
 
 export const FavoriteImage = styled.img`
@@ -280,6 +334,7 @@ export const FavoriteInfo = styled.div`
     flex: .8;
     font-weight: bolder;
     color: snow;
+    cursor: pointer;
     p
     {
       width: 50%;
@@ -294,7 +349,7 @@ export const FavoriteInfo = styled.div`
   {
     flex: .8;
     font-weight: bolder;
-    color: snow;
+    cursor: pointer;
     p
     {
       width: 80%;
@@ -302,6 +357,7 @@ export const FavoriteInfo = styled.div`
       margin: auto;
       border-radius: 1vw;
       background: cadetblue;
+      color: snow;
     }
   }
   
@@ -310,6 +366,7 @@ export const FavoriteInfo = styled.div`
     flex: 1;
     font-size: 1.3vw;
     color: indianred;
+    cursor: pointer;
   }
   
 `

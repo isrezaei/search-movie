@@ -7,10 +7,11 @@ import ResultFavoriteRender from "./Results/ResultFavorite/ResultFavoriteRender"
 import Details from "./Details/Details";
 import NotFound404 from "./NotFound/NotFound404";
 import Sidebar from "./Sidebar/Sidebar";
-import {ThemeProvider} from "styled-components";
+import styled, {ThemeProvider} from "styled-components";
 import {useSelector} from "react-redux";
 import {GlobalStyle} from "./GlobalStyle";
 import React from "react";
+import {ToastContainer} from 'react-toastify';
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
         color_top_section_search_result_your_search_text : isDarkMood ? '#9ca0ab' : '#9a9a9a',
         color_please_search_text : isDarkMood ? '#e0e0e0' : '#525252',
         color_please_search_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
+        color_NotFound_text : isDarkMood ? '#e0e0e0' : '#525252',
+        color_NotFound_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
 
         responsive : {
             small_mobile : '320px',
@@ -54,11 +57,20 @@ function App() {
         }
     }
 
+    const ToastNotify = styled(ToastContainer)`
+      .Toastify__toast {
+        background: ${isDarkMood ? '#131313' : '#e0e0e0'} ;
+        color: ${isDarkMood ? '#e0e0e0' : '#131313'} ;
+        font-weight: bold;
+      }
+    `
+
 
     return (
         <ThemeProvider theme={ThemeProject} >
             <GlobalStyle/>
             <Header/>
+            <ToastNotify/>
             <Routes>
                 <Route path='/' exact element={<ResultHomeReadyToRender/>}/>
                 <Route path='/search/movie'  element={<ResultMovieRender/>}/>

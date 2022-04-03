@@ -12,19 +12,8 @@ const ResultHomeShow = () => {
 
     const MovieShow = MovieIds.map(ids => <ResultHomeCard key={ids} ids={ids}/>)
 
-    const isDarkMood = useSelector(state => state.DarkMoodSlice.darkMood)
-
-    const ToastNotify = styled(ToastContainer)`
-      .Toastify__toast {
-        background: ${isDarkMood ? '#131313' : '#e0e0e0'} ;
-        color: ${isDarkMood ? '#e0e0e0' : '#131313'} ;
-        font-weight: bold;
-      }
-    `
-
     return (
         <>
-            <ToastNotify/>
             <GridDisplay>
                 {MovieShow}
             </GridDisplay>

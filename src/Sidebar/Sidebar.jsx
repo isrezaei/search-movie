@@ -19,15 +19,14 @@ const Sidebar = () => {
     const dispatch = useDispatch()
 
     const ActiveCategory = useSelector(state => state.ResultSearchSlice.activeCategory)
-    const LenghtFavorite = useSelector(selectFavoriteId).length
+    const LengthFavorite = useSelector(selectFavoriteId).length
 
     // console.log(ActiveIconSidebar)
 
-    const ActiveHome = ActiveCategory === 'Home'
-    const ActiveMovie = ActiveCategory === 'Movie'
-    const ActiveSeries = ActiveCategory === 'Series'
-    const ActiveFavorite = ActiveCategory === 'Favorite'
-
+    const ActiveHome = ActiveCategory === 'home'
+    const ActiveMovie = ActiveCategory === 'movie'
+    const ActiveSeries = ActiveCategory === 'series'
+    const ActiveFavorite = ActiveCategory === 'favorite'
 
     const onSubmit = (IconName) =>
     {
@@ -35,18 +34,14 @@ const Sidebar = () => {
         sessionStorage.setItem('IconName' , JSON.stringify(IconName))
     }
 
-
     return (
 
         <SidebarStyle>
-
-
-
             <Animated
                 animationIn="tada"
                 animateOnMount={ActiveHome}>
                 <Link to={'/'}>
-                    <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('Home')}><HiHome/></Icon>
+                    <Icon Name={'Home'} ActiveIcon={ActiveHome} onClick={()=> onSubmit('home')}><HiHome/></Icon>
                 </Link>
             </Animated>
 
@@ -54,7 +49,7 @@ const Sidebar = () => {
                 animationIn="tada"
                 animateOnMount={ActiveMovie}>
                 <Link to={'/search/movie'}>
-                    <Icon Name={'Movie'} ActiveIcon={ActiveMovie} onClick={()=> onSubmit('Movie')}><MdLocalMovies/></Icon>
+                    <Icon Name={'Movie'} ActiveIcon={ActiveMovie} onClick={()=> onSubmit('movie')}><MdLocalMovies/></Icon>
                 </Link>
             </Animated>
 
@@ -62,29 +57,23 @@ const Sidebar = () => {
                 animationIn="tada"
                 animateOnMount={ActiveSeries}>
                 <Link to={'/search/series'}>
-                    <Icon Name={'Series'} ActiveIcon={ActiveSeries} onClick={()=> onSubmit('Series')}><RiMovie2Fill/></Icon>
+                    <Icon Name={'Series'} ActiveIcon={ActiveSeries} onClick={()=> onSubmit('series')}><RiMovie2Fill/></Icon>
                 </Link>
 
             </Animated>
-
 
             <Animated
                 animationIn="tada"
-                animateOnMount={ActiveSeries}>
-
+                animateOnMount={ActiveFavorite}>
                 <Link to={'/favorite'}>
-                    <Icon Name={'Favorite'} ActiveIcon={ActiveFavorite} onClick={()=> onSubmit('Favorite')}>
-                        {LenghtFavorite ? <FavoriteBag>{LenghtFavorite}</FavoriteBag> : null}
+                    <Icon Name={'Favorite'} ActiveIcon={ActiveFavorite} onClick={()=> onSubmit('favorite')}>
+                        {LengthFavorite ? <FavoriteBag>{LengthFavorite}</FavoriteBag> : null}
                         <GoListUnordered/>
                     </Icon>
                 </Link>
-
-
             </Animated>
 
-
             <Icon><DarkMoodControl/></Icon>
-
         </SidebarStyle>
     );
 };

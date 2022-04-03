@@ -29,7 +29,7 @@ export const Header = () => {
 
     const {register,watch,reset} = useForm({
         defaultValues : {
-            TypeOfShow : 'Movie'
+            TypeOfShow : 'movie'
         }
     });
 
@@ -38,20 +38,16 @@ export const Header = () => {
     const InputValue = watch('InputValue')
     const TypeOfShow = watch('TypeOfShow')
 
-
     const onSubmit = () => {
         if (InputValue)
         {
             dispatch(fetchResultSearch(InputValue))
             dispatch(ActiveIcone(TypeOfShow))
             dispatch(SearchValue(InputValue))
-
             reset({InputValue : ''})
             Navigate(`/search/${TypeOfShow}`)
         }
     }
-
-
 
     useEffect(()=>{
 
@@ -73,7 +69,6 @@ export const Header = () => {
 
     let Render ;
 
-
     if (SearchStatus === 'pending')
     {
         Render = <HeaderSyncSearchSpinner/>
@@ -87,32 +82,22 @@ export const Header = () => {
         Render = <HeaderSyncSearchNotFound/>
     }
 
-
     return (
         <HeaderStyle>
-
-
-
             <HeaderLogo onClick={()=> Navigate('/')}>MOV.</HeaderLogo>
-
             <HeaderSearchSection>
-
                 <HeaderSearchElements>
                     <HeaderBtnSearch onClick={onSubmit}><BiSearchAlt/></HeaderBtnSearch>
                     <HeaderInputSearch  onKeyPress={e => e.key === 'Enter' && onSubmit()} {...register('InputValue')} placeholder='Search something here...' type='text'/>
                     <HeaderSelectTypeShow {...register('TypeOfShow')}>
-                        <option>Movie</option>
-                        <option>Series</option>
+                        <option>movie</option>
+                        <option>series</option>
                     </HeaderSelectTypeShow>
                 </HeaderSearchElements>
-
                 <RenderSearch render={InputValue ? 'block' : 'none'}>
                     {Render}
                 </RenderSearch>
-
             </HeaderSearchSection>
-
-
         </HeaderStyle>
     );
 };

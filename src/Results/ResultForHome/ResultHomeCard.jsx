@@ -21,6 +21,8 @@ import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 
 const ResultHomeCard = ({ids}) => {
 
+
+
     const MovieData = useSelector(state => selectMovieByIds(state , ids))
     const MovieFavorite = useSelector(state => selectFavoriteById(state , ids))
     const dispatch = useDispatch()
@@ -41,13 +43,13 @@ const ResultHomeCard = ({ids}) => {
     });
 
 
-    const AddF = () =>
+    const AddFavoriteOnList = () =>
     {
-        dispatch(AddFavorite({imdbID , Type , Year , Title , Poster , favorite : true}))
+        dispatch(AddFavorite({imdbID , Type , Year , Title , Poster , favorite : true }))
         AddNotify()
     }
 
-    const DeleteF = () =>
+    const DeleteFavoriteOnList = () =>
     {
         dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster , favorite : false}))
         RemoveNotify()
@@ -67,7 +69,7 @@ const ResultHomeCard = ({ids}) => {
                 <CardTitleFavorites>
                     <CardTitle>{Title}</CardTitle>
                     <CardFavorites isFavorite={isFavorite}>
-                        {isFavorite ? <RiHeart3Fill onClick={DeleteF}/> : <RiHeart3Line onClick={AddF}/>}
+                        {isFavorite ? <RiHeart3Fill onClick={DeleteFavoriteOnList}/> : <RiHeart3Line onClick={AddFavoriteOnList}/>}
                     </CardFavorites>
                 </CardTitleFavorites>
             </CardParent>

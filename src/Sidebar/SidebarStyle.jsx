@@ -154,10 +154,10 @@ export const FavoriteBag = styled.div`
 
   //1280
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    width: 1.7vw;
-    height: 1.7vw;
-    right: .6vw;
-    bottom: 12vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    right: .3vw;
+    bottom: 9.2vw;
     font-size: 1.2vw;
   }
 

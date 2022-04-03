@@ -9,7 +9,7 @@ const TopSectionMovieSeries = () => {
     return (
         <TextSearchStyle>
             <TextSearch>
-                {SearchValue}
+                Search result for "{SearchValue}"
             </TextSearch>
 
             <TypeSearch>

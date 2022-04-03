@@ -49,7 +49,7 @@ export const ResultSearchSlice = createSlice({
         },
         SearchValue : (state , {payload}) =>
         {
-            state.searchValue = `Search result for "${payload}"`
+            state.searchValue = payload
         }
     },
     extraReducers : {

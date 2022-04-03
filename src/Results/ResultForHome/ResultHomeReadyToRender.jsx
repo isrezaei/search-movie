@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import ResultHomeShow from "./ResultHomeShow";
-import {useEffect, useMemo} from "react";
+import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";

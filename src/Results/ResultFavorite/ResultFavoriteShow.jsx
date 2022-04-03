@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 import {FavoriteInfo, FavoriteSection, FavoriteImage} from "../ResultComponentsStyled/ResultComponentsStyle";
-import {RiDeleteBin2Fill} from 'react-icons/ri'
+import {MdOutlineDeleteOutline} from 'react-icons/md'
 import {useDispatch} from "react-redux";
 import {RemoveFavorite} from "../../Redux/FavoriteSlice";
 import {toast} from "react-toastify";
@@ -54,7 +54,7 @@ const ResultFavoriteShow = ({ids}) => {
 
                     <div className='FavoriteTypeAndDelete'>
                         <div className='FavoriteType'>{Type}</div>
-                        <div className='FavoriteRemove'><RiDeleteBin2Fill onClick={DeleteFavorite}/></div>
+                        <div className='FavoriteRemove'><MdOutlineDeleteOutline onClick={DeleteFavorite}/></div>
                     </div>
                 </div>
 

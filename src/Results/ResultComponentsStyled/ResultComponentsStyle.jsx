@@ -280,14 +280,9 @@ export const FavoriteParent = styled.div `
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(2, 30vw);
-  grid-column-gap: 5vw;
-  width: 80%;
-  height: 40vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , -50%);
+  grid-template-columns: repeat(3, 26vw);
+  grid-column-gap: 1.5vw;
+  width: 85%;
   margin: auto;
   overflow-y: scroll;
 
@@ -306,7 +301,6 @@ export const FavoriteSection = styled.div`
   background-image: linear-gradient(${({FavoriteRandomBg}) => FavoriteRandomBg});
   padding:1vw;
   transition: .1s;
-
 `
 
 export const FavoriteImage = styled.img`
@@ -343,6 +337,7 @@ export const FavoriteInfo = styled.div`
     font-weight: bolder;
     text-align: start;
     color: ${props => props.theme.color_Favorite_Title};
+    transition: .1s;
   }
 
   .FavoriteTypeAndDelete {
@@ -358,13 +353,15 @@ export const FavoriteInfo = styled.div`
     font-weight: bolder;
     cursor: pointer;
     color: ${props => props.theme.color_Favorite_Title};
+    transition: .1s;
   }
 }
 
 .FavoriteRemove {
   font-size: 1.5vw;
-  color: whitesmoke;
+  color: ${props => props.theme.color_Favorite_Title};
   cursor: pointer;
+  transition: .1s;
 }
 
 `

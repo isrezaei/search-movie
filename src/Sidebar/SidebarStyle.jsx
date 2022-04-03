@@ -142,6 +142,7 @@ export const FavoriteBag = styled.div`
   align-items: center;
   width: 1.1vw;
   height: 1.1vw;
+
   bottom: 8.3vw;
   right: .8vw;
   font-size: .70vw;

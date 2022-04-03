@@ -47,6 +47,7 @@ function App() {
         color_please_search_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
         color_NotFound_text : isDarkMood ? '#e0e0e0' : '#525252',
         color_NotFound_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
+        color_Favorite_Title : isDarkMood ? '#e0e0e0' : '#525252',
 
         responsive : {
             small_mobile : '320px',

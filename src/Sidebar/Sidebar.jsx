@@ -62,17 +62,18 @@ const Sidebar = () => {
 
             </Animated>
 
+
             <Animated
                 animationIn="tada"
                 animateOnMount={ActiveFavorite}>
                 <Link to={'/favorite'}>
                     <Icon Name={'Favorite'} ActiveIcon={ActiveFavorite} onClick={()=> onSubmit('favorite')}>
-                        {LengthFavorite ? <FavoriteBag>{LengthFavorite}</FavoriteBag> : null}
                         <GoListUnordered/>
                     </Icon>
                 </Link>
             </Animated>
 
+            {LengthFavorite ? <FavoriteBag>{LengthFavorite}</FavoriteBag> : null}
             <Icon><DarkMoodControl/></Icon>
         </SidebarStyle>
     );

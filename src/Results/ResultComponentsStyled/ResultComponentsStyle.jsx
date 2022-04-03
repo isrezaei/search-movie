@@ -275,19 +275,22 @@ export const FavoriteList = styled(PleaseSearch)``
 //extended from "SearchIcon"
 export const FavoriteIcon = styled(SearchIcon)``
 
+
 export const FavoriteParent = styled.div `
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 30vw);
+  grid-column-gap: 5vw;
   width: 80%;
   height: 40vw;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
-  overflow-y: scroll;
   margin: auto;
+  overflow-y: scroll;
+
   ::-webkit-scrollbar {
     display: none;
   }
@@ -299,12 +302,15 @@ export const FavoriteSection = styled.div`
   align-items: center;
   margin: 1vw 0;
   width: 100%;
-  padding: 1vw 0;
-  border: 1px solid cadetblue;
+  height: 10vw;
+  background-image: linear-gradient(${({FavoriteRandomBg}) => FavoriteRandomBg});
+  padding:1vw;
+  transition: .1s;
+
 `
 
 export const FavoriteImage = styled.img`
-    width: 8vw;
+  width: 6vw;
 `
 
 export const FavoriteInfo = styled.div`
@@ -313,60 +319,52 @@ export const FavoriteInfo = styled.div`
   align-items: center;
   width: 80%;
   text-align: center;
-  
-  .FavoriteTitle
+
+
+  .FavoriteParent 
   {
-    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    height: 8vw;
+    margin: 0 1vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .TitleAdnYear {
     font-size: 1.1vw;
     white-space: nowrap;
     overflow: clip;
     font-weight: bolder;
     text-align: start;
+    color: ${props => props.theme.color_Favorite_Title};
   }
-  .FavoriteName
-  {
-    flex: 1;
-    font-size: .95vw;
-    font-weight: bolder;
+
+  .FavoriteTypeAndDelete {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .FavoriteType
-  {
-    flex: .8;
-    font-weight: bolder;
-    color: snow;
-    cursor: pointer;
-    p
-    {
-      width: 50%;
-      height: 1.2vw;
-      margin: auto;
-      border-radius: 1vw;
-      background: cadetblue;
-    }
-  }
-  
-  .FavoriteDetails
-  {
-    flex: .8;
+
+
+  .FavoriteType {
+    font-size: 1vw;
     font-weight: bolder;
     cursor: pointer;
-    p
-    {
-      width: 80%;
-      height: 1.2vw;
-      margin: auto;
-      border-radius: 1vw;
-      background: cadetblue;
-      color: snow;
-    }
+    color: ${props => props.theme.color_Favorite_Title};
   }
-  
-  .FavoriteRemove
-  {
-    flex: 1;
-    font-size: 1.3vw;
-    color: indianred;
-    cursor: pointer;
-  }
-  
+}
+
+.FavoriteRemove {
+  font-size: 1.5vw;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
 `

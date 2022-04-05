@@ -299,7 +299,7 @@ export const FavoriteSection = styled.div`
   width: 100%;
   height: 10vw;
   background-image: linear-gradient(${({FavoriteRandomBg}) => FavoriteRandomBg});
-  padding:1vw;
+  padding: 1vw;
   transition: .1s;
 `
 
@@ -321,7 +321,7 @@ export const FavoriteInfo = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    flex: 1;
+    width: 100%;
     height: 8vw;
     margin: 0 1vw;
     white-space: nowrap;

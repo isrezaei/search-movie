@@ -38,6 +38,7 @@ const ResultFavoriteShow = ({ids}) => {
     ]
     let RandomIndexBg = FavoriteDarkBg[Math.floor(Math.random() * FavoriteDarkBg.length)]
 
+
     return (
         <FavoriteSection FavoriteRandomBg = {RandomIndexBg}>
 

@@ -21,13 +21,14 @@ export const DetailsSlice = createSlice({
         CleanDetails : (state) =>
         {
             state.details = {}
+            state.status = 'idle'
         }
     },
     extraReducers : {
 
         [fetchDetails.pending] : (state) =>
         {
-            state.state = 'pending'
+            state.status = 'pending'
         },
         [fetchDetails.fulfilled] : (state , {payload}) =>
         {

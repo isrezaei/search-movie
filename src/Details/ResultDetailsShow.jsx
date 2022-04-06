@@ -16,17 +16,9 @@ import {FaTheaterMasks} from 'react-icons/fa'
 import {IoLanguage , IoWarningOutline} from 'react-icons/io5'
 import {CgDollar} from 'react-icons/cg'
 import {toast} from "react-toastify";
-import {useLocation , useHref} from "react-router-dom";
 
 
 const ResultDetailsShow = ({DetailsData}) => {
-
-
-    const Location = useLocation()
-
-
-    console.log(Location.pathname)
-
 
     const dispatch = useDispatch()
 
@@ -42,13 +34,19 @@ const ResultDetailsShow = ({DetailsData}) => {
 
     const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
     });
 
     const RemoveNotify = () => toast.error(`" ${Title} " Removed to your favorites list`, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
     });
+
+    const ClipboardNotify = () => toast('The page address was copied', {
+        position: "top-center",
+        autoClose: 2000,
+    });
+
 
     const AddFavoriteOnList = () =>
     {
@@ -60,6 +58,13 @@ const ResultDetailsShow = ({DetailsData}) => {
     {
         dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster , favorite : false}))
         RemoveNotify()
+    }
+
+    const ClipboardUrl = () =>
+    {
+        const CurrentUrl = window.location.href
+        navigator.clipboard.writeText(CurrentUrl)
+        ClipboardNotify()
     }
 
     return (
@@ -92,7 +97,7 @@ const ResultDetailsShow = ({DetailsData}) => {
                         <div className='MetacriticRate'>{Metascore}</div>
                     </div>
 
-                    <div className='ShareSection'>
+                    <div onClick={ClipboardUrl} className='ShareSection'>
                         <RiShareForwardFill className='ShareIcone'/>
                         <div className='ShareText'>Share This Page</div>
                     </div>

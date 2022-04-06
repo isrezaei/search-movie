@@ -137,6 +137,7 @@ export const RightSideDetails = styled.div `
       width: 55%;
       height: auto;
       margin: .3vw 0;
+      cursor: pointer;
     }
 
     .ShareIcone {

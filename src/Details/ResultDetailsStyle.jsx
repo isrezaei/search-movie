@@ -14,6 +14,31 @@ export const RightSideDetails = styled.div `
   //background: chartreuse;
   height: 100%;
   padding: 2vw;
+  
+  .DetailsPoster
+  {
+    width: 15vw;
+    height: 22.2vw;
+  }
+  
+  .DetailsFavorite
+  {
+    position: absolute;
+    width: 2.8vw;
+    height: 2.8vw;
+    background: coral;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 26vw;
+    left: 25vw;
+    .Icon
+    {
+      font-size: 1.8vw;
+      color: white;
+    }
+  }
 
   .DetailsRate {
 

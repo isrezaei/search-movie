@@ -3,13 +3,12 @@ import {
     RightSideDetails,
     LeftSideDetails,
 } from "./ResultDetailsStyle";
-import { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import ImdbLogo from '../ImdbLogo.png'
 import RottenTomatoesLogo from '../RottenTomatoes.png'
 import MetacriticLogo from '../Metacritic.png'
 
-import {AiOutlineVideoCamera} from 'react-icons/ai'
+import {AiOutlineVideoCamera , AiOutlineHeart} from 'react-icons/ai'
 import {RiBallPenLine , RiShareForwardFill} from 'react-icons/ri'
 import {BiWorld} from 'react-icons/bi'
 import {FaTheaterMasks} from 'react-icons/fa'
@@ -37,11 +36,12 @@ const ResultDetailsShow = ({DetailsData}) => {
             <RightSideDetails>
 
                 <img className='DetailsPoster' src={Poster} alt={Title}/>
+                <div className='DetailsFavorite'><AiOutlineHeart className='Icon'/></div>
 
                 <section className='DetailsRate'>
                     <div className='Imdb'>
+
                         <img className='ImdbLogo' src={ImdbLogo} alt={'Imdb Logo'}/>
-                        <div></div>
 
                         <div className='RateAndVotes'>
                             <div className='ImdbRate'> <b className='BoldRate'>{imdbRating}</b> / 10</div>

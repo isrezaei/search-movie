@@ -23,13 +23,8 @@ const ResultDetailsShow = ({DetailsData}) => {
     const dispatch = useDispatch()
 
 
-    const {Actors , Country , Metascore , BoxOffice , Director , Genre , Language , Plot ,
-        Poster , Rated , Ratings  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes , imdbID} = DetailsData
-
+    const {Actors , Country , Metascore , BoxOffice , Director , Genre , Language , Plot , Poster , Rated , Ratings  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes , imdbID} = DetailsData
     const Favorite = useSelector(state => selectFavoriteById(state , imdbID))
-
-    console.log(Favorite)
-
     const RottenTomatoes = Ratings[1] ? Ratings[1].Value : 'N/A'
 
     const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {

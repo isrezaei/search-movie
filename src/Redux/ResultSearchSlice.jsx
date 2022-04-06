@@ -21,7 +21,7 @@ const ResultSearchAdapter = createEntityAdapter({
 
 const initialState  = ResultSearchAdapter.getInitialState({
     status : 'idle',
-    activeCategory : DefaultIconName || 'Home',
+    activeCategory : DefaultIconName || 'home',
     searchValue : ''
 })
 

@@ -3,24 +3,32 @@ import {
     RightSideDetails,
     LeftSideDetails,
 } from "./ResultDetailsStyle";
-
+import { useState } from 'react'
+import { Rating } from 'react-simple-star-rating'
 import ImdbLogo from '../ImdbLogo.png'
+import RottenTomatoesLogo from '../RottenTomatoes.png'
+import MetacriticLogo from '../Metacritic.png'
 
 import {AiOutlineVideoCamera} from 'react-icons/ai'
-import {RiBallPenLine , RiUserStarLine} from 'react-icons/ri'
+import {RiBallPenLine , RiShareForwardFill} from 'react-icons/ri'
 import {BiWorld} from 'react-icons/bi'
 import {FaTheaterMasks} from 'react-icons/fa'
+import {IoLanguage , IoWarningOutline} from 'react-icons/io5'
+import {CgDollar} from 'react-icons/cg'
 
 
 const ResultDetailsShow = ({DetailsData}) => {
 
 
-    const {Actors , Awards , Country , BoxOffice , Director , Genre , Language , Plot ,
-        Poster , Rated  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes} = DetailsData
 
+    const {Actors , Country , Metascore , BoxOffice , Director , Genre , Language , Plot ,
+        Poster , Rated , Ratings  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes} = DetailsData
+
+    const RottenTomatoes = Ratings[1] ? Ratings[1].Value : 'N/A'
 
     console.log(DetailsData)
 
+    console.log(RottenTomatoes)
 
     return (
         <DetailsParent>
@@ -30,23 +38,74 @@ const ResultDetailsShow = ({DetailsData}) => {
 
                 <img className='DetailsPoster' src={Poster} alt={Title}/>
 
+                <section className='DetailsRate'>
+                    <div className='Imdb'>
+                        <img className='ImdbLogo' src={ImdbLogo} alt={'Imdb Logo'}/>
+                        <div></div>
+
+                        <div className='RateAndVotes'>
+                            <div className='ImdbRate'> <b className='BoldRate'>{imdbRating}</b> / 10</div>
+                            <div className='ImdbVotes'> Votes : {imdbVotes}</div>
+                        </div>
+                    </div>
+
+                    <div className='RottenTomatoes'>
+                        <img className='RottenTomatoesLogo' src={RottenTomatoesLogo} alt={'Imdb Logo'}/>
+                        <div className='RottenTomatoesRate'> {RottenTomatoes} </div>
+                    </div>
+
+                    <div className='Metacritic'>
+                        <img className='MetacriticLogo' src={MetacriticLogo} alt={'Imdb Logo'}/>
+                        <div className='MetacriticRate'>{Metascore}</div>
+                    </div>
+
+                    <div className='ShareSection'>
+                        <RiShareForwardFill className='ShareIcone'/>
+                        <div className='ShareText'>Share This Page</div>
+                    </div>
+                    <div className='GetTickets'> Get Tickets </div>
+
+                    <section className='StarRate'>
+                        <p className='RateText'>Rate This</p>
+                        <Rating
+                                iconsCount={10}
+                                size={25}
+                                allowHover={true}
+                                transition={true}
+                                showTooltip={false}
+                                tooltipArray={[ 'Awful' , 'bad', 'good' , 'very good' , 'Excellent']}/>
+                    </section>
+                </section>
+
             </RightSideDetails>
 
             <LeftSideDetails>
 
-                <section className='DetailsTitle'> {Title} <p className='Year'>{Year}</p> </section>
+                <section className='DetailsTitle'> {Title} {Year}</section>
 
                 <section className='DetailsInfo'>
                     <div className='Options'>{Released ? Released : 'N/A'}</div>
                     <div className='Options'>{Genre ? Genre : 'N/A'}</div>
                     <div className='Options'>{Runtime ? Runtime : 'N/A'}</div>
-                    <div className='Options'>Is your favorite</div>
+                    <div className='Options'>{Type}</div>
                 </section>
 
-                <section className='DetailsImdbRate'>
-                    <img className='ImdbLogo' src={ImdbLogo} alt={'Imdb Logo'}/>
-                    <div className='ImdbRate'> <b className='BoldRate'>{imdbRating}</b> /10 </div>
-                    <div>{imdbVotes}</div>
+                <section className='DetailsAdditionInfo'>
+                    <div className='Options'>
+                        <IoLanguage className='Icon'/>
+                        <p className='Text'>{Language}</p>
+                    </div>
+
+                    <div className='Options'>
+                        <CgDollar className='Icon'/>
+                        <p className='Text'>{BoxOffice}</p>
+                    </div>
+
+                    <div className='Options'>
+                        <IoWarningOutline className='Icon'/>
+                        <p className='Text'>{Rated}</p>
+                    </div>
+
                 </section>
 
                 <section className='DetailsOverview'>
@@ -60,12 +119,10 @@ const ResultDetailsShow = ({DetailsData}) => {
                         <FaTheaterMasks className='Icone'/>
                         <p className='Text'>Actors</p>
                     </div>
-
                     <div className='ActorName'> {Actors} </div>
                 </section>
 
                 <section className='DetailsCreator'>
-
                     <div className='Options'>
                         <div className='IconAndText'>
                             <AiOutlineVideoCamera className='Icone'/>
@@ -91,10 +148,7 @@ const ResultDetailsShow = ({DetailsData}) => {
                     </div>
                 </section>
 
-
             </LeftSideDetails>
-
-
         </DetailsParent>
 
     );

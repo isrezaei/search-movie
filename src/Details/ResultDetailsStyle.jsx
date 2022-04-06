@@ -90,7 +90,7 @@ export const RightSideDetails = styled.div `
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 25%;
+      width: 27%;
       margin: .3vw 0;
 
 
@@ -111,9 +111,9 @@ export const RightSideDetails = styled.div `
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      width: 100%;
+      width: 27%;
       margin: .3vw 0;
-
+  
 
       .MetacriticLogo {
         width: 1.5vw;

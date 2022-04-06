@@ -16,10 +16,16 @@ import {FaTheaterMasks} from 'react-icons/fa'
 import {IoLanguage , IoWarningOutline} from 'react-icons/io5'
 import {CgDollar} from 'react-icons/cg'
 import {toast} from "react-toastify";
+import {useLocation , useHref} from "react-router-dom";
 
 
 const ResultDetailsShow = ({DetailsData}) => {
 
+
+    const Location = useLocation()
+
+
+    console.log(Location.pathname)
 
 
     const dispatch = useDispatch()

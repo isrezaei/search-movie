@@ -14,27 +14,25 @@ export const RightSideDetails = styled.div `
   //background: chartreuse;
   height: 100%;
   padding: 2vw;
-  
-  .DetailsPoster
-  {
+
+  .DetailsPoster {
     width: 15vw;
     height: 22.2vw;
   }
-  
-  .DetailsFavorite
-  {
+
+  .DetailsFavorite {
     position: absolute;
     width: 2.8vw;
     height: 2.8vw;
-    background: coral;
+    background: #fca688;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 26vw;
     left: 25vw;
-    .Icon
-    {
+
+    .Icon {
       font-size: 1.8vw;
       color: white;
     }
@@ -132,36 +130,32 @@ export const RightSideDetails = styled.div `
     }
 
 
-    .ShareSection
-    {
+    .ShareSection {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 50%;
+      width: 55%;
       height: auto;
       margin: .3vw 0;
     }
 
-    .ShareIcone
-    {
+    .ShareIcone {
       font-size: 1.8vw;
     }
 
-    .ShareText
-    {
+    .ShareText {
       font-family: 'Josefin Sans', sans-serif;
       font-size: .8vw;
       font-weight: bold;
     }
 
-    .GetTickets
-    {
+    .GetTickets {
       width: 100%;
       height: 2.5vw;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgb(235,131,7);
+      background: rgb(235, 131, 7);
       color: white;
       margin: .5vw 0;
       cursor: pointer;
@@ -170,8 +164,7 @@ export const RightSideDetails = styled.div `
       font-weight: bold;
     }
 
-    .StarRate
-    {
+    .StarRate {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -179,8 +172,8 @@ export const RightSideDetails = styled.div `
       align-items: flex-start;
       margin: .5vw 0;
     }
-    .RateText
-    {
+
+    .RateText {
       font-size: 1vw;
       font-weight: bold;
       margin: .3vw 0;

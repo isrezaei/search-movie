@@ -7,27 +7,54 @@ import { Rating } from 'react-simple-star-rating'
 import ImdbLogo from '../ImdbLogo.png'
 import RottenTomatoesLogo from '../RottenTomatoes.png'
 import MetacriticLogo from '../Metacritic.png'
-
-import {AiOutlineVideoCamera , AiOutlineHeart} from 'react-icons/ai'
+import {useSelector , useDispatch} from "react-redux";
+import {AddFavorite ,RemoveFavorite, selectFavoriteById} from "../Redux/FavoriteSlice";
+import {AiOutlineVideoCamera , AiOutlineHeart , AiTwotoneHeart} from 'react-icons/ai'
 import {RiBallPenLine , RiShareForwardFill} from 'react-icons/ri'
 import {BiWorld} from 'react-icons/bi'
 import {FaTheaterMasks} from 'react-icons/fa'
 import {IoLanguage , IoWarningOutline} from 'react-icons/io5'
 import {CgDollar} from 'react-icons/cg'
+import {toast} from "react-toastify";
 
 
 const ResultDetailsShow = ({DetailsData}) => {
 
 
 
+    const dispatch = useDispatch()
+
+
     const {Actors , Country , Metascore , BoxOffice , Director , Genre , Language , Plot ,
-        Poster , Rated , Ratings  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes} = DetailsData
+        Poster , Rated , Ratings  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes , imdbID} = DetailsData
+
+    const Favorite = useSelector(state => selectFavoriteById(state , imdbID))
+
+    console.log(Favorite)
 
     const RottenTomatoes = Ratings[1] ? Ratings[1].Value : 'N/A'
 
-    console.log(DetailsData)
+    const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
+        position: "top-center",
+        autoClose: 3000,
+    });
 
-    console.log(RottenTomatoes)
+    const RemoveNotify = () => toast.error(`" ${Title} " Removed to your favorites list`, {
+        position: "top-center",
+        autoClose: 3000,
+    });
+
+    const AddFavoriteOnList = () =>
+    {
+        dispatch(AddFavorite({imdbID , Type , Year , Title , Poster , favorite : true }))
+        AddNotify()
+    }
+
+    const DeleteFavoriteOnList = () =>
+    {
+        dispatch(RemoveFavorite({imdbID , Type , Year , Title , Poster , favorite : false}))
+        RemoveNotify()
+    }
 
     return (
         <DetailsParent>
@@ -36,7 +63,7 @@ const ResultDetailsShow = ({DetailsData}) => {
             <RightSideDetails>
 
                 <img className='DetailsPoster' src={Poster} alt={Title}/>
-                <div className='DetailsFavorite'><AiOutlineHeart className='Icon'/></div>
+                <div className='DetailsFavorite'>{Favorite ? <AiTwotoneHeart onClick={DeleteFavoriteOnList} className='Icon'/> : <AiOutlineHeart onClick={AddFavoriteOnList} className='Icon'/>}</div>
 
                 <section className='DetailsRate'>
                     <div className='Imdb'>

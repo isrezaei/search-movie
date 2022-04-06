@@ -11,9 +11,7 @@ const FavoriteSliceAdapter = createEntityAdapter({
 export const {selectEntities : selectFavoriteEntities , selectById : selectFavoriteById , selectIds : selectFavoriteId} = FavoriteSliceAdapter.getSelectors(state => state.FavoriteSlice)
 
 
-const initialState = FavoriteSliceAdapter.getInitialState({
-    sortFavorite : 0
-})
+const initialState = FavoriteSliceAdapter.getInitialState()
 
 
 
@@ -23,11 +21,9 @@ const FavoriteSlice = createSlice({
     reducers : {
         AddFavorite(state , {payload}){
             FavoriteSliceAdapter.addOne(state , payload)
-            state.sortFavorite += 1
         },
         RemoveFavorite(state , {payload}){
             FavoriteSliceAdapter.removeOne(state , payload.imdbID)
-            state.sortFavorite -= 1
         }
     }
 })

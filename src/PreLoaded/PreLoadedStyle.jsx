@@ -30,6 +30,57 @@ export const PreloadStyle = styled.div`
     height: 1vw;
     border-radius: 0;
   }
+  
+  //1280px
+
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    grid-template-columns: repeat(3 , 25vw);
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+
+    .SkeletonPoster
+    {
+
+      height: 37vw;
+    }
+    .SkeletonTextOne
+    {
+      width: 8vw;
+      height: 1.3vw;
+      margin-top: 1vw;
+    }
+
+    .SkeletonTextTwo
+    {
+      width: 18vw;
+      height: 1.5vw;
+    }
+  }
+  
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    grid-template-columns: repeat(3 , 28vw);
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+
+    .SkeletonPoster
+    {
+     
+      height: 40vw;
+    }
+    .SkeletonTextOne
+    {
+      width: 8vw;
+      height: 1.3vw;
+      margin-top: 1vw;
+    }
+
+    .SkeletonTextTwo
+    {
+      width: 18vw;
+      height: 1.5vw;
+    }
+  }
 
   //600px
   @media(max-width: ${props => props.theme.responsive.large_mobile}) {

@@ -21,7 +21,7 @@ import {toast} from "react-toastify";
 const ResultDetailsShow = ({DetailsData}) => {
 
     const dispatch = useDispatch()
-
+    const isDarkMood = useSelector(state => state.DarkMoodSlice.darkMood)
 
     const {Actors , Country , Metascore , BoxOffice , Director , Genre , Language , Plot , Poster , Rated , Ratings  , Released , Runtime , Title , Type , Writer , Year , imdbRating , imdbVotes , imdbID} = DetailsData
     const Favorite = useSelector(state => selectFavoriteById(state , imdbID))
@@ -37,7 +37,7 @@ const ResultDetailsShow = ({DetailsData}) => {
         autoClose: 1000,
     });
 
-    const ClipboardNotify = () => toast('The page address was copied', {
+    const ClipboardNotify = () => toast('The page url was copied', {
         position: "top-center",
         autoClose: 2000,
     });
@@ -66,7 +66,7 @@ const ResultDetailsShow = ({DetailsData}) => {
         <DetailsParent>
 
 
-            <RightSideDetails>
+            <LeftSideDetails>
 
                 <img className='DetailsPoster' src={Poster} alt={Title}/>
                 <div className='DetailsFavorite'>{Favorite ? <AiTwotoneHeart onClick={DeleteFavoriteOnList} className='Icon'/> : <AiOutlineHeart onClick={AddFavoriteOnList} className='Icon'/>}</div>
@@ -106,13 +106,14 @@ const ResultDetailsShow = ({DetailsData}) => {
                                 allowHover={true}
                                 transition={true}
                                 showTooltip={false}
+                                emptyColor={isDarkMood ? 'rgb(33,33,33)' : 'rgb(185,185,185)'}
                                 tooltipArray={[ 'Awful' , 'bad', 'good' , 'very good' , 'Excellent']}/>
                     </section>
                 </section>
 
-            </RightSideDetails>
+            </LeftSideDetails>
 
-            <LeftSideDetails>
+            <RightSideDetails>
 
                 <section className='DetailsTitle'> {Title} {Year}</section>
 
@@ -181,7 +182,7 @@ const ResultDetailsShow = ({DetailsData}) => {
                     </div>
                 </section>
 
-            </LeftSideDetails>
+            </RightSideDetails>
         </DetailsParent>
 
     );

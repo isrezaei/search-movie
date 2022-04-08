@@ -10,7 +10,7 @@ export const DetailsParent = styled.div`
   //background: #d7ce5d;
 `
 
-export const RightSideDetails = styled.div `
+export const LeftSideDetails = styled.div `
   //background: chartreuse;
   height: 100%;
   padding: 2vw;
@@ -68,6 +68,8 @@ export const RightSideDetails = styled.div `
           font-size: .8vw;
           font-weight: bold;
           font-family: 'Josefin Sans', sans-serif;
+          color: ${props => props.theme.color_Details_Titles};
+          transition: .1s;
         }
 
         .BoldRate {
@@ -80,7 +82,8 @@ export const RightSideDetails = styled.div `
           font-family: 'Josefin Sans', sans-serif;
           font-weight: bold;
           font-size: .9vw;
-          color: #e39400;
+          color: ${props => props.theme.color_Details_Titles};
+          transition: .1s;
         }
       }
     }
@@ -142,12 +145,16 @@ export const RightSideDetails = styled.div `
 
     .ShareIcone {
       font-size: 1.8vw;
+      color: ${props => props.theme.color_details_icons};
+      transition: .1s;
     }
 
     .ShareText {
       font-family: 'Josefin Sans', sans-serif;
       font-size: .8vw;
       font-weight: bold;
+      color: ${props => props.theme.color_Details_Titles};
+      transition: .1s;
     }
 
     .GetTickets {
@@ -156,8 +163,9 @@ export const RightSideDetails = styled.div `
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgb(235, 131, 7);
-      color: white;
+      background: ${props => props.theme.color_details_icons};
+      color: ${props => props.theme.color_details_ticket_innerText};
+      transition: .1s;
       margin: .5vw 0;
       cursor: pointer;
       border-radius: 5vw;
@@ -171,25 +179,25 @@ export const RightSideDetails = styled.div `
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      margin: .5vw 0;
+      margin: 2vw 0 0 0;
     }
 
     .RateText {
       font-size: 1vw;
       font-weight: bold;
       margin: .3vw 0;
+      color: ${props => props.theme.color_Details_Titles};
+      transition: .1s;
+      margin-left: .2vw;
     }
-
-
   }
 
 `
 
 
-export const LeftSideDetails = styled.div `
+export const RightSideDetails = styled.div `
   width: 75%;
   height: 100%;
-  //background: pink;
   padding: 2vw;
 
   .DetailsTitle {
@@ -198,6 +206,8 @@ export const LeftSideDetails = styled.div `
     align-items: center;
     font-size: 2vw;
     font-weight: bold;
+    color: ${props => props.theme.color_Details_Titles};
+    transition: .1s;
   }
 
   .DetailsInfo {
@@ -209,7 +219,8 @@ export const LeftSideDetails = styled.div `
     margin: .5vw 0;
 
     .Options {
-      background: #efe8d8;
+      background: ${props => props.theme.color_Details_Bag};
+      color: ${props => props.theme.color_Details_Bag_InnerText};
       width: auto;
       height: 1.5vw;
       display: flex;
@@ -219,6 +230,7 @@ export const LeftSideDetails = styled.div `
       font-weight: bold;
       border-radius: 2vw;
       padding: .8vw .5vw;
+      transition: .1s;
     }
   }
   
@@ -232,15 +244,18 @@ export const LeftSideDetails = styled.div `
     
     .Options
     {
-      width: 20%;
+      width: 100%;
       height: 2vw;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       
+      
       .Icon
       {
         font-size: 1.5vw;
+        color: ${props => props.theme.color_details_icons};
+        transition: .1s;
       }
       
       .Text
@@ -248,6 +263,8 @@ export const LeftSideDetails = styled.div `
         margin-left: .5vw;
         font-size: 1vw;
         font-weight: bold;
+        color: ${props => props.theme.color_Details_Titles};
+        transition: .1s;
       }
     }
   }
@@ -260,12 +277,16 @@ export const LeftSideDetails = styled.div `
       font-size: 2vw;
       font-weight: bold;
       margin: .5vw 0;
+      color: ${props => props.theme.color_details_icons};
+      transition: .1s;
     }
 
     .OverviewPlot {
       width: 70%;
       font-size: 1.1vw;
       font-weight: bold;
+      color: ${props => props.theme.color_Details_Titles};
+      transition: .1s;
     }
   }
 
@@ -289,12 +310,16 @@ export const LeftSideDetails = styled.div `
       .Icone
       {
         font-size: 4.5vw;
+        color: ${props => props.theme.color_details_icons};
+        transition: .1s;
       }
       .Text
       {
         font-size: 1.7vw;
         font-weight: bold;
         margin-left: .5vw;
+        color: ${props => props.theme.color_Details_Titles};
+        transition: .1s;
       }
     }
 
@@ -302,6 +327,8 @@ export const LeftSideDetails = styled.div `
     {
       font-size: 1.3vw;
       font-weight: bold;
+      color: ${props => props.theme.color_Details_Titles};
+      transition: .1s;
     }
 
   }
@@ -333,17 +360,24 @@ export const LeftSideDetails = styled.div `
         {
           font-size: 2vw;
           margin-right: .5vw;
+          color: ${props => props.theme.color_details_icons};
+          transition: .1s;
         }
+        transition: .1s;
         .Text
         {
           font-size: 1.5vw;
           font-weight: bolder;
+          color: ${props => props.theme.color_Details_Titles};
+          transition: .1s;
         }
       }
       .DirectorName
       {
         font-size: .9vw;
         font-weight: bolder;
+        color: ${props => props.theme.color_Details_Titles};
+        transition: .1s;
       }
     }
   }

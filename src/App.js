@@ -48,6 +48,11 @@ function App() {
         color_NotFound_text : isDarkMood ? '#e0e0e0' : '#525252',
         color_NotFound_text_strong : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
         color_Favorite_Title : isDarkMood ? '#e0e0e0' : '#525252',
+        color_Details_Titles : isDarkMood ? '#e0e0e0' : '#525252',
+        color_Details_Bag : isDarkMood ? 'rgb(33,33,33)' : 'rgb(218,218,218)',
+        color_Details_Bag_InnerText : isDarkMood ? '#ababab' : '#525252',
+        color_details_icons : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
+        color_details_ticket_innerText : isDarkMood ? '#212121' : '#fff',
 
         responsive : {
             small_mobile : '320px',

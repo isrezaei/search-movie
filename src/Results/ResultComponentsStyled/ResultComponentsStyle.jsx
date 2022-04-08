@@ -243,6 +243,38 @@ export const PleaseSearch = styled.div`
     color: ${props => props.theme.color_please_search_text_strong};
     transition: .1s;
   }
+
+  //1280
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    p 
+    {
+     font-size: 1.8vw; 
+    }
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      p
+      {
+        font-size: 2.5vw;
+      }
+    }
+
+    //600px
+    @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+      p
+      {
+        font-size: 4vw;
+      }
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      p
+      {
+        font-size: 4.5vw;
+      }
+    }
+  }
 `
 export const SearchIcon = styled.div `
 
@@ -252,6 +284,26 @@ export const SearchIcon = styled.div `
   align-items: center;
   color: ${props => props.theme.color_please_search_text_strong};
   transition: .1s;
+
+  //1280
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    font-size: 27vw;
+  }
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    font-size: 40vw;
+  }
+
+  //600px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 46vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    font-size: 55vw;
+  }
+  
 `
 
 //extended from "PleaseSearch"

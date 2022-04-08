@@ -9,6 +9,9 @@ export const PreloadStyle = styled.div`
   grid-template-rows: repeat(2 , 26vw) ;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    display: none;
+  }
 `
 export const Skeletal = styled.div`
   display: flex;

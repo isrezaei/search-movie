@@ -7,34 +7,32 @@ export const DetailsParent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  //background: #d7ce5d;
 `
 
 export const LeftSideDetails = styled.div `
-  //background: chartreuse;
   height: 100%;
   padding: 2vw;
 
   .DetailsPoster {
     width: 15vw;
     height: 22.2vw;
+    filter: brightness(80%);
   }
 
   .DetailsFavorite {
     position: absolute;
-    width: 2.8vw;
-    height: 2.8vw;
-    background: #fca688;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 26vw;
-    left: 25vw;
+    background: ${props => props.theme.color_Details_Bag};
+    top: 26.3vw;
+    left: 24.9vw;
+    padding: .3vw;
+
 
     .Icon {
-      font-size: 1.8vw;
-      color: white;
+      font-size: 2vw;
+      color: ${({Favorite}) => Favorite ? 'rgba(255,81,49,0.82)' : '#ff8282'};
     }
   }
 
@@ -116,7 +114,7 @@ export const LeftSideDetails = styled.div `
       align-items: center;
       width: 27%;
       margin: .3vw 0;
-  
+
 
       .MetacriticLogo {
         width: 1.5vw;

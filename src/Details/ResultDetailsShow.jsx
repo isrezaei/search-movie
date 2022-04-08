@@ -9,11 +9,11 @@ import RottenTomatoesLogo from '../RottenTomatoes.png'
 import MetacriticLogo from '../Metacritic.png'
 import {useSelector , useDispatch} from "react-redux";
 import {AddFavorite ,RemoveFavorite, selectFavoriteById} from "../Redux/FavoriteSlice";
-import {AiOutlineVideoCamera , AiOutlineHeart , AiTwotoneHeart} from 'react-icons/ai'
-import {RiBallPenLine , RiShareForwardFill} from 'react-icons/ri'
+import {AiOutlineVideoCamera} from 'react-icons/ai'
+import {RiBallPenLine , RiShareForwardFill , RiHeartAddFill , RiHeartFill} from 'react-icons/ri'
 import {BiWorld} from 'react-icons/bi'
 import {FaTheaterMasks} from 'react-icons/fa'
-import {IoLanguage , IoWarningOutline} from 'react-icons/io5'
+import {IoLanguage , IoWarningOutline , IoHeartDislikeSharp} from 'react-icons/io5'
 import {CgDollar} from 'react-icons/cg'
 import {toast} from "react-toastify";
 
@@ -66,10 +66,10 @@ const ResultDetailsShow = ({DetailsData}) => {
         <DetailsParent>
 
 
-            <LeftSideDetails>
+            <LeftSideDetails Favorite={Favorite}>
 
                 <img className='DetailsPoster' src={Poster} alt={Title}/>
-                <div className='DetailsFavorite'>{Favorite ? <AiTwotoneHeart onClick={DeleteFavoriteOnList} className='Icon'/> : <AiOutlineHeart onClick={AddFavoriteOnList} className='Icon'/>}</div>
+                <div className='DetailsFavorite'>{Favorite ? <RiHeartFill onClick={DeleteFavoriteOnList} className='Icon'/> : <RiHeartAddFill onClick={AddFavoriteOnList} className='Icon'/>}</div>
 
                 <section className='DetailsRate'>
                     <div className='Imdb'>

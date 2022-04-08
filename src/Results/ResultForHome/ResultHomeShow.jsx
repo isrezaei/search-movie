@@ -3,8 +3,6 @@ import {useSelector} from "react-redux";
 import {selectMovieIds} from "../../Redux/ResultFirstRenderSlice";
 import ResultHomeCard from "./ResultHomeCard";
 import {GridDisplay} from "../ResultComponentsStyled/ResultComponentsStyle";
-import {ToastContainer} from 'react-toastify';
-import styled from "styled-components";
 
 const ResultHomeShow = () => {
 

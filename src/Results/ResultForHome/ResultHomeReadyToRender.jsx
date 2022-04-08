@@ -6,6 +6,7 @@ import {GetImdbMovieData} from "../../Redux/ResultFirstRenderSlice";
 import {Preloaded} from "../../PreLoaded/Preloaded";
 import {UpperSlider , UnderSlider} from "../../Upper&UnderHomeSlider/UpperUnderHomeSlider";
 import TopSectionHome from "../../TopSections/TopSectionHomeSlider/SliderHome";
+import PreloadedMobile from "../../PreLoaded/PreloadedMobile";
 
 const ResultHomeReadyToRender = () => {
 
@@ -19,7 +20,10 @@ const ResultHomeReadyToRender = () => {
 
     if (status === 'pending')
     {
-        Rendering = <Preloaded/>
+        Rendering = <>
+            <Preloaded/>
+            <PreloadedMobile/>
+        </>
     }
     else if (status === 'success')
     {

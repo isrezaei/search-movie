@@ -89,7 +89,7 @@ const ResultDetailsShow = ({DetailsData}) => {
 
                     <div className='Metacritic'>
                         <img className='MetacriticLogo' src={MetacriticLogo} alt={'Imdb Logo'}/>
-                        <div className='MetacriticRate'>{Metascore}</div>
+                        <div className='MetacriticRate'>{Metascore}%</div>
                     </div>
 
                     <div onClick={ClipboardUrl} className='ShareSection'>

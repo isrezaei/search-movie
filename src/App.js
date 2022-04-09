@@ -57,7 +57,7 @@ function App() {
         responsive : {
             small_mobile : '320px',
             medium_mobile : '480px',
-            large_mobile : '600px',
+            large_mobile : '750px',
             small_screen : '900px',
             medium_screen : '1280px',
             large_screen : '1900px'

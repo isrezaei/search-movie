@@ -17,6 +17,13 @@ export const LeftSideDetails = styled.div `
     width: 15vw;
     height: 22.2vw;
     filter: brightness(80%);
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      width: 20vw;
+      height: 30vw;
+    }
+
   }
 
   .DetailsFavorite {
@@ -29,10 +36,18 @@ export const LeftSideDetails = styled.div `
     left: 24.9vw;
     padding: .3vw;
 
-
     .Icon {
       font-size: 2vw;
       color: ${({Favorite}) => Favorite ? 'rgba(255,81,49,0.82)' : '#ff8282'};
+    }
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      top: 35.9vw;
+      left: 29vw;
+      .Icon {
+        font-size: 2.5vw;
+      }
     }
   }
 
@@ -45,6 +60,12 @@ export const LeftSideDetails = styled.div `
     align-items: flex-start;
     margin-top: .5vw;
 
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      margin-top: .3vw;
+    }
+
     .Imdb {
       width: 100%;
       display: flex;
@@ -52,8 +73,13 @@ export const LeftSideDetails = styled.div `
       align-items: flex-end;
       margin: .5vw 0;
 
+
       .ImdbLogo {
         width: 3vw;
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          width: 4.5vw;
+        }
       }
 
       .RateAndVotes {
@@ -62,18 +88,33 @@ export const LeftSideDetails = styled.div `
         justify-content: space-between;
         align-items: center;
 
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          width: 73%;
+        }
+
+
         .ImdbRate {
           font-size: .8vw;
           font-weight: bold;
           font-family: 'Josefin Sans', sans-serif;
           color: ${props => props.theme.color_Details_Titles};
           transition: .1s;
+
+          //1280px
+          @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+            font-size: 1.2vw;
+          }
         }
 
         .BoldRate {
           font-size: 1.4vw;
           font-weight: bold;
           color: #e39400;
+          //1280px
+          @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+            font-size: 1.9vw;
+          }
         }
 
         .ImdbVotes {
@@ -82,6 +123,11 @@ export const LeftSideDetails = styled.div `
           font-size: .9vw;
           color: ${props => props.theme.color_Details_Titles};
           transition: .1s;
+
+          //1280px
+          @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+            font-size: 1.1vw;
+          }
         }
       }
     }
@@ -94,10 +140,20 @@ export const LeftSideDetails = styled.div `
       width: 27%;
       margin: .3vw 0;
 
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        width: 28%;
+      }
+
 
       .RottenTomatoesLogo {
         width: 1.5vw;
         filter: brightness(90%);
+
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          width: 2.5vw;
+        }
       }
 
       .RottenTomatoesRate {
@@ -105,6 +161,11 @@ export const LeftSideDetails = styled.div `
         font-size: 1vw;
         font-weight: bold;
         color: tomato;
+
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          font-size: 1.3vw;
+        }
       }
     }
 
@@ -115,10 +176,20 @@ export const LeftSideDetails = styled.div `
       width: 27%;
       margin: .3vw 0;
 
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        width: 28%;
+      }
+
 
       .MetacriticLogo {
         width: 1.5vw;
         filter: brightness(90%);
+
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          width: 2.5vw;
+        }
       }
 
       .MetacriticRate {
@@ -127,6 +198,11 @@ export const LeftSideDetails = styled.div `
         font-weight: bold;
         color: cadetblue;
         margin-left: .7vw;
+
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          font-size: 1.3vw;
+        }
       }
     }
 
@@ -145,6 +221,11 @@ export const LeftSideDetails = styled.div `
       font-size: 1.8vw;
       color: ${props => props.theme.color_details_icons};
       transition: .1s;
+
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        font-size: 2.5vw;
+      }
     }
 
     .ShareText {
@@ -153,6 +234,11 @@ export const LeftSideDetails = styled.div `
       font-weight: bold;
       color: ${props => props.theme.color_Details_Titles};
       transition: .1s;
+
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        font-size: 1.1vw;
+      }
     }
 
     .GetTickets {
@@ -169,6 +255,11 @@ export const LeftSideDetails = styled.div `
       border-radius: 5vw;
       font-size: 1vw;
       font-weight: bold;
+
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        font-size: 1.3vw;
+      }
     }
 
     .StarRate {
@@ -178,6 +269,12 @@ export const LeftSideDetails = styled.div `
       justify-content: center;
       align-items: flex-start;
       margin: 2vw 0 0 0;
+
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        width: 50%;
+        margin: .5vw 0 0 0;
+      }
     }
 
     .RateText {
@@ -206,6 +303,12 @@ export const RightSideDetails = styled.div `
     font-weight: bold;
     color: ${props => props.theme.color_Details_Titles};
     transition: .1s;
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      font-size: 3vw;
+    }
+
   }
 
   .DetailsInfo {
@@ -230,8 +333,17 @@ export const RightSideDetails = styled.div `
       padding: .8vw .5vw;
       transition: .1s;
     }
+
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+
+      height: 4vw;
+
+      .Options {
+        font-size: 1vw;
+      }
+    }
   }
-  
+
   .DetailsAdditionInfo
   {
     width: 100%;
@@ -239,7 +351,7 @@ export const RightSideDetails = styled.div `
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+
     .Options
     {
       width: 100%;
@@ -247,15 +359,15 @@ export const RightSideDetails = styled.div `
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      
-      
+
+
       .Icon
       {
         font-size: 1.5vw;
         color: ${props => props.theme.color_details_icons};
         transition: .1s;
       }
-      
+
       .Text
       {
         margin-left: .5vw;
@@ -264,6 +376,24 @@ export const RightSideDetails = styled.div `
         color: ${props => props.theme.color_Details_Titles};
         transition: .1s;
       }
+    }
+
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+
+      .Options
+      {
+        height: 3vw;
+        .Icon
+        {
+          font-size: 2vw;
+        }
+
+        .Text
+        {
+          font-size: 1.3vw;
+        }
+      }
+      
     }
   }
 
@@ -277,6 +407,11 @@ export const RightSideDetails = styled.div `
       margin: .5vw 0;
       color: ${props => props.theme.color_details_icons};
       transition: .1s;
+      
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        margin: .8vw 0;
+      }
     }
 
     .OverviewPlot {
@@ -285,6 +420,11 @@ export const RightSideDetails = styled.div `
       font-weight: bold;
       color: ${props => props.theme.color_Details_Titles};
       transition: .1s;
+
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        font-size: 1.4vw;
+      }
     }
   }
 
@@ -310,6 +450,12 @@ export const RightSideDetails = styled.div `
         font-size: 4.5vw;
         color: ${props => props.theme.color_details_icons};
         transition: .1s;
+
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          font-size: 6vw;
+        }
+        
       }
       .Text
       {
@@ -318,6 +464,11 @@ export const RightSideDetails = styled.div `
         margin-left: .5vw;
         color: ${props => props.theme.color_Details_Titles};
         transition: .1s;
+
+        //1280px
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          font-size: 2vw;
+        }
       }
     }
 
@@ -327,6 +478,11 @@ export const RightSideDetails = styled.div `
       font-weight: bold;
       color: ${props => props.theme.color_Details_Titles};
       transition: .1s;
+
+      //1280px
+      @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+        font-size: 1.4vw;
+      }
     }
 
   }
@@ -338,6 +494,12 @@ export const RightSideDetails = styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      width: 95%;
+      height: 12vw;
+    }
 
     .Options
     {
@@ -360,6 +522,12 @@ export const RightSideDetails = styled.div `
           margin-right: .5vw;
           color: ${props => props.theme.color_details_icons};
           transition: .1s;
+          
+          //1280px
+          @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+            font-size: 3.5vw;
+          }
+          
         }
         transition: .1s;
         .Text
@@ -368,6 +536,11 @@ export const RightSideDetails = styled.div `
           font-weight: bolder;
           color: ${props => props.theme.color_Details_Titles};
           transition: .1s;
+
+          //1280px
+          @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+            font-size: 1.8vw;
+          }
         }
       }
       .DirectorName
@@ -376,6 +549,10 @@ export const RightSideDetails = styled.div `
         font-weight: bolder;
         color: ${props => props.theme.color_Details_Titles};
         transition: .1s;
+
+        @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          font-size: 1.2vw;
+        }
       }
     }
   }

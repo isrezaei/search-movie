@@ -32,7 +32,6 @@ export const PreloadStyle = styled.div`
   }
   
   //1280px
-
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     grid-template-columns: repeat(3 , 25vw);
     grid-column-gap: 2vw;
@@ -40,7 +39,6 @@ export const PreloadStyle = styled.div`
 
     .SkeletonPoster
     {
-
       height: 37vw;
     }
     .SkeletonTextOne

@@ -101,8 +101,10 @@ const ResultDetailsShow = ({DetailsData}) => {
                     <section className='StarRate'>
                         <p className='RateText'>Rate This</p>
                         <Rating
-                                iconsCount={10}
-                                size={25}
+                                iconsCount={8}
+                                size={20}
+
+                                emptyClassName={'Stars'}
                                 allowHover={true}
                                 transition={true}
                                 showTooltip={false}

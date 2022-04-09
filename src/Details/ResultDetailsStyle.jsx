@@ -7,7 +7,13 @@ export const DetailsParent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    width: 90%;
+  }
 `
+
 
 export const LeftSideDetails = styled.div `
   height: 100%;
@@ -24,6 +30,12 @@ export const LeftSideDetails = styled.div `
       height: 30vw;
     }
 
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      width: 25vw;
+      height: 35vw;
+    }
+
   }
 
   .DetailsFavorite {
@@ -32,21 +44,31 @@ export const LeftSideDetails = styled.div `
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.color_Details_Bag};
-    top: 26.3vw;
-    left: 24.9vw;
+    top: 25.6vw;
+    left: 24.4vw;
     padding: .3vw;
+    border-radius: 1vw 0 0 0vw ;
 
     .Icon {
       font-size: 2vw;
       color: ${({Favorite}) => Favorite ? 'rgba(255,81,49,0.82)' : '#ff8282'};
     }
-
+    
     //1280px
     @media(max-width: ${props => props.theme.responsive.medium_screen}) {
       top: 35.9vw;
       left: 29vw;
       .Icon {
         font-size: 2.5vw;
+      }
+    }
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      top: 41.9vw;
+      left: 28.4vw;
+      .Icon {
+        font-size: 3vw;
       }
     }
   }
@@ -66,6 +88,11 @@ export const LeftSideDetails = styled.div `
       margin-top: .3vw;
     }
 
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      margin-top: .6vw;
+    }
+
     .Imdb {
       width: 100%;
       display: flex;
@@ -76,9 +103,15 @@ export const LeftSideDetails = styled.div `
 
       .ImdbLogo {
         width: 3vw;
+        
         //1280px
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           width: 4.5vw;
+        }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          width: 5.5vw;
         }
       }
 
@@ -90,6 +123,11 @@ export const LeftSideDetails = styled.div `
 
         //1280px
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+          width: 73%;
+        }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
           width: 73%;
         }
 
@@ -105,6 +143,12 @@ export const LeftSideDetails = styled.div `
           @media(max-width: ${props => props.theme.responsive.medium_screen}) {
             font-size: 1.2vw;
           }
+
+          //900px
+          @media(max-width: ${props => props.theme.responsive.small_screen}) {
+            font-size: 1.2vw;
+          }
+          
         }
 
         .BoldRate {
@@ -114,6 +158,11 @@ export const LeftSideDetails = styled.div `
           //1280px
           @media(max-width: ${props => props.theme.responsive.medium_screen}) {
             font-size: 1.9vw;
+          }
+
+          //900px
+          @media(max-width: ${props => props.theme.responsive.small_screen}) {
+            font-size: 2.3vw;
           }
         }
 
@@ -127,6 +176,11 @@ export const LeftSideDetails = styled.div `
           //1280px
           @media(max-width: ${props => props.theme.responsive.medium_screen}) {
             font-size: 1.1vw;
+          }
+
+          //900px
+          @media(max-width: ${props => props.theme.responsive.small_screen}) {
+            font-size: 1.5vw;
           }
         }
       }
@@ -145,6 +199,10 @@ export const LeftSideDetails = styled.div `
         width: 28%;
       }
 
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        width: 32%;
+      }
 
       .RottenTomatoesLogo {
         width: 1.5vw;
@@ -154,6 +212,12 @@ export const LeftSideDetails = styled.div `
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           width: 2.5vw;
         }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          width: 3.5vw;
+        }
+        
       }
 
       .RottenTomatoesRate {
@@ -166,12 +230,16 @@ export const LeftSideDetails = styled.div `
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           font-size: 1.3vw;
         }
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          font-size: 1.8vw;
+        }
       }
     }
 
     .Metacritic {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       width: 27%;
       margin: .3vw 0;
@@ -179,6 +247,11 @@ export const LeftSideDetails = styled.div `
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         width: 28%;
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        width: 32%;
       }
 
 
@@ -189,6 +262,11 @@ export const LeftSideDetails = styled.div `
         //1280px
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           width: 2.5vw;
+        }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          width: 3.5vw;
         }
       }
 
@@ -203,6 +281,11 @@ export const LeftSideDetails = styled.div `
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           font-size: 1.3vw;
         }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          font-size: 1.8vw;
+        }
       }
     }
 
@@ -215,7 +298,14 @@ export const LeftSideDetails = styled.div `
       height: auto;
       margin: .3vw 0;
       cursor: pointer;
+
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        width: 60%;
+      }
     }
+    
 
     .ShareIcone {
       font-size: 1.8vw;
@@ -225,6 +315,11 @@ export const LeftSideDetails = styled.div `
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         font-size: 2.5vw;
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        font-size: 3.5vw;
       }
     }
 
@@ -238,6 +333,11 @@ export const LeftSideDetails = styled.div `
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         font-size: 1.1vw;
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        font-size: 1.5vw;
       }
     }
 
@@ -260,6 +360,12 @@ export const LeftSideDetails = styled.div `
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         font-size: 1.3vw;
       }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        height: 4vw;
+        font-size: 1.8vw;
+      }
     }
 
     .StarRate {
@@ -269,11 +375,21 @@ export const LeftSideDetails = styled.div `
       justify-content: center;
       align-items: flex-start;
       margin: 2vw 0 0 0;
+      
 
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         width: 50%;
         margin: .5vw 0 0 0;
+        .Stars
+        {
+          width: 20vw;
+        }
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        margin: 3vw 0 0 0;
       }
     }
 
@@ -284,6 +400,13 @@ export const LeftSideDetails = styled.div `
       color: ${props => props.theme.color_Details_Titles};
       transition: .1s;
       margin-left: .2vw;
+
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        margin-left: .5vw;
+        font-size: 1.6vw;
+      }
     }
   }
 
@@ -307,6 +430,11 @@ export const RightSideDetails = styled.div `
     //1280px
     @media(max-width: ${props => props.theme.responsive.medium_screen}) {
       font-size: 3vw;
+    }
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      font-size: 3.5vw;
     }
 
   }
@@ -335,11 +463,19 @@ export const RightSideDetails = styled.div `
     }
 
     @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-
       height: 4vw;
-
       .Options {
         font-size: 1vw;
+      }
+    }
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      height: 5vw;
+      
+      .Options {
+        font-size: 1.3vw;
+        padding: 1.1vw;
       }
     }
   }
@@ -395,11 +531,34 @@ export const RightSideDetails = styled.div `
       }
       
     }
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      .Options
+      {
+        height: 4vw;
+        .Icon
+        {
+          font-size: 3.2vw;
+        }
+
+        .Text
+        {
+          font-size: 1.8vw;
+        }
+      }
+    }
+    
+    
   }
 
   .DetailsOverview {
     width: 100%;
     height: 12vw;
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      height: 17vw;
+    }
 
     .OverviewText {
       font-size: 2vw;
@@ -411,6 +570,12 @@ export const RightSideDetails = styled.div `
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         margin: .8vw 0;
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        margin: 1vw 0;
+        font-size: 3vw;
       }
     }
 
@@ -424,6 +589,12 @@ export const RightSideDetails = styled.div `
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         font-size: 1.4vw;
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        width: 95%;
+        font-size: 1.8vw;
       }
     }
   }
@@ -455,7 +626,10 @@ export const RightSideDetails = styled.div `
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           font-size: 6vw;
         }
-        
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          font-size: 8vw;
+        }
       }
       .Text
       {
@@ -468,6 +642,11 @@ export const RightSideDetails = styled.div `
         //1280px
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           font-size: 2vw;
+        }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          font-size: 2.5vw;
         }
       }
     }
@@ -482,6 +661,11 @@ export const RightSideDetails = styled.div `
       //1280px
       @media(max-width: ${props => props.theme.responsive.medium_screen}) {
         font-size: 1.4vw;
+      }
+
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        font-size: 2vw;
       }
     }
 
@@ -499,6 +683,12 @@ export const RightSideDetails = styled.div `
     @media(max-width: ${props => props.theme.responsive.medium_screen}) {
       width: 95%;
       height: 12vw;
+    }
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      width: 100%;
+      height: 15vw;
     }
 
     .Options
@@ -527,6 +717,11 @@ export const RightSideDetails = styled.div `
           @media(max-width: ${props => props.theme.responsive.medium_screen}) {
             font-size: 3.5vw;
           }
+
+          //900px
+          @media(max-width: ${props => props.theme.responsive.small_screen}) {
+            font-size: 4.5vw;
+          }
           
         }
         transition: .1s;
@@ -541,6 +736,11 @@ export const RightSideDetails = styled.div `
           @media(max-width: ${props => props.theme.responsive.medium_screen}) {
             font-size: 1.8vw;
           }
+
+          //900px
+          @media(max-width: ${props => props.theme.responsive.small_screen}) {
+            font-size: 2vw;
+          }
         }
       }
       .DirectorName
@@ -552,6 +752,11 @@ export const RightSideDetails = styled.div `
 
         @media(max-width: ${props => props.theme.responsive.medium_screen}) {
           font-size: 1.2vw;
+        }
+
+        //900px
+        @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          font-size: 1.8vw;
         }
       }
     }

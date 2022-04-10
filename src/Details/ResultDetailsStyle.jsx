@@ -484,7 +484,8 @@ export const LeftSideDetails = styled.div `
       
       //480px
       @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-        width: 85%;
+        width: 100%;
+        justify-content: flex-start;
       }
     }
     
@@ -540,6 +541,7 @@ export const LeftSideDetails = styled.div `
       //480px
       @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
         font-size: 3.2vw;
+        margin-left: 1vw;
       }
     }
 

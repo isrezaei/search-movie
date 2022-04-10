@@ -83,6 +83,7 @@ export const LeftSideDetails = styled.div `
     top: 25.6vw;
     left: 24.4vw;
     padding: .3vw;
+    transition: .1s;
 
     .Icon {
       font-size: 2vw;
@@ -118,8 +119,8 @@ export const LeftSideDetails = styled.div `
 
     //480px
     @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-      top: 85vw;
-      left: 43vw;
+      top: 84.6vw;
+      left: 42.2vw;
       .Icon {
         font-size: 8vw;
       }

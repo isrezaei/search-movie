@@ -693,6 +693,11 @@ export const RightSideDetails = styled.div `
     @media(max-width: ${props => props.theme.responsive.large_mobile}) {
       font-size: 4.3vw;
     }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      font-size: 6vw;
+    }
   }
 
   .DetailsInfo {
@@ -702,7 +707,8 @@ export const RightSideDetails = styled.div `
     justify-content: space-between;
     align-items: center;
     margin: .5vw 0;
-
+    
+    
     .Options {
       background: ${props => props.theme.color_Details_Bag};
       color: ${props => props.theme.color_Details_Bag_InnerText};
@@ -740,6 +746,20 @@ export const RightSideDetails = styled.div `
       .Options {
         font-size: 1.8vw;
         padding: 1.5vw;
+      }
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      width: 100%;
+      height: 35vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      .Options {
+        font-size: 3vw;
+        padding: 2.5vw;
       }
     }
   }
@@ -827,6 +847,26 @@ export const RightSideDetails = styled.div `
         }
       }
     }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      width: 100%;
+      margin: 2vw 0;
+      .Options
+      {
+        height: 10vw;
+        .Icon
+        {
+          font-size: 8vw;
+        }
+
+        .Text
+        {
+          font-size: 4vw;
+          margin-left: 2vw;
+        }
+      }
+    }
     
   }
 
@@ -842,6 +882,11 @@ export const RightSideDetails = styled.div `
     //750px
     @media(max-width: ${props => props.theme.responsive.large_mobile}) {
       height: 25vw;
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      height: 45vw;
     }
 
     .OverviewText {
@@ -867,6 +912,12 @@ export const RightSideDetails = styled.div `
         margin: 1vw 0;
         font-size: 4.5vw;
       }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        margin: 1vw 0;
+        font-size: 7vw;
+      }
     }
 
     .OverviewPlot {
@@ -891,6 +942,11 @@ export const RightSideDetails = styled.div `
       @media(max-width: ${props => props.theme.responsive.large_mobile}) {
         width: 100%;
         font-size: 2.5vw;
+      }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        font-size: 4vw;
       }
     }
   }
@@ -931,6 +987,11 @@ export const RightSideDetails = styled.div `
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           font-size: 12vw;
         }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          font-size: 18vw;
+        }
       }
       .Text
       {
@@ -952,6 +1013,10 @@ export const RightSideDetails = styled.div `
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           font-size: 3vw;
+        }
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          font-size: 5.3vw;
         }
       }
     }
@@ -976,6 +1041,11 @@ export const RightSideDetails = styled.div `
       //750px
       @media(max-width: ${props => props.theme.responsive.large_mobile}) {
         font-size: 2.3vw;
+      }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        font-size: 3.5vw;
       }
     }
   }
@@ -1008,6 +1078,11 @@ export const RightSideDetails = styled.div `
     //750px
     @media(max-width: ${props => props.theme.responsive.large_mobile}) {
       height: 40vw;
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      height: 60vw;
     }
 
     .Options
@@ -1051,6 +1126,11 @@ export const RightSideDetails = styled.div `
           @media(max-width: ${props => props.theme.responsive.large_mobile}) {
             font-size: 6vw;
           }
+
+          //480px
+          @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+            font-size: 9vw;
+          }
         }
    
         .Text
@@ -1073,6 +1153,12 @@ export const RightSideDetails = styled.div `
           //750px
           @media(max-width: ${props => props.theme.responsive.large_mobile}) {
             font-size: 2.8vw;
+          }
+
+          //480px
+          @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+            font-size: 4.5vw;
+            margin-left: 2vw;
           }
         }
       }
@@ -1097,6 +1183,11 @@ export const RightSideDetails = styled.div `
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           font-size: 2.3vw;
+        }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          font-size: 3.5vw;
         }
       }
     }

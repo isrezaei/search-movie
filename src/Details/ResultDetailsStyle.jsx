@@ -115,6 +115,15 @@ export const LeftSideDetails = styled.div `
         font-size: 4.5vw;
       }
     }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      top: 85vw;
+      left: 43vw;
+      .Icon {
+        font-size: 8vw;
+      }
+    }
   }
 
   .DetailsRate {

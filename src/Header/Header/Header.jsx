@@ -63,7 +63,6 @@ export const Header = () => {
             }
         }) ;
 
-
     },[watch , dispatch])
 
 
@@ -75,7 +74,7 @@ export const Header = () => {
     }
     else if (SearchStatus === 'success')
     {
-        Render = SyncSearchId.map(ids => ids && <HeaderSyncSearch InputValue={InputValue} key={ids} ids={ids}/>)
+        Render = SyncSearchId.map(ids => ids && <HeaderSyncSearch reset={reset} key={ids} ids={ids}/>)
     }
     else if (SearchStatus === 'reject')
     {

@@ -4,7 +4,7 @@ import ResultHomeReadyToRender from "./Results/ResultForHome/ResultHomeReadyToRe
 import ResultMovieRender from "./Results/ResultSearchMovie/ResultMovieRender";
 import ResultSeriesRender from "./Results/ResultSearchSeries/ResultSeriesRender";
 import ResultFavoriteRender from "./Results/ResultFavorite/ResultFavoriteRender";
-import ResultDetailsRender from "./Results/Details/ResultDetailsRender";
+import ResultDetailsRender from "./Results/ResultDetails/ResultDetailsRender";
 import NotFound404 from "./NotFound/NotFound404";
 import Sidebar from "./Sidebar/Sidebar";
 import styled, {ThemeProvider} from "styled-components";

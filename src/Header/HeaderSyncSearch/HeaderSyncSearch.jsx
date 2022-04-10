@@ -5,12 +5,14 @@ import {SearchItems} from "./HeaderSyncSearchStyle";
 
 import {selectByIdSyncSearch} from "../../Redux/SyncSearchSlice";
 
-const HeaderSyncSearch = ({InputValue , ids}) => {
+const HeaderSyncSearch = ({reset , ids}) => {
 
     const SyncSearchData = useSelector(state => selectByIdSyncSearch(state , ids))
     const {Poster , Title ,Type , Year , imdbID} = SyncSearchData
 
-    const CleanSearchInput = () => InputValue.unsubscribe()
+    const CleanSearchInput = () => {
+        reset({InputValue : ''})
+    }
 
     return (
         <Link onClick={CleanSearchInput} to={`/details/${imdbID}`}>

@@ -4,11 +4,11 @@ import {
     LeftSideDetails,
 } from "./ResultDetailsStyle";
 import { Rating } from 'react-simple-star-rating'
-import ImdbLogo from '../ImdbLogo.png'
-import RottenTomatoesLogo from '../RottenTomatoes.png'
-import MetacriticLogo from '../Metacritic.png'
+import ImdbLogo from '../../ImdbLogo.png'
+import RottenTomatoesLogo from '../../RottenTomatoes.png'
+import MetacriticLogo from '../../Metacritic.png'
 import {useSelector , useDispatch} from "react-redux";
-import {AddFavorite ,RemoveFavorite, selectFavoriteById} from "../Redux/FavoriteSlice";
+import {AddFavorite ,RemoveFavorite, selectFavoriteById} from "../../Redux/FavoriteSlice";
 import {AiOutlineVideoCamera} from 'react-icons/ai'
 import {RiBallPenLine , RiShareForwardFill , RiHeartAddFill , RiHeartFill} from 'react-icons/ri'
 import {BiWorld} from 'react-icons/bi'

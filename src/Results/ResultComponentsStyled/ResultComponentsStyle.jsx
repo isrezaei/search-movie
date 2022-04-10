@@ -341,6 +341,33 @@ export const FavoriteParent = styled.div `
   ::-webkit-scrollbar {
     display: none;
   }
+
+  //1280px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 100%;
+    grid-template-columns: repeat(2, 40vw);
+    margin-top: 2vw;
+  }
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    grid-template-columns: repeat(2, 45vw);
+  }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    grid-template-columns: repeat(1, 70vw);
+    margin-top: 2vw;
+    margin-bottom: 12vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    grid-template-columns: repeat(1, 85vw);
+    grid-row-gap: 2vw;
+    margin-top: 4vw;
+    margin-bottom: 20vw;
+  }
 `
 
 export const FavoriteSection = styled.div`
@@ -353,10 +380,55 @@ export const FavoriteSection = styled.div`
   background-image: linear-gradient(${({FavoriteRandomBg}) => FavoriteRandomBg});
   padding: 1vw;
   transition: .1s;
+
+  //1280px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    height: 15vw;
+  }
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    height: 20vw;
+  }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    height: 25vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    height: 35vw;
+  }
 `
 
 export const FavoriteImage = styled.img`
   width: 6vw;
+
+  //1280px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    width: 10vw;
+    padding: .5vw;
+  }
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    width: 15vw;
+    padding: 1.5vw;
+  }
+  
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 20vw;
+    padding: 2.5vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 26vw;
+    padding: 2.5vw;
+  }
+    
 `
 
 export const FavoriteInfo = styled.div`
@@ -379,6 +451,24 @@ export const FavoriteInfo = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      height: 12vw;
+    }
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      height: 17vw;
+    }
+    //750px
+    @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+      height: 20vw;
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      height: 27vw;
+    }
   }
 
 
@@ -390,6 +480,24 @@ export const FavoriteInfo = styled.div`
     text-align: start;
     color: ${props => props.theme.color_Favorite_Title};
     transition: .1s;
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      font-size: 2vw;
+    }
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      font-size: 2.5vw;
+    }
+    //750px
+    @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+      font-size: 3.2vw;
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      font-size: 4.3vw;
+    }
   }
 
   .FavoriteTypeAndDelete {
@@ -406,7 +514,26 @@ export const FavoriteInfo = styled.div`
     cursor: pointer;
     color: ${props => props.theme.color_Favorite_Title};
     transition: .1s;
+
+    //1280px
+    @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+      font-size: 1.5vw;
   }
+
+    //900px
+    @media(max-width: ${props => props.theme.responsive.small_screen}) {
+      font-size: 2vw;
+    }
+
+    //750px
+    @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+      font-size: 2.8vw;
+    }
+
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      font-size: 3.5vw;
+    }
 }
 
 .FavoriteRemove {
@@ -414,6 +541,26 @@ export const FavoriteInfo = styled.div`
   color: ${props => props.theme.color_Favorite_Title};
   cursor: pointer;
   transition: .1s;
+
+  //1280px
+  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
+    font-size: 2.3vw;
+  }
+
+  //900px
+  @media(max-width: ${props => props.theme.responsive.small_screen}) {
+    font-size: 3vw;
+  }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 4vw;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    font-size: 6vw;
+  }
 }
 
 `

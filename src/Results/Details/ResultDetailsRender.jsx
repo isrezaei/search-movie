@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import ResultDetailsShow from "./ResultDetailsShow";
 import {useLayoutEffect} from "react";
-import {CleanDetails, fetchDetails} from "../Redux/DetailsSlice";
+import {CleanDetails, fetchDetails} from "../../Redux/DetailsSlice";
 import {useParams} from "react-router-dom";
 
 const ResultDetailsRender = () => {

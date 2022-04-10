@@ -5,6 +5,7 @@ import {MdOutlineDeleteOutline} from 'react-icons/md'
 import {useDispatch} from "react-redux";
 import {RemoveFavorite} from "../../Redux/FavoriteSlice";
 import {toast} from "react-toastify";
+import {Link} from "react-router-dom";
 
 const ResultFavoriteShow = ({ids}) => {
 
@@ -42,7 +43,10 @@ const ResultFavoriteShow = ({ids}) => {
     return (
         <FavoriteSection FavoriteRandomBg = {RandomIndexBg}>
 
-            <FavoriteImage src={Poster} />
+            <Link to={`/details/${imdbID}`}>
+                <FavoriteImage src={Poster} />
+            </Link>
+
 
             <FavoriteInfo>
 

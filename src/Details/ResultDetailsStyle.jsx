@@ -1092,6 +1092,7 @@ export const RightSideDetails = styled.div `
     //480px
     @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
       height: 60vw;
+      margin-bottom: 20vw;
     }
 
     .Options

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const DetailsParent = styled.div`
   width: 80%;
   margin: 0 auto;
@@ -22,7 +21,6 @@ export const DetailsParent = styled.div`
     align-items: center;
   }
 `
-
 
 export const LeftSideDetails = styled.div `
   height: 100%;
@@ -174,7 +172,6 @@ export const LeftSideDetails = styled.div `
         margin: 2vw 0;
       }
       
-      
       .ImdbLogo {
         width: 3vw;
         
@@ -304,8 +301,7 @@ export const LeftSideDetails = styled.div `
         }
       }
     }
-
-
+    
     .RottenTomatoes {
       display: flex;
       justify-content: space-between;

@@ -321,7 +321,7 @@ export const LeftSideDetails = styled.div `
 
       //480px
       @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-        width: 45%;
+        width: 50%;
           margin: 2vw 0
       }
 
@@ -403,7 +403,7 @@ export const LeftSideDetails = styled.div `
 
       //480px
       @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-        width: 45%;
+        width: 50%;
         margin: 2vw 0
       }
 
@@ -484,7 +484,7 @@ export const LeftSideDetails = styled.div `
       
       //480px
       @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-        width: 83%;
+        width: 85%;
       }
     }
     

@@ -79,6 +79,16 @@ export const UnderSection = styled.div`
   @media(max-width:${props => props.theme.responsive.small_screen}) {
     height: 8vw;
   }
+}
+
+//750px
+@media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
   //480px
   @media(max-width:${props => props.theme.responsive.medium_mobile}) {
@@ -169,6 +179,19 @@ export const UnderSliderSection = styled.div`
     left: 6vw;
     font-size: 2.5vw;
   }
+
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vw;
+  }
+  
+  
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     display: flex;
@@ -177,10 +200,6 @@ export const UnderSliderSection = styled.div`
     width: 100%;
     height: 8vw;
     font-size: 5vw;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
     color: ${props => props.theme.color_upper_slider_right_btn};
   }
 

@@ -26,7 +26,7 @@ export const SidebarStyle = styled.div`
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 40%;
-    height: 8vw;
+    height: 7vw;
     top: auto;
     bottom: 0;
     left: 0;
@@ -39,6 +39,12 @@ export const SidebarStyle = styled.div`
     align-items: center;
     border-radius: 5vw 5vw 0 0;
     margin: auto;
+  }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 50%;
+    height: 8vw;
   }
   
   //480px
@@ -72,8 +78,17 @@ const AdjustIcon = styled.div`
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     height: 4vw;
     margin-top: 0;
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
+
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    height: 4vw;
+    margin-top: 0;
+    font-size: 5vw;
+  }
+    
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {

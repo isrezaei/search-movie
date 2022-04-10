@@ -176,8 +176,8 @@ export const UnderSliderSection = styled.div`
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: auto;
-    left: 6vw;
-    font-size: 2.5vw;
+    left: 5vw;
+    font-size: 3vw;
   }
 
 

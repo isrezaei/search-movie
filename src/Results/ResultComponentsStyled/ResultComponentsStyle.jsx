@@ -9,7 +9,7 @@ export const GridDisplay = styled.div`
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
 
-  //1280
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     grid-template-columns: repeat(3 , 26vw);
     margin-bottom: 8vw;
@@ -66,7 +66,7 @@ export const CardImage = styled.img`
   margin: .5vw 0;
   filter: brightness(80%);
 
-  //1280
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     width: 24vw;
     height: 35vw;
@@ -160,7 +160,7 @@ export const CardYear = styled.div`
   font-weight: bold;
   color: ${props => props.theme.color_card_Year};
 
-  //1200
+  //1280
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     font-size: 1.4vw;
   }
@@ -224,7 +224,7 @@ export const CardTitle = styled.div`
   font-weight: bolder;
   color: ${props => props.theme.color_card_title};
 
-  //1200
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     font-size: 1.5vw;
   }

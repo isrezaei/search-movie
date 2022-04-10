@@ -37,6 +37,12 @@ export const LeftSideDetails = styled.div `
     align-items: flex-start;
   }
 
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    justify-content: space-between;
+   padding: 3vw;
+  }
+
   .DetailsPoster {
     width: 15vw;
     height: 22.2vw;
@@ -59,6 +65,12 @@ export const LeftSideDetails = styled.div `
       width: 35vw;
       height: 49vw;
     }
+    
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      width: 45vw;
+      height: 65vw;
+    }
 
   }
 
@@ -67,11 +79,10 @@ export const LeftSideDetails = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${props => props.theme.color_Details_Bag};
+    background: ${props => props.theme.background_project};
     top: 25.6vw;
     left: 24.4vw;
     padding: .3vw;
-    border-radius: 1vw 0 0 0 ;
 
     .Icon {
       font-size: 2vw;
@@ -99,7 +110,7 @@ export const LeftSideDetails = styled.div `
     //750px
     @media(max-width: ${props => props.theme.responsive.large_mobile}) {
       top: 54.4vw;
-      left: 30.3vw;
+      left: 36.3vw;
       .Icon {
         font-size: 4.5vw;
       }
@@ -131,6 +142,11 @@ export const LeftSideDetails = styled.div `
       margin-top: 0;
     }
 
+    //480px
+    @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      width: 45%;
+    }
+
     .Imdb {
       width: 100%;
       display: flex;
@@ -141,6 +157,11 @@ export const LeftSideDetails = styled.div `
       //750px
       @media(max-width: ${props => props.theme.responsive.large_mobile}) {
         margin: 1vw 0;
+      }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        margin: 2vw 0;
       }
       
       
@@ -160,6 +181,11 @@ export const LeftSideDetails = styled.div `
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           width: 8vw;
+        }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          width: 12vw;
         }
       }
 
@@ -184,6 +210,10 @@ export const LeftSideDetails = styled.div `
           width: 80%;
         }
 
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          width: 60%;
+        }
 
         .ImdbRate {
           font-size: .8vw;
@@ -206,6 +236,12 @@ export const LeftSideDetails = styled.div `
           @media(max-width: ${props => props.theme.responsive.large_mobile}) {
             font-size: 2vw;
           }
+
+
+          //480px
+          @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+            font-size: 3.5vw;
+          }
         }
 
         .BoldRate {
@@ -224,7 +260,7 @@ export const LeftSideDetails = styled.div `
 
           //750px
           @media(max-width: ${props => props.theme.responsive.large_mobile}) {
-            font-size: 4vw;
+            font-size: 5vw;
           }
         }
 
@@ -249,6 +285,12 @@ export const LeftSideDetails = styled.div `
           @media(max-width: ${props => props.theme.responsive.large_mobile}) {
             font-size: 2vw;
           }
+
+          //480px
+          @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+            display: none;
+          }
+          
         }
       }
     }
@@ -277,6 +319,12 @@ export const LeftSideDetails = styled.div `
         margin: 1vw 0;
       }
 
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        width: 45%;
+          margin: 2vw 0
+      }
+
       .RottenTomatoesLogo {
         width: 1.5vw;
         filter: brightness(90%);
@@ -294,6 +342,11 @@ export const LeftSideDetails = styled.div `
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           width: 5vw;
+        }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          width: 8vw;
         }
         
       }
@@ -316,6 +369,11 @@ export const LeftSideDetails = styled.div `
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           font-size: 3vw;
+        }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          font-size: 4.5vw;
         }
       }
     }
@@ -343,6 +401,11 @@ export const LeftSideDetails = styled.div `
         margin: 1vw 0;
       }
 
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        width: 45%;
+        margin: 2vw 0
+      }
 
       .MetacriticLogo {
         width: 1.5vw;
@@ -361,6 +424,11 @@ export const LeftSideDetails = styled.div `
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           width: 5vw;
+        }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          width: 8vw;
         }
       }
 
@@ -385,6 +453,11 @@ export const LeftSideDetails = styled.div `
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
           font-size: 3vw;
         }
+
+        //480px
+        @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+          font-size: 4.5vw;
+        }
       }
     }
 
@@ -408,9 +481,13 @@ export const LeftSideDetails = styled.div `
       @media(max-width: ${props => props.theme.responsive.large_mobile}) {
         width: 50%;
       }
+      
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        width: 83%;
+      }
     }
     
-
     .ShareIcone {
       font-size: 1.8vw;
       color: ${props => props.theme.color_details_icons};
@@ -430,6 +507,11 @@ export const LeftSideDetails = styled.div `
       @media(max-width: ${props => props.theme.responsive.large_mobile}) {
         font-size: 5.5vw;
         margin: .5vw 0;
+      }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        font-size: 8vw;
       }
     }
 
@@ -453,6 +535,11 @@ export const LeftSideDetails = styled.div `
       //750px
       @media(max-width: ${props => props.theme.responsive.large_mobile}) {
         font-size: 2.2vw;
+      }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        font-size: 3.2vw;
       }
     }
 
@@ -487,6 +574,12 @@ export const LeftSideDetails = styled.div `
         height: 5.5vw;
         font-size: 2.3vw;
       }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        height: 7vw;
+        font-size: 3.5vw;
+      }
     }
 
     .StarRate {
@@ -518,6 +611,18 @@ export const LeftSideDetails = styled.div `
         width: 100%;
         align-items: center;
       }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        align-items: flex-start;
+
+        .Stars
+        {
+          width: 100%;
+        }
+        
+      }
+        
     }
 
     .RateText {
@@ -540,6 +645,13 @@ export const LeftSideDetails = styled.div `
         margin-left: 0;
         font-size: 2.5vw;
       }
+
+      //480px
+      @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+        margin-left: .8vw;
+        font-size: 4vw;
+      }
+      
     }
   }
 
@@ -876,7 +988,7 @@ export const RightSideDetails = styled.div `
 
     //1280px
     @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-      width: 95%;
+      width: 60vw;
       height: 12vw;
       margin-bottom: 8vw;
     }
@@ -884,12 +996,16 @@ export const RightSideDetails = styled.div `
     //900px
     @media(max-width: ${props => props.theme.responsive.small_screen}) {
       width: 100%;
-      height: 15vw;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 12vw;
     }
 
     //750px
     @media(max-width: ${props => props.theme.responsive.large_mobile}) {
-      height: 20vw;
+      height: 40vw;
     }
 
     .Options
@@ -899,6 +1015,11 @@ export const RightSideDetails = styled.div `
       justify-content: center;
       align-items: center;
 
+      //900px
+      @media(max-width: ${props => props.theme.responsive.small_screen}) {
+        margin: 1vw 0;
+      }
+
       .IconAndText
       {
         width: 100%;
@@ -906,7 +1027,7 @@ export const RightSideDetails = styled.div `
         justify-content: flex-start;
         align-items: center;
         margin: .5vw 0;
-
+        
         .Icone
         {
           font-size: 2vw;
@@ -929,7 +1050,7 @@ export const RightSideDetails = styled.div `
             font-size: 6vw;
           }
         }
-        transition: .1s;
+   
         .Text
         {
           font-size: 1.5vw;
@@ -966,12 +1087,14 @@ export const RightSideDetails = styled.div `
 
         //900px
         @media(max-width: ${props => props.theme.responsive.small_screen}) {
+          width: 100%;
           font-size: 1.8vw;
+          text-align: start;
         }
 
         //750px
         @media(max-width: ${props => props.theme.responsive.large_mobile}) {
-          font-size: 2vw;
+          font-size: 2.3vw;
         }
       }
     }

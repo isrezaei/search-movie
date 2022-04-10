@@ -31,7 +31,6 @@ const SliderHome = () => {
             <SliderImdbRate><SliderYellowRate>{data.imdbRate}</SliderYellowRate>/10</SliderImdbRate>
             <SliderImdbLogo src={ImdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>
-            <SliderAddFavorite><RiHeartAddFill/></SliderAddFavorite>
         </div>
     )
 
@@ -42,7 +41,6 @@ const SliderHome = () => {
             <SliderImdbRate><SliderYellowRate>{data.imdbRate}</SliderYellowRate>/10</SliderImdbRate>
             <SliderImdbLogo src={ImdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>
-            <SliderAddFavorite><RiHeartAddFill/></SliderAddFavorite>
         </SwiperSlide>
     )
 

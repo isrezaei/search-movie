@@ -9,15 +9,25 @@ export const GridDisplay = styled.div`
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
 
-  //1200
+  //1280
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     grid-template-columns: repeat(3 , 26vw);
+    margin-bottom: 8vw;
   }
   //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     grid-template-columns: repeat(3 , 28vw);
     grid-column-gap: 2vw;
+    margin-bottom: 10vw;
   }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    grid-template-columns: repeat(2 , 40vw);
+    margin-bottom: 15vw;
+  }
+  
+  
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     display: flex;
@@ -56,7 +66,7 @@ export const CardImage = styled.img`
   margin: .5vw 0;
   filter: brightness(80%);
 
-  //1200
+  //1280
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     width: 24vw;
     height: 35vw;
@@ -67,6 +77,13 @@ export const CardImage = styled.img`
     width: 28vw;
     height: 40vw;
   }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 35vw;
+    height: 50vw;
+  }
+  
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
     width: 70vw;
@@ -113,6 +130,16 @@ export const CardType = styled.span`
   font-size: 1.9vw;
 }
 
+//750px
+@media(max-width: ${props => props.theme.responsive.large_mobile}) {
+  width: 7vw;
+  height: 3vw;
+  right: 4vw;
+  top: 2vw;
+  font-size: 1.9vw;
+}
+
+
 //480px
 @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
   width: 15vw;
@@ -143,6 +170,11 @@ export const CardYear = styled.div`
     font-size: 1.8vw;
   }
 
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 2.3vw;
+  }
+
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
 
@@ -160,13 +192,27 @@ export const CardTitleFavorites = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
+  //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
     width: 93%;
   }
+  
+  //900px
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     width: 100%;
   }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    width: 88%;
+  }
+
+  //480px
+  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+    width: 100%;
+  }
+    
 `
 
 export const CardTitle = styled.div`
@@ -187,9 +233,15 @@ export const CardTitle = styled.div`
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 2vw;
   }
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 2.5vw;
+  }
+  
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    width: 60vw;
+    
     font-size: 4.3vw;
     height: 6vw;
   }
@@ -211,6 +263,12 @@ export const CardFavorites = styled.div`
   @media(max-width: ${props => props.theme.responsive.small_screen}) {
     font-size: 3vw;
     margin-right: 0;
+  }
+
+
+  //750px
+  @media(max-width: ${props => props.theme.responsive.large_mobile}) {
+    font-size: 4vw;
   }
 
   //480px
@@ -302,7 +360,7 @@ export const SearchIcon = styled.div `
 
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 55vw;
+    font-size: 45vw;
   }
   
 `

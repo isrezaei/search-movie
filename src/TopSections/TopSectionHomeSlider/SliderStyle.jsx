@@ -157,37 +157,3 @@ export const SliderImdbLogo = styled.img`
     border-radius: 2vw;
   }
 `
-export const SliderAddFavorite = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #cccccc;
-  font-size: 2vw;
-  right: 1vw;
-  top: 1vw;
-  cursor: pointer;
-  transition: .3s;
-  &:hover {
-    color: pink;
-  }
-  
-  //1024
-  @media(max-width: ${props => props.theme.responsive.medium_screen}) {
-    font-size: 3vw;
-    right: 1.5vw;
-    top: 1.5vw;
-  }
-  //900px
-  @media(max-width: ${props => props.theme.responsive.small_screen}) {
-    font-size: 4vw;
-  }
-  //480px
-  @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    font-size: 8vw;
-    right: 4vw;
-    top: 2vw;
-  }
-  //380px
-  //no need
-`

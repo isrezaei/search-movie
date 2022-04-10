@@ -380,6 +380,7 @@ export const FavoriteSection = styled.div`
   background-image: linear-gradient(${({FavoriteRandomBg}) => FavoriteRandomBg});
   padding: 1vw;
   transition: .1s;
+  overflow: hidden;
 
   //1280px
   @media(max-width: ${props => props.theme.responsive.medium_screen}) {
@@ -496,7 +497,12 @@ export const FavoriteInfo = styled.div`
 
     //480px
     @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
+      width: 50vw;
       font-size: 4.3vw;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
     }
   }
 

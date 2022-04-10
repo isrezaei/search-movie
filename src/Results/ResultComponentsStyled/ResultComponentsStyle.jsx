@@ -241,7 +241,7 @@ export const CardTitle = styled.div`
   
   //480px
   @media(max-width: ${props => props.theme.responsive.medium_mobile}) {
-    
+    width: 60vw;
     font-size: 4.3vw;
     height: 6vw;
   }

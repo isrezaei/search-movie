@@ -13,7 +13,7 @@ import {AiOutlineVideoCamera} from 'react-icons/ai'
 import {RiBallPenLine , RiShareForwardFill , RiHeartAddFill , RiHeartFill} from 'react-icons/ri'
 import {BiWorld} from 'react-icons/bi'
 import {FaTheaterMasks} from 'react-icons/fa'
-import {IoLanguage , IoWarningOutline , IoHeartDislikeSharp} from 'react-icons/io5'
+import {IoLanguage , IoWarningOutline} from 'react-icons/io5'
 import {CgDollar} from 'react-icons/cg'
 import {toast} from "react-toastify";
 
@@ -103,13 +103,14 @@ const ResultDetailsShow = ({DetailsData}) => {
                         <Rating
                                 iconsCount={8}
                                 size={20}
-
                                 emptyClassName={'Stars'}
                                 allowHover={true}
                                 transition={true}
                                 showTooltip={false}
+                                ratingValue={false}
                                 emptyColor={isDarkMood ? 'rgb(33,33,33)' : 'rgb(185,185,185)'}
-                                tooltipArray={[ 'Awful' , 'bad', 'good' , 'very good' , 'Excellent']}/>
+                                tooltipArray={[ 'Awful' , 'bad', 'good' , 'very good' , 'Excellent']}
+                        />
                     </section>
                 </section>
 

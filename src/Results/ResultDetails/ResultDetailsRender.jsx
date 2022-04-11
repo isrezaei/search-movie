@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {CleanDetails, fetchDetails} from "../../Redux/DetailsSlice";
 import {useParams} from "react-router-dom";
 import PreLoadedDetails from "../../PreLoaded/PreLoadedDetails";
+import NotFound404 from "../../NotFound/NotFound404";
 
 const ResultDetailsRender = () => {
 
@@ -11,12 +12,11 @@ const ResultDetailsRender = () => {
     const Status = useSelector(state => state.DetailsSlice.status)
 
 
+    console.log(DetailsData.Response === 'False')
 
 
     const {imdbID} = useParams()
     const dispatch = useDispatch()
-
-
 
 
     useEffect(()=>{
@@ -38,7 +38,7 @@ const ResultDetailsRender = () => {
         }
         else if (Status === 'reject')
         {
-            Render = <h1>Errors</h1>
+            Render = <NotFound404/>
         }
 
 

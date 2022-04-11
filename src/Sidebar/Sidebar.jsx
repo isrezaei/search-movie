@@ -10,23 +10,21 @@ import {selectFavoriteId} from "../Redux/FavoriteSlice";
 import {ChangeActiveIcon} from "../Redux/ResultSearchSlice";
 import {useDispatch} from "react-redux";
 import {Animated} from "react-animated-css";
+import {useLocation} from "react-router-dom";
 import React from "react";
 
 
 const Sidebar = () => {
 
-
     const dispatch = useDispatch()
-
+    const Location = useLocation().pathname
     const ActiveCategory = useSelector(state => state.ResultSearchSlice.activeCategory)
     const LengthFavorite = useSelector(selectFavoriteId).length
 
-    // console.log(ActiveIconSidebar)
-
-    const ActiveHome = ActiveCategory === 'home'
-    const ActiveMovie = ActiveCategory === 'movie'
-    const ActiveSeries = ActiveCategory === 'series'
-    const ActiveFavorite = ActiveCategory === 'favorite'
+    const ActiveHome = ActiveCategory === 'home' || Location === '/'
+    const ActiveMovie = ActiveCategory === 'movie' || Location === '/search/movie'
+    const ActiveSeries = ActiveCategory === 'series' || Location === '/search/series'
+    const ActiveFavorite = ActiveCategory === 'favorite' || Location === '/favorite'
 
     const onSubmit = (IconName) =>
     {
@@ -59,9 +57,7 @@ const Sidebar = () => {
                 <Link to={'/search/series'}>
                     <Icon Name={'Series'} ActiveIcon={ActiveSeries} onClick={()=> onSubmit('series')}><RiMovie2Fill/></Icon>
                 </Link>
-
             </Animated>
-
 
             <Animated
                 animationIn="tada"

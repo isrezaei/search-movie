@@ -34,6 +34,10 @@ export const DetailsSlice = createSlice({
         {
             state.status = 'success'
             state.details = payload
+            if (payload.Response === 'False')
+            {
+                state.status = 'reject'
+            }
         },
         [fetchDetails.rejected] : (state) =>
         {

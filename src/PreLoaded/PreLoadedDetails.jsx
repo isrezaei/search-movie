@@ -6,8 +6,6 @@ const PreLoadedDetails = () => {
 
     const isDarkMood = useSelector(state => state.DarkMoodSlice.darkMood)
 
-    console.log(isDarkMood)
-
     const override = css`
       display: block;
       position: absolute;

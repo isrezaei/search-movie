@@ -79,7 +79,7 @@ function App() {
             <Header/>
             <ToastNotify/>
             <Routes>
-                <Route path='/' exact element={<ResultHomeReadyToRender/>}/>
+                <Route path='/' exact={true} element={<ResultHomeReadyToRender/>}/>
                 <Route path='/search/movie'  element={<ResultMovieRender/>}/>
                 <Route path='/search/series' element={<ResultSeriesRender/>}/>
                 <Route path='/details/:imdbID' element={<ResultDetailsRender/>}/>

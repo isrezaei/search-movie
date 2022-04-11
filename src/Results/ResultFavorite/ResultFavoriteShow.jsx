@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
-import {FavoriteInfo, FavoriteSection, FavoriteImage} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {FavoriteInfo, FavoriteSection, FavoriteImage} from "../ResultStyled/ResultStyle";
 import {MdOutlineDeleteOutline} from 'react-icons/md'
 import {useDispatch} from "react-redux";
 import {RemoveFavorite} from "../../Redux/FavoriteSlice";

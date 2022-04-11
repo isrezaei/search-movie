@@ -54,10 +54,11 @@ export const ResultSearchSlice = createSlice({
     },
     extraReducers : {
 
-        [fetchResultSearch.pending] : (state)=>
+        [fetchResultSearch.pending] : (state , payload)=>
         {
             state.status = 'pending'
             ResultSearchAdapter.removeAll(state)
+            console.log(payload)
         },
         [fetchResultSearch.fulfilled] : (state , {payload})=>
         {

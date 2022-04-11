@@ -4,9 +4,6 @@ import {
     LeftSideDetails,
 } from "./ResultDetailsStyle";
 import { Rating } from 'react-simple-star-rating'
-import ImdbLogo from '../../ImdbLogo.png'
-import RottenTomatoesLogo from '../../RottenTomatoes.png'
-import MetacriticLogo from '../../Metacritic.png'
 import {useSelector , useDispatch} from "react-redux";
 import {AddFavorite ,RemoveFavorite, selectFavoriteById} from "../../Redux/FavoriteSlice";
 import {AiOutlineVideoCamera} from 'react-icons/ai'
@@ -74,7 +71,7 @@ const ResultDetailsShow = ({DetailsData}) => {
                 <section className='DetailsRate'>
                     <div className='Imdb'>
 
-                        <img className='ImdbLogo' src={ImdbLogo} alt={'Imdb Logo'}/>
+                        <img className='ImdbLogo' src='https://user-images.githubusercontent.com/77073972/162730044-a6a49b8b-6e11-4147-aeee-ff2c4e00a145.png' alt={'Imdb Logo'}/>
 
                         <div className='RateAndVotes'>
                             <div className='ImdbRate'> <b className='BoldRate'>{imdbRating}</b> / 10</div>
@@ -83,12 +80,12 @@ const ResultDetailsShow = ({DetailsData}) => {
                     </div>
 
                     <div className='RottenTomatoes'>
-                        <img className='RottenTomatoesLogo' src={RottenTomatoesLogo} alt={'Imdb Logo'}/>
+                        <img className='RottenTomatoesLogo' src='https://user-images.githubusercontent.com/77073972/162730038-38c966d5-980e-4c59-8228-fe6c56e51b59.png' alt={'Imdb Logo'}/>
                         <div className='RottenTomatoesRate'> {RottenTomatoes} </div>
                     </div>
 
                     <div className='Metacritic'>
-                        <img className='MetacriticLogo' src={MetacriticLogo} alt={'Imdb Logo'}/>
+                        <img className='MetacriticLogo' src='https://user-images.githubusercontent.com/77073972/162730041-f88fe757-f35c-4d08-858d-014ee2359ad0.png' alt={'Imdb Logo'}/>
                         <div className='MetacriticRate'>{Metascore}%</div>
                     </div>
 

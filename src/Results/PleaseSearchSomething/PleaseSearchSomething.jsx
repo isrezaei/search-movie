@@ -1,7 +1,7 @@
 import {Animated} from "react-animated-css";
 
 import {MdOutlineScreenSearchDesktop} from 'react-icons/md'
-import {PleaseSearch , SearchIcon} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {PleaseSearch , SearchIcon} from "../ResultStyled/ResultStyle";
 
 
 const PleaseSearchSomething = () => {

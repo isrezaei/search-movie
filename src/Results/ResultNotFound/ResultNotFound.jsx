@@ -1,7 +1,7 @@
 import {Animated} from "react-animated-css";
 import {BiMessageError} from 'react-icons/bi'
 import {useSelector} from "react-redux";
-import {NotFoundSearch , NotFoundIcon} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {NotFoundSearch , NotFoundIcon} from "../ResultStyled/ResultStyle";
 
 
 const ResultNotFound = () => {

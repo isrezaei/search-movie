@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import {Animated} from "react-animated-css";
-import NoImageAvailable from "../../NoImageAvailable.svg";
 import {
     CardFavorites,
     CardImage,
@@ -8,7 +7,7 @@ import {
     CardTitle,
     CardTitleFavorites,
     CardYear
-} from "../ResultComponentsStyled/ResultComponentsStyle";
+} from "../ResultStyled/ResultStyle";
 import {toast} from "react-toastify";
 import {AddFavorite, RemoveFavorite, selectFavoriteById} from "../../Redux/FavoriteSlice";
 import {useDispatch, useSelector} from "react-redux";
@@ -53,7 +52,7 @@ const ResultMovieCard = ({MovieData}) => {
         <Animated animationIn='bounceIn'>
             <CardParent>
                 <Link to={`/details/${imdbID}`}>
-                    <CardImage src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
+                    <CardImage src={Poster === 'N/A' ? 'https://user-images.githubusercontent.com/77073972/162730581-cb29a828-6101-4fa0-bd2e-c57c7d7ed811.svg' : Poster} alt={Title}/>
                     <CardYear>{Year}</CardYear>
                 </Link>
                 <CardTitleFavorites>

@@ -1,5 +1,5 @@
 import {RiPagesLine} from 'react-icons/ri'
-import {NotFoundIcon, NotFoundSearch} from "../Results/ResultComponentsStyled/ResultComponentsStyle";
+import {NotFoundIcon, NotFoundSearch} from "../Results/ResultStyled/ResultStyle";
 import {Animated} from "react-animated-css";
 
 

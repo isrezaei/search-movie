@@ -1,10 +1,10 @@
 import {useSelector} from "react-redux";
 import {selectFavoriteId} from "../../Redux/FavoriteSlice";
 import ResultFavoriteShow from "./ResultFavoriteShow";
-import {FavoriteParent} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {FavoriteParent} from "../ResultStyled/ResultStyle";
 import {Animated} from "react-animated-css";
 import {MdOutlinePlaylistAdd} from "react-icons/md";
-import {FavoriteList , FavoriteIcon} from "../ResultComponentsStyled/ResultComponentsStyle";
+import {FavoriteList , FavoriteIcon} from "../ResultStyled/ResultStyle";
 
 
 const ResultFavoriteRender = () => {

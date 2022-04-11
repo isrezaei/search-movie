@@ -1,6 +1,4 @@
-import ImdbLogo from '../../ImdbLogo.png'
 import {Carousel} from '3d-react-carousal';
-import {RiHeartAddFill} from 'react-icons/ri'
 import {SliderData} from "./SliderData";
 import React from "react";
 import {
@@ -10,7 +8,6 @@ import {
     SliderImdbLogo,
     ParentSlider,
     DivMobileSlider,
-    SliderAddFavorite,
     SliderYellowRate
 } from "./SliderStyle";
 
@@ -29,7 +26,7 @@ const SliderHome = () => {
         <div>
             <SliderImage src={data.image} alt={data.id}/>
             <SliderImdbRate><SliderYellowRate>{data.imdbRate}</SliderYellowRate>/10</SliderImdbRate>
-            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderImdbLogo src={data.imdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>
         </div>
     )
@@ -39,7 +36,7 @@ const SliderHome = () => {
         <SwiperSlide key={data.id}>
             <SliderImage src={data.smallImage} alt={data.id}/>
             <SliderImdbRate><SliderYellowRate>{data.imdbRate}</SliderYellowRate>/10</SliderImdbRate>
-            <SliderImdbLogo src={ImdbLogo}/>
+            <SliderImdbLogo src={data.imdbLogo}/>
             <SliderPosterName>{data.posterName}</SliderPosterName>
         </SwiperSlide>
     )

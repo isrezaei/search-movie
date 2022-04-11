@@ -17,11 +17,11 @@ import {ToastContainer} from 'react-toastify';
 function App() {
 
     const isDarkMood = useSelector(state => state.DarkMoodSlice.darkMood)
-
     const ThemeProject = {
         background_project : isDarkMood ? '#000000' : '#eceff1',
         background_header : isDarkMood ? '#131313' : '#e0e0e0',
         background_sidebar : isDarkMood ? '#131313' : '#e0e0e0',
+        background_scroll : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
         color_header_sync_search : isDarkMood ? '#e5e5e5' : '#2c2c2c',
         color_Header_logo : isDarkMood ? 'white' : '#484848',
         color_search_component : isDarkMood ? '#20e28c' : 'rgb(235, 131, 7)',
@@ -60,7 +60,6 @@ function App() {
             large_mobile : '750px',
             small_screen : '900px',
             medium_screen : '1280px',
-            large_screen : '1900px'
         }
     }
 
@@ -71,8 +70,6 @@ function App() {
         font-weight: bold;
       }
     `
-
-
     return (
         <ThemeProvider theme={ThemeProject} >
             <GlobalStyle/>

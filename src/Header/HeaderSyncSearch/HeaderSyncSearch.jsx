@@ -1,4 +1,3 @@
-import NoImageAvailable from '../../NoImageAvailable.svg'
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {SearchItems} from "./HeaderSyncSearchStyle";
@@ -17,7 +16,7 @@ const HeaderSyncSearch = ({reset , ids}) => {
     return (
         <Link onClick={CleanSearchInput} to={`/details/${imdbID}`}>
             <SearchItems>
-                <img src={Poster === 'N/A'  ? NoImageAvailable : Poster} alt={Title}/>
+                <img src={Poster === 'N/A'  ?'https://user-images.githubusercontent.com/77073972/162730581-cb29a828-6101-4fa0-bd2e-c57c7d7ed811.svg' : Poster} alt={Title}/>
                 <section>
                     <h4>{Title}</h4>
                     <p>{Year}</p>

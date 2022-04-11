@@ -11,13 +11,24 @@ export const GlobalStyle =  createGlobalStyle `
     font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
   }
-  
   html
   {
     overflow-x: hidden;
-    user-select: none
+    user-select: none;
   }
   
+  *::-webkit-scrollbar {
+    width: .8vw;
+  }
+  *::-webkit-scrollbar-track {
+    background: ${props => props.theme.background_project};
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: ${props => props.theme.background_scroll};
+    border-radius: 5vw;
+    border: .3vw solid ${props => props.theme.background_project};
+  }
   body
   {
     margin: 0;

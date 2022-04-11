@@ -8,7 +8,9 @@ export const PreloadStyle = styled.div`
   grid-template-columns: repeat(5 , 16vw);
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
+  margin-top: 2vw;
   margin-bottom: 2vw;
+  z-index: 1;
   
   .SkeletonPoster
   {

@@ -1,7 +1,6 @@
 import {useSelector , useDispatch} from "react-redux";
 import {selectMovieByIds} from "../../Redux/ResultFirstRenderSlice";
 import {Link} from "react-router-dom";
-import NoImageAvailable from '../../NoImageAvailable.svg'
 import {Animated} from "react-animated-css";
 import {RiHeart3Fill , RiHeart3Line} from 'react-icons/ri'
 import {AddFavorite , RemoveFavorite} from "../../Redux/FavoriteSlice";
@@ -14,7 +13,7 @@ import {
     CardType,
     CardTitleFavorites,
     CardFavorites
-} from "../ResultComponentsStyled/ResultComponentsStyle";
+} from "../ResultStyled/ResultStyle";
 import {toast} from "react-toastify";
 import {selectFavoriteById} from "../../Redux/FavoriteSlice";
 
@@ -63,7 +62,7 @@ const ResultHomeCard = ({ids}) => {
             <CardParent>
                 <Link to={`/details/${imdbID}`}>
                 <CardType>{Type}</CardType>
-                    <CardImage src={Poster === 'N/A' ? NoImageAvailable : Poster} alt={Title}/>
+                    <CardImage src={Poster === 'N/A' ? 'https://user-images.githubusercontent.com/77073972/162730581-cb29a828-6101-4fa0-bd2e-c57c7d7ed811.svg' : Poster} alt={Title}/>
                 <CardYear>{Year}</CardYear>
                 </Link>
                 <CardTitleFavorites>

@@ -32,7 +32,7 @@ export const SidebarStyle = styled.div`
     left: 0;
     right: 0;
     transform: none;
-    position: fixed;
+    position: fixed; 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

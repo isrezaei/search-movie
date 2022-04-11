@@ -25,12 +25,12 @@ const ResultMovieCard = ({MovieData}) => {
 
     const AddNotify = () => toast.success(`" ${Title} " Added to your favorites list`, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
     });
 
     const RemoveNotify = () => toast.error(`" ${Title} " Removed to your favorites list`, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
     });
 
 

@@ -1,8 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
 import ResultDetailsShow from "./ResultDetailsShow";
-import {useEffect, useLayoutEffect} from "react";
+import {useEffect} from "react";
 import {CleanDetails, fetchDetails} from "../../Redux/DetailsSlice";
 import {useParams} from "react-router-dom";
+import PreLoadedDetails from "../../PreLoaded/PreLoadedDetails";
 
 const ResultDetailsRender = () => {
 
@@ -29,7 +30,7 @@ const ResultDetailsRender = () => {
 
         if (Status === 'pending')
         {
-            Render = <h1>Loading ...</h1>
+            Render = <PreLoadedDetails/>
         }
         else if (Status === 'success')
         {

@@ -11,13 +11,8 @@ const ResultDetailsRender = () => {
     const DetailsData = useSelector(state => state.DetailsSlice.details)
     const Status = useSelector(state => state.DetailsSlice.status)
 
-
-    console.log(DetailsData.Response === 'False')
-
-
     const {imdbID} = useParams()
     const dispatch = useDispatch()
-
 
     useEffect(()=>{
         dispatch(fetchDetails(imdbID))
@@ -40,7 +35,6 @@ const ResultDetailsRender = () => {
         {
             Render = <NotFound404/>
         }
-
 
     return (
         <div>
